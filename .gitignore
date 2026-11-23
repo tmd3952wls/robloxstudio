@@ -1,0 +1,27 @@
+# 로그인 정보 (절대 올리지 않음)
+**/.fish_profile/
+.env
+*.key
+
+# 렌더 결과·미리보기 이미지·대용량 미디어 (용량 큼)
+blender/frames/
+blender_hq/frames/
+blender_hq/frames2/
+blender_hq/open_anim/
+blender/check*/
+blender_hq/hq*/
+blender_hq/dyn*/
+blender_hq/preview/
+blender_hq/out/
+*.png
+*.jpg
+*.mp4
+*.wav
+*.mp3
+*.blend1
+__pycache__/
+*.pyc
+
+# fish.audio 페이지 덤프 (계정 정보 포함 가능)
+audio/fish/re/s*.html
+audio/fish/re/s*.txt

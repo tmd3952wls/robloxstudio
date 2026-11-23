@@ -1,0 +1,404 @@
+00:01.454  blend            | Read blend: "C:\Users\tmd39\Documents\수명을파는시장\blender_hq\market.blend"
+00:13.235  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0001.png'
+F 1
+00:17.672  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0002.png'
+F 2
+00:22.047  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0003.png'
+F 3
+00:26.454  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0004.png'
+F 4
+00:30.813  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0005.png'
+F 5
+00:35.235  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0006.png'
+F 6
+00:39.579  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0007.png'
+F 7
+00:43.985  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0008.png'
+F 8
+00:48.782  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0009.png'
+F 9
+00:53.344  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0010.png'
+F 10
+00:58.016  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0011.png'
+F 11
+01:02.547  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0012.png'
+F 12
+01:07.125  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0013.png'
+F 13
+01:11.704  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0014.png'
+F 14
+01:16.250  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0015.png'
+F 15
+01:20.844  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0016.png'
+F 16
+01:25.469  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0017.png'
+F 17
+01:29.969  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0018.png'
+F 18
+01:34.547  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0019.png'
+F 19
+01:39.110  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0020.png'
+F 20
+01:43.641  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0021.png'
+F 21
+01:48.125  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0022.png'
+F 22
+01:52.844  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0023.png'
+F 23
+01:57.579  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0024.png'
+F 24
+02:02.375  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0025.png'
+F 25
+02:07.125  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0026.png'
+F 26
+02:11.891  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0027.png'
+F 27
+02:16.641  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0028.png'
+F 28
+02:21.297  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0029.png'
+F 29
+02:26.094  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0030.png'
+F 30
+02:30.891  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0031.png'
+F 31
+02:35.532  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0032.png'
+F 32
+02:40.266  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0033.png'
+F 33
+02:44.860  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0034.png'
+F 34
+02:49.594  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0035.png'
+F 35
+02:54.172  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0036.png'
+F 36
+02:58.829  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0037.png'
+F 37
+03:03.594  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0038.png'
+F 38
+03:08.313  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0039.png'
+F 39
+03:13.188  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0040.png'
+F 40
+03:17.969  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0041.png'
+F 41
+03:22.750  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0042.png'
+F 42
+03:27.579  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0043.png'
+F 43
+03:32.407  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0044.png'
+F 44
+03:37.172  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0045.png'
+F 45
+03:42.063  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0046.png'
+F 46
+03:46.829  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0047.png'
+F 47
+03:51.579  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0048.png'
+F 48
+03:56.391  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0049.png'
+F 49
+04:01.266  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0050.png'
+F 50
+04:06.282  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0051.png'
+F 51
+04:11.282  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0052.png'
+F 52
+04:16.329  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0053.png'
+F 53
+04:21.297  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0054.png'
+F 54
+04:26.235  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0055.png'
+F 55
+04:31.266  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0056.png'
+F 56
+04:36.329  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0057.png'
+F 57
+04:41.235  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0058.png'
+F 58
+04:46.250  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0059.png'
+F 59
+04:51.032  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0060.png'
+F 60
+04:55.860  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0061.png'
+F 61
+05:00.766  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0062.png'
+F 62
+05:05.594  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0063.png'
+F 63
+05:10.375  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0064.png'
+F 64
+05:15.094  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0065.png'
+F 65
+05:19.860  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0066.png'
+F 66
+05:24.610  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0067.png'
+F 67
+05:29.360  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0068.png'
+F 68
+05:33.954  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0069.png'
+F 69
+05:38.579  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0070.png'
+F 70
+05:43.188  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0071.png'
+F 71
+05:47.797  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0072.png'
+F 72
+05:52.454  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0073.png'
+F 73
+05:57.016  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0074.png'
+F 74
+06:01.422  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0075.png'
+F 75
+06:05.672  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0076.png'
+F 76
+06:09.782  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0077.png'
+F 77
+06:13.844  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0078.png'
+F 78
+06:18.000  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0079.png'
+F 79
+06:22.125  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0080.png'
+F 80
+06:26.063  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0081.png'
+F 81
+06:30.047  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0082.png'
+F 82
+06:34.016  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0083.png'
+F 83
+06:38.032  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0084.png'
+F 84
+06:42.032  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0085.png'
+F 85
+06:46.000  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0086.png'
+F 86
+06:49.985  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0087.png'
+F 87
+06:53.954  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0088.png'
+F 88
+06:57.922  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0089.png'
+F 89
+07:01.750  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0090.png'
+F 90
+07:05.547  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0091.png'
+F 91
+07:09.485  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0092.png'
+F 92
+07:13.329  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0093.png'
+F 93
+07:17.250  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0094.png'
+F 94
+07:21.110  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0095.png'
+F 95
+07:24.922  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0096.png'
+F 96
+07:28.688  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0097.png'
+F 97
+07:32.500  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0098.png'
+F 98
+07:36.313  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0099.png'
+F 99
+07:40.250  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0100.png'
+F 100
+07:44.079  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0101.png'
+F 101
+07:47.891  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0102.png'
+F 102
+07:51.704  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0103.png'
+F 103
+07:55.485  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0104.png'
+F 104
+07:59.266  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0105.png'
+F 105
+08:03.063  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0106.png'
+F 106
+08:06.860  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0107.png'
+F 107
+08:10.657  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0108.png'
+F 108
+08:14.485  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0109.png'
+F 109
+08:18.266  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0110.png'
+F 110
+08:22.047  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0111.png'
+F 111
+08:25.860  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0112.png'
+F 112
+08:29.641  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0113.png'
+F 113
+08:33.454  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0114.png'
+F 114
+08:37.266  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0115.png'
+F 115
+08:41.032  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0116.png'
+F 116
+08:44.844  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0117.png'
+F 117
+08:48.657  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0118.png'
+F 118
+08:52.454  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0119.png'
+F 119
+08:56.250  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0120.png'
+F 120
+09:00.032  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0121.png'
+F 121
+09:03.813  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0122.png'
+F 122
+09:07.610  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0123.png'
+F 123
+09:11.422  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0124.png'
+F 124
+09:15.235  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0125.png'
+F 125
+09:19.000  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0126.png'
+F 126
+09:22.797  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0127.png'
+F 127
+09:26.625  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0128.png'
+F 128
+09:30.407  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0129.png'
+F 129
+09:34.204  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0130.png'
+F 130
+09:38.016  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0131.png'
+F 131
+09:41.813  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0132.png'
+F 132
+09:46.500  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0133.png'
+F 133
+09:51.157  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0134.png'
+F 134
+09:55.750  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0135.png'
+F 135
+10:00.360  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0136.png'
+F 136
+10:04.954  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0137.png'
+F 137
+10:09.547  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0138.png'
+F 138
+10:14.329  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0139.png'
+F 139
+10:18.922  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0140.png'
+F 140
+10:23.485  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0141.png'
+F 141
+10:28.079  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0142.png'
+F 142
+10:32.672  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0143.png'
+F 143
+10:37.266  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0144.png'
+F 144
+10:41.875  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0145.png'
+F 145
+10:46.469  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0146.png'
+F 146
+10:51.047  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0147.png'
+F 147
+10:55.625  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0148.png'
+F 148
+11:00.235  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0149.png'
+F 149
+11:04.844  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0150.png'
+F 150
+11:09.422  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0151.png'
+F 151
+11:14.032  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0152.png'
+F 152
+11:18.625  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0153.png'
+F 153
+11:23.235  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0154.png'
+F 154
+11:27.829  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0155.png'
+F 155
+11:32.297  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0156.png'
+F 156
+11:36.844  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0157.png'
+F 157
+11:41.438  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0158.png'
+F 158
+11:46.016  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0159.png'
+F 159
+11:50.625  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0160.png'
+F 160
+11:55.204  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0161.png'
+F 161
+11:59.829  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0162.png'
+F 162
+12:04.407  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0163.png'
+F 163
+12:09.000  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0164.png'
+F 164
+12:13.485  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0165.png'
+F 165
+12:18.047  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0166.png'
+F 166
+12:22.610  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0167.png'
+F 167
+12:27.204  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0168.png'
+F 168
+12:31.797  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0169.png'
+F 169
+12:36.000  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0170.png'
+F 170
+12:39.610  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0171.png'
+F 171
+12:43.016  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0172.png'
+F 172
+12:47.282  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0173.png'
+F 173
+12:51.672  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0174.png'
+F 174
+12:56.063  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0175.png'
+F 175
+13:00.829  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0176.png'
+F 176
+13:05.344  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0177.png'
+F 177
+13:10.250  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0178.png'
+F 178
+13:15.391  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0179.png'
+F 179
+13:20.704  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0180.png'
+F 180
+13:25.813  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0181.png'
+F 181
+13:30.969  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0182.png'
+F 182
+13:36.141  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0183.png'
+F 183
+13:41.219  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0184.png'
+F 184
+13:46.344  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0185.png'
+F 185
+13:51.438  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0186.png'
+F 186
+13:56.454  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0187.png'
+F 187
+14:01.454  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0188.png'
+F 188
+14:06.391  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0189.png'
+F 189
+14:11.391  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0190.png'
+F 190
+14:16.313  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0191.png'
+F 191
+14:21.172  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0192.png'
+F 192
+14:25.969  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0193.png'
+F 193
+14:30.782  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0194.png'
+F 194
+14:35.704  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0195.png'
+F 195
+14:40.563  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0196.png'
+F 196
+14:45.500  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0197.png'
+F 197
+14:50.469  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0198.png'
+F 198
+14:55.344  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0199.png'
+F 199
+15:00.532  render           | Saved: 'C:\Users\tmd39\Documents\수명을파는시장\blender_hq\open_anim\f0200.png'
+F 200
+Blender 5.3.0 (hash 02f0899d78e3 built 2026-11-10 01:33:43)
+
+Blender quit

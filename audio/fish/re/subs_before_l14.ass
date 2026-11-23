@@ -1,0 +1,660 @@
+﻿[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Word,Jua,120,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,3.5,0,5,80,80,0,1
+Style: Shadow,Jua,120,&H1A000000,&H1A000000,&H1A000000,&H00000000,0,0,0,0,100,100,0,0,1,3.5,0,5,80,80,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.31,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}이 마을
+Dialogue: 1,0:00:00.00,0:00:00.31,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}이 마을
+Dialogue: 0,0:00:00.31,0:00:00.63,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}사람들
+Dialogue: 1,0:00:00.31,0:00:00.63,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}사람들
+Dialogue: 0,0:00:00.63,0:00:00.99,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}팔에는
+Dialogue: 1,0:00:00.63,0:00:00.99,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}팔에는
+Dialogue: 0,0:00:00.99,0:00:01.55,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}숫자가
+Dialogue: 1,0:00:00.99,0:00:01.55,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H0000E1FF&}숫자가
+Dialogue: 0,0:00:01.55,0:00:01.89,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}적혀
+Dialogue: 1,0:00:01.55,0:00:01.89,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}적혀
+Dialogue: 0,0:00:01.89,0:00:02.22,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}있어
+Dialogue: 1,0:00:01.89,0:00:02.22,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}있어
+Dialogue: 0,0:00:02.22,0:00:02.64,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}일 초에
+Dialogue: 1,0:00:02.22,0:00:02.64,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}일 초에
+Dialogue: 0,0:00:02.64,0:00:02.98,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하나씩
+Dialogue: 1,0:00:02.64,0:00:02.98,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하나씩
+Dialogue: 0,0:00:02.98,0:00:03.34,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}줄어드는
+Dialogue: 1,0:00:02.98,0:00:03.34,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}줄어드는
+Dialogue: 0,0:00:03.34,0:00:03.86,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}남은
+Dialogue: 1,0:00:03.34,0:00:03.86,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}남은
+Dialogue: 0,0:00:03.86,0:00:04.40,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}수명이야
+Dialogue: 1,0:00:03.86,0:00:04.40,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H002E2EFF&}수명이야
+Dialogue: 0,0:00:04.40,0:00:04.83,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}숫자가
+Dialogue: 1,0:00:04.40,0:00:04.83,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}숫자가
+Dialogue: 0,0:00:04.83,0:00:05.05,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}영이
+Dialogue: 1,0:00:04.83,0:00:05.05,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}영이
+Dialogue: 0,0:00:05.05,0:00:05.21,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}되는
+Dialogue: 1,0:00:05.05,0:00:05.21,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}되는
+Dialogue: 0,0:00:05.21,0:00:05.51,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}순간
+Dialogue: 1,0:00:05.21,0:00:05.51,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}순간
+Dialogue: 0,0:00:05.51,0:00:06.11,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그 사람은
+Dialogue: 1,0:00:05.51,0:00:06.11,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그 사람은
+Dialogue: 0,0:00:06.11,0:00:06.59,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}멈춰
+Dialogue: 1,0:00:06.11,0:00:06.59,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H002E2EFF&}멈춰
+Dialogue: 0,0:00:06.59,0:00:06.80,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그리고
+Dialogue: 1,0:00:06.59,0:00:06.80,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그리고
+Dialogue: 0,0:00:06.80,0:00:07.55,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}이 마을에선
+Dialogue: 1,0:00:06.80,0:00:07.55,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}이 마을에선
+Dialogue: 0,0:00:07.55,0:00:08.06,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그 숫자를
+Dialogue: 1,0:00:07.55,0:00:08.06,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그 숫자를
+Dialogue: 0,0:00:08.06,0:00:08.34,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}돈
+Dialogue: 1,0:00:08.06,0:00:08.34,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}돈
+Dialogue: 0,0:00:08.34,0:00:08.52,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}주고
+Dialogue: 1,0:00:08.34,0:00:08.52,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}주고
+Dialogue: 0,0:00:08.52,0:00:09.10,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}사고팔 수
+Dialogue: 1,0:00:08.52,0:00:09.10,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H0000E1FF&}사고팔 수
+Dialogue: 0,0:00:09.10,0:00:09.46,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}있어
+Dialogue: 1,0:00:09.10,0:00:09.46,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}있어
+Dialogue: 0,0:00:09.46,0:00:09.61,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}빵
+Dialogue: 1,0:00:09.46,0:00:09.61,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}빵
+Dialogue: 0,0:00:09.61,0:00:10.03,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하나에
+Dialogue: 1,0:00:09.61,0:00:10.03,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하나에
+Dialogue: 0,0:00:10.03,0:00:10.51,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}한 시간
+Dialogue: 1,0:00:10.03,0:00:10.51,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H0000E1FF&}한 시간
+Dialogue: 0,0:00:10.51,0:00:10.92,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}따뜻한
+Dialogue: 1,0:00:10.51,0:00:10.92,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}따뜻한
+Dialogue: 0,0:00:10.92,0:00:11.38,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}수프는
+Dialogue: 1,0:00:10.92,0:00:11.38,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}수프는
+Dialogue: 0,0:00:11.38,0:00:11.86,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}세 시간
+Dialogue: 1,0:00:11.38,0:00:11.86,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H0000E1FF&}세 시간
+Dialogue: 0,0:00:11.86,0:00:12.00,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}비
+Dialogue: 1,0:00:11.86,0:00:12.00,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}비
+Dialogue: 0,0:00:12.00,0:00:12.20,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}오는
+Dialogue: 1,0:00:12.00,0:00:12.20,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}오는
+Dialogue: 0,0:00:12.20,0:00:12.36,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}날
+Dialogue: 1,0:00:12.20,0:00:12.36,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}날
+Dialogue: 0,0:00:12.36,0:00:12.78,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}우산은
+Dialogue: 1,0:00:12.36,0:00:12.78,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}우산은
+Dialogue: 0,0:00:12.78,0:00:13.22,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}하루
+Dialogue: 1,0:00:12.78,0:00:13.22,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H0000E1FF&}하루
+Dialogue: 0,0:00:13.22,0:00:13.64,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}손목을
+Dialogue: 1,0:00:13.22,0:00:13.64,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}손목을
+Dialogue: 0,0:00:13.64,0:00:14.06,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}맞대면
+Dialogue: 1,0:00:13.64,0:00:14.06,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}맞대면
+Dialogue: 0,0:00:14.06,0:00:14.52,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}숫자가
+Dialogue: 1,0:00:14.06,0:00:14.52,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}숫자가
+Dialogue: 0,0:00:14.52,0:00:15.10,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}건너가
+Dialogue: 1,0:00:14.52,0:00:15.10,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H0000E1FF&}건너가
+Dialogue: 0,0:00:15.10,0:00:15.44,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}부자들
+Dialogue: 1,0:00:15.10,0:00:15.44,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}부자들
+Dialogue: 0,0:00:15.44,0:00:15.80,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}팔엔
+Dialogue: 1,0:00:15.44,0:00:15.80,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}팔엔
+Dialogue: 0,0:00:15.80,0:00:16.10,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}소매
+Dialogue: 1,0:00:15.80,0:00:16.10,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}소매
+Dialogue: 0,0:00:16.10,0:00:16.54,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}끝까지
+Dialogue: 1,0:00:16.10,0:00:16.54,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H0000E1FF&}끝까지
+Dialogue: 0,0:00:16.54,0:00:16.88,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}숫자가
+Dialogue: 1,0:00:16.54,0:00:16.88,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}숫자가
+Dialogue: 0,0:00:16.88,0:00:17.26,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}이어져
+Dialogue: 1,0:00:16.88,0:00:17.26,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}이어져
+Dialogue: 0,0:00:17.26,0:00:17.59,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}있고
+Dialogue: 1,0:00:17.26,0:00:17.59,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}있고
+Dialogue: 0,0:00:17.59,0:00:17.94,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}가난한
+Dialogue: 1,0:00:17.59,0:00:17.94,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}가난한
+Dialogue: 0,0:00:17.94,0:00:18.45,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}사람들은
+Dialogue: 1,0:00:17.94,0:00:18.45,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}사람들은
+Dialogue: 0,0:00:18.45,0:00:18.90,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}한 시간씩
+Dialogue: 1,0:00:18.45,0:00:18.90,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}한 시간씩
+Dialogue: 0,0:00:18.90,0:00:19.24,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}팔아서
+Dialogue: 1,0:00:18.90,0:00:19.24,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}팔아서
+Dialogue: 0,0:00:19.24,0:00:19.84,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}버티지
+Dialogue: 1,0:00:19.24,0:00:19.84,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}버티지
+Dialogue: 0,0:00:19.84,0:00:20.07,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그래서
+Dialogue: 1,0:00:19.84,0:00:20.07,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그래서
+Dialogue: 0,0:00:20.07,0:00:20.37,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}다들
+Dialogue: 1,0:00:20.07,0:00:20.37,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}다들
+Dialogue: 0,0:00:20.37,0:00:20.69,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}소매를
+Dialogue: 1,0:00:20.37,0:00:20.69,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}소매를
+Dialogue: 0,0:00:20.69,0:00:21.03,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}내리고
+Dialogue: 1,0:00:20.69,0:00:21.03,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}내리고
+Dialogue: 0,0:00:21.03,0:00:21.43,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}다녀
+Dialogue: 1,0:00:21.03,0:00:21.43,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}다녀
+Dialogue: 0,0:00:21.43,0:00:21.98,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}남의 숫자를
+Dialogue: 1,0:00:21.43,0:00:21.98,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}남의 숫자를
+Dialogue: 0,0:00:21.98,0:00:22.44,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}보는 건
+Dialogue: 1,0:00:21.98,0:00:22.44,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}보는 건
+Dialogue: 0,0:00:22.44,0:00:23.54,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}큰 실례거든
+Dialogue: 1,0:00:22.44,0:00:23.54,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H002E2EFF&}큰 실례거든
+Dialogue: 0,0:00:23.54,0:00:23.74,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}이건
+Dialogue: 1,0:00:23.54,0:00:23.74,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}이건
+Dialogue: 0,0:00:23.74,0:00:24.26,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루야
+Dialogue: 1,0:00:23.74,0:00:24.26,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루야
+Dialogue: 0,0:00:24.26,0:00:24.60,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루의
+Dialogue: 1,0:00:24.26,0:00:24.60,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루의
+Dialogue: 0,0:00:24.60,0:00:25.00,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}팔엔
+Dialogue: 1,0:00:24.60,0:00:25.00,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}팔엔
+Dialogue: 0,0:00:25.00,0:00:25.47,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}이십사
+Dialogue: 1,0:00:25.00,0:00:25.47,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H0000E1FF&}이십사
+Dialogue: 0,0:00:25.47,0:00:25.80,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}시간이
+Dialogue: 1,0:00:25.47,0:00:25.80,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}시간이
+Dialogue: 0,0:00:25.80,0:00:26.08,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}적혀
+Dialogue: 1,0:00:25.80,0:00:26.08,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}적혀
+Dialogue: 0,0:00:26.08,0:00:26.46,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}있어
+Dialogue: 1,0:00:26.08,0:00:26.46,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}있어
+Dialogue: 0,0:00:26.46,0:00:27.03,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}딱 하루
+Dialogue: 1,0:00:26.46,0:00:27.03,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H0000E1FF&}딱 하루
+Dialogue: 0,0:00:27.03,0:00:27.70,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}이상한 건
+Dialogue: 1,0:00:27.03,0:00:27.70,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}이상한 건
+Dialogue: 0,0:00:27.70,0:00:28.12,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}자정만
+Dialogue: 1,0:00:27.70,0:00:28.12,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}자정만
+Dialogue: 0,0:00:28.12,0:00:28.48,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}지나면
+Dialogue: 1,0:00:28.12,0:00:28.48,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}지나면
+Dialogue: 0,0:00:28.48,0:00:28.82,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}숫자가
+Dialogue: 1,0:00:28.48,0:00:28.82,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}숫자가
+Dialogue: 0,0:00:28.82,0:00:29.19,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}다시
+Dialogue: 1,0:00:28.82,0:00:29.19,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}다시
+Dialogue: 0,0:00:29.19,0:00:29.40,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}이십사
+Dialogue: 1,0:00:29.19,0:00:29.40,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}이십사
+Dialogue: 0,0:00:29.40,0:00:29.96,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}시간으로
+Dialogue: 1,0:00:29.40,0:00:29.96,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}시간으로
+Dialogue: 0,0:00:29.96,0:00:30.42,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}돌아온다는
+Dialogue: 1,0:00:29.96,0:00:30.42,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H0000E1FF&}돌아온다는
+Dialogue: 0,0:00:30.42,0:00:30.82,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}거야
+Dialogue: 1,0:00:30.42,0:00:30.82,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}거야
+Dialogue: 0,0:00:30.82,0:00:31.24,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}태어나서
+Dialogue: 1,0:00:30.82,0:00:31.24,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}태어나서
+Dialogue: 0,0:00:31.24,0:00:31.66,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}지금까지
+Dialogue: 1,0:00:31.24,0:00:31.66,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}지금까지
+Dialogue: 0,0:00:31.66,0:00:32.64,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}매일 밤
+Dialogue: 1,0:00:31.66,0:00:32.64,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}매일 밤
+Dialogue: 0,0:00:32.64,0:00:33.00,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루는
+Dialogue: 1,0:00:32.64,0:00:33.00,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루는
+Dialogue: 0,0:00:33.00,0:00:33.20,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그게
+Dialogue: 1,0:00:33.00,0:00:33.20,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그게
+Dialogue: 0,0:00:33.20,0:00:33.52,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}원래
+Dialogue: 1,0:00:33.20,0:00:33.52,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}원래
+Dialogue: 0,0:00:33.52,0:00:33.94,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그런 줄
+Dialogue: 1,0:00:33.52,0:00:33.94,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그런 줄
+Dialogue: 0,0:00:33.94,0:00:34.33,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}알았어
+Dialogue: 1,0:00:33.94,0:00:34.33,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}알았어
+Dialogue: 0,0:00:34.44,0:00:34.70,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그런데
+Dialogue: 1,0:00:34.44,0:00:34.70,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그런데
+Dialogue: 0,0:00:34.70,0:00:35.22,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그 소문이
+Dialogue: 1,0:00:34.70,0:00:35.22,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그 소문이
+Dialogue: 0,0:00:35.22,0:00:35.60,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}시장에
+Dialogue: 1,0:00:35.22,0:00:35.60,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}시장에
+Dialogue: 0,0:00:35.60,0:00:36.16,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}퍼졌어
+Dialogue: 1,0:00:35.60,0:00:36.16,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}퍼졌어
+Dialogue: 0,0:00:36.16,0:00:36.48,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}숫자가
+Dialogue: 1,0:00:36.16,0:00:36.48,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}숫자가
+Dialogue: 0,0:00:36.48,0:00:36.76,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}다시
+Dialogue: 1,0:00:36.48,0:00:36.76,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}다시
+Dialogue: 0,0:00:36.76,0:00:37.16,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}차오르는
+Dialogue: 1,0:00:36.76,0:00:37.16,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H0000E1FF&}차오르는
+Dialogue: 0,0:00:37.16,0:00:37.48,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}아이가
+Dialogue: 1,0:00:37.16,0:00:37.48,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}아이가
+Dialogue: 0,0:00:37.48,0:00:37.92,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}있다
+Dialogue: 1,0:00:37.48,0:00:37.92,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}있다
+Dialogue: 0,0:00:37.92,0:00:38.36,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}사람들은
+Dialogue: 1,0:00:37.92,0:00:38.36,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}사람들은
+Dialogue: 0,0:00:38.36,0:00:38.72,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루를
+Dialogue: 1,0:00:38.36,0:00:38.72,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루를
+Dialogue: 0,0:00:38.72,0:00:38.90,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}보면
+Dialogue: 1,0:00:38.72,0:00:38.90,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}보면
+Dialogue: 0,0:00:38.90,0:00:39.58,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}손목부터
+Dialogue: 1,0:00:38.90,0:00:39.58,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}손목부터
+Dialogue: 0,0:00:39.58,0:00:40.23,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}쳐다봤지
+Dialogue: 1,0:00:39.58,0:00:40.23,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}쳐다봤지
+Dialogue: 0,0:00:40.23,0:00:40.66,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}시장에서
+Dialogue: 1,0:00:40.23,0:00:40.66,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}시장에서
+Dialogue: 0,0:00:40.66,0:00:40.88,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}제일
+Dialogue: 1,0:00:40.66,0:00:40.88,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}제일
+Dialogue: 0,0:00:40.88,0:00:41.40,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}큰 부자가
+Dialogue: 1,0:00:40.88,0:00:41.40,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}큰 부자가
+Dialogue: 0,0:00:41.40,0:00:42.11,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}찾아왔어
+Dialogue: 1,0:00:41.40,0:00:42.11,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}찾아왔어
+Dialogue: 0,0:00:42.11,0:00:42.66,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}네 시간을
+Dialogue: 1,0:00:42.11,0:00:42.66,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}네 시간을
+Dialogue: 0,0:00:42.66,0:00:43.00,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}전부
+Dialogue: 1,0:00:42.66,0:00:43.00,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H002E2EFF&}전부
+Dialogue: 0,0:00:43.00,0:00:43.51,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}사겠다
+Dialogue: 1,0:00:43.00,0:00:43.51,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}사겠다
+Dialogue: 0,0:00:43.51,0:00:44.02,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}대신
+Dialogue: 1,0:00:43.51,0:00:44.02,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}대신
+Dialogue: 0,0:00:44.02,0:00:44.41,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}백 년을
+Dialogue: 1,0:00:44.02,0:00:44.41,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H0000E1FF&}백 년을
+Dialogue: 0,0:00:44.41,0:00:44.78,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}주지
+Dialogue: 1,0:00:44.41,0:00:44.78,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}주지
+Dialogue: 0,0:00:44.78,0:00:45.15,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루는
+Dialogue: 1,0:00:44.78,0:00:45.15,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루는
+Dialogue: 0,0:00:45.15,0:00:45.82,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}이상했어
+Dialogue: 1,0:00:45.15,0:00:45.82,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}이상했어
+Dialogue: 0,0:00:45.82,0:00:46.28,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}왜 겨우
+Dialogue: 1,0:00:45.82,0:00:46.28,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}왜 겨우
+Dialogue: 0,0:00:46.28,0:00:46.84,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루를
+Dialogue: 1,0:00:46.28,0:00:46.84,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루를
+Dialogue: 0,0:00:46.84,0:00:47.30,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}백 년이나
+Dialogue: 1,0:00:46.84,0:00:47.30,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}백 년이나
+Dialogue: 0,0:00:47.30,0:00:47.42,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}주고
+Dialogue: 1,0:00:47.30,0:00:47.42,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}주고
+Dialogue: 0,0:00:47.42,0:00:47.80,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}사려는
+Dialogue: 1,0:00:47.42,0:00:47.80,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}사려는
+Dialogue: 0,0:00:47.80,0:00:48.22,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}걸까
+Dialogue: 1,0:00:47.80,0:00:48.22,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}걸까
+Dialogue: 0,0:00:48.22,0:00:48.47,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}부자가
+Dialogue: 1,0:00:48.22,0:00:48.47,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}부자가
+Dialogue: 0,0:00:48.47,0:00:48.91,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}웃으며
+Dialogue: 1,0:00:48.47,0:00:48.91,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}웃으며
+Dialogue: 0,0:00:48.91,0:00:49.47,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}말했어
+Dialogue: 1,0:00:48.91,0:00:49.47,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}말했어
+Dialogue: 0,0:00:49.47,0:00:49.85,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}매일 밤
+Dialogue: 1,0:00:49.47,0:00:49.85,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}매일 밤
+Dialogue: 0,0:00:49.85,0:00:50.41,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}누군가
+Dialogue: 1,0:00:49.85,0:00:50.41,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}누군가
+Dialogue: 0,0:00:50.41,0:00:50.75,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}너한테
+Dialogue: 1,0:00:50.41,0:00:50.75,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}너한테
+Dialogue: 0,0:00:50.75,0:00:51.17,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}시간을
+Dialogue: 1,0:00:50.75,0:00:51.17,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H0000E1FF&}시간을
+Dialogue: 0,0:00:51.17,0:00:51.33,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}넣고
+Dialogue: 1,0:00:51.17,0:00:51.33,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}넣고
+Dialogue: 0,0:00:51.33,0:00:51.83,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}있다
+Dialogue: 1,0:00:51.33,0:00:51.83,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}있다
+Dialogue: 0,0:00:51.83,0:00:52.25,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그 사람만
+Dialogue: 1,0:00:51.83,0:00:52.25,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그 사람만
+Dialogue: 0,0:00:52.25,0:00:52.69,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}찾으면
+Dialogue: 1,0:00:52.25,0:00:52.69,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}찾으면
+Dialogue: 0,0:00:52.69,0:00:53.27,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}이 마을의
+Dialogue: 1,0:00:52.69,0:00:53.27,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}이 마을의
+Dialogue: 0,0:00:53.27,0:00:53.63,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}시간을
+Dialogue: 1,0:00:53.27,0:00:53.63,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}시간을
+Dialogue: 0,0:00:53.63,0:00:53.99,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}전부
+Dialogue: 1,0:00:53.63,0:00:53.99,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H002E2EFF&}전부
+Dialogue: 0,0:00:53.99,0:00:54.39,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}가질 수
+Dialogue: 1,0:00:53.99,0:00:54.39,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}가질 수
+Dialogue: 0,0:00:54.39,0:00:54.76,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}있다고
+Dialogue: 1,0:00:54.39,0:00:54.76,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}있다고
+Dialogue: 0,0:00:54.88,0:00:55.29,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그날 밤
+Dialogue: 1,0:00:54.88,0:00:55.29,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그날 밤
+Dialogue: 0,0:00:55.29,0:00:55.79,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루는
+Dialogue: 1,0:00:55.29,0:00:55.79,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루는
+Dialogue: 0,0:00:55.79,0:00:56.09,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}자는
+Dialogue: 1,0:00:55.79,0:00:56.09,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}자는
+Dialogue: 0,0:00:56.09,0:00:56.47,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}척하며
+Dialogue: 1,0:00:56.09,0:00:56.47,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}척하며
+Dialogue: 0,0:00:56.47,0:00:57.14,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}기다렸어
+Dialogue: 1,0:00:56.47,0:00:57.14,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}기다렸어
+Dialogue: 0,0:00:57.14,0:00:57.65,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}시계탑이
+Dialogue: 1,0:00:57.14,0:00:57.65,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}시계탑이
+Dialogue: 0,0:00:57.65,0:00:58.06,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}열두 번
+Dialogue: 1,0:00:57.65,0:00:58.06,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H0000E1FF&}열두 번
+Dialogue: 0,0:00:58.06,0:00:58.50,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}울렸어
+Dialogue: 1,0:00:58.06,0:00:58.50,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}울렸어
+Dialogue: 0,0:00:58.50,0:00:58.75,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}문이
+Dialogue: 1,0:00:58.50,0:00:58.75,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}문이
+Dialogue: 0,0:00:58.75,0:00:58.95,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}아주
+Dialogue: 1,0:00:58.75,0:00:58.95,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}아주
+Dialogue: 0,0:00:58.95,0:00:59.35,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}조용히
+Dialogue: 1,0:00:58.95,0:00:59.35,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}조용히
+Dialogue: 0,0:00:59.35,0:00:59.85,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}열리고
+Dialogue: 1,0:00:59.35,0:00:59.85,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}열리고
+Dialogue: 0,0:00:59.85,0:01:00.24,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}차가운
+Dialogue: 1,0:00:59.85,0:01:00.24,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}차가운
+Dialogue: 0,0:01:00.24,0:01:00.38,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}손
+Dialogue: 1,0:01:00.24,0:01:00.38,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}손
+Dialogue: 0,0:01:00.38,0:01:00.78,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하나가
+Dialogue: 1,0:01:00.38,0:01:00.78,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하나가
+Dialogue: 0,0:01:00.78,0:01:01.24,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루의
+Dialogue: 1,0:01:00.78,0:01:01.24,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루의
+Dialogue: 0,0:01:01.24,0:01:01.64,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}손목에
+Dialogue: 1,0:01:01.24,0:01:01.64,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H0000E1FF&}손목에
+Dialogue: 0,0:01:01.64,0:01:02.13,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}닿았어
+Dialogue: 1,0:01:01.64,0:01:02.13,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}닿았어
+Dialogue: 0,0:01:02.13,0:01:02.35,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}팔이
+Dialogue: 1,0:01:02.13,0:01:02.35,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}팔이
+Dialogue: 0,0:01:02.35,0:01:03.23,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}따뜻해지면서
+Dialogue: 1,0:01:02.35,0:01:03.23,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}따뜻해지면서
+Dialogue: 0,0:01:03.23,0:01:03.55,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}숫자가
+Dialogue: 1,0:01:03.23,0:01:03.55,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}숫자가
+Dialogue: 0,0:01:03.55,0:01:03.83,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}다시
+Dialogue: 1,0:01:03.55,0:01:03.83,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}다시
+Dialogue: 0,0:01:03.83,0:01:04.31,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}올라가기
+Dialogue: 1,0:01:03.83,0:01:04.31,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H0000E1FF&}올라가기
+Dialogue: 0,0:01:04.31,0:01:04.94,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}시작했어
+Dialogue: 1,0:01:04.31,0:01:04.94,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}시작했어
+Dialogue: 0,0:01:04.94,0:01:05.29,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루는
+Dialogue: 1,0:01:04.94,0:01:05.29,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루는
+Dialogue: 0,0:01:05.29,0:01:05.55,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}눈을
+Dialogue: 1,0:01:05.29,0:01:05.55,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}눈을
+Dialogue: 0,0:01:05.55,0:01:06.02,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}떴어
+Dialogue: 1,0:01:05.55,0:01:06.02,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}떴어
+Dialogue: 0,0:01:06.02,0:01:06.39,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}거기엔
+Dialogue: 1,0:01:06.02,0:01:06.39,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}거기엔
+Dialogue: 0,0:01:06.39,0:01:06.63,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}시계
+Dialogue: 1,0:01:06.39,0:01:06.63,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}시계
+Dialogue: 0,0:01:06.63,0:01:06.99,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}수리점
+Dialogue: 1,0:01:06.63,0:01:06.99,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}수리점
+Dialogue: 0,0:01:06.99,0:01:07.43,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}할머니가
+Dialogue: 1,0:01:06.99,0:01:07.43,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H0000E1FF&}할머니가
+Dialogue: 0,0:01:07.43,0:01:07.91,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}있었어
+Dialogue: 1,0:01:07.43,0:01:07.91,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}있었어
+Dialogue: 0,0:01:07.91,0:01:08.34,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}매일 아침
+Dialogue: 1,0:01:07.91,0:01:08.34,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}매일 아침
+Dialogue: 0,0:01:08.34,0:01:08.86,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루한테
+Dialogue: 1,0:01:08.34,0:01:08.86,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루한테
+Dialogue: 0,0:01:08.86,0:01:09.34,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}사탕을
+Dialogue: 1,0:01:08.86,0:01:09.34,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}사탕을
+Dialogue: 0,0:01:09.34,0:01:09.53,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}쥐여
+Dialogue: 1,0:01:09.34,0:01:09.53,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}쥐여
+Dialogue: 0,0:01:09.53,0:01:09.78,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}주던
+Dialogue: 1,0:01:09.53,0:01:09.78,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}주던
+Dialogue: 0,0:01:09.78,0:01:10.49,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그 할머니
+Dialogue: 1,0:01:09.78,0:01:10.49,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그 할머니
+Dialogue: 0,0:01:10.49,0:01:10.94,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}할머니는
+Dialogue: 1,0:01:10.49,0:01:10.94,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}할머니는
+Dialogue: 0,0:01:10.94,0:01:11.28,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}깜짝
+Dialogue: 1,0:01:10.94,0:01:11.28,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}깜짝
+Dialogue: 0,0:01:11.28,0:01:11.64,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}놀라서
+Dialogue: 1,0:01:11.28,0:01:11.64,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}놀라서
+Dialogue: 0,0:01:11.64,0:01:11.94,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}소매를
+Dialogue: 1,0:01:11.64,0:01:11.94,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}소매를
+Dialogue: 0,0:01:11.94,0:01:12.53,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}내렸어
+Dialogue: 1,0:01:11.94,0:01:12.53,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}내렸어
+Dialogue: 0,0:01:12.53,0:01:12.79,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하지만
+Dialogue: 1,0:01:12.53,0:01:12.79,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하지만
+Dialogue: 0,0:01:12.79,0:01:13.19,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루는
+Dialogue: 1,0:01:12.79,0:01:13.19,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루는
+Dialogue: 0,0:01:13.19,0:01:13.37,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}이미
+Dialogue: 1,0:01:13.19,0:01:13.37,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}이미
+Dialogue: 0,0:01:13.37,0:01:13.91,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}봤어
+Dialogue: 1,0:01:13.37,0:01:13.91,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}봤어
+Dialogue: 0,0:01:13.91,0:01:14.23,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}할머니
+Dialogue: 1,0:01:13.91,0:01:14.23,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}할머니
+Dialogue: 0,0:01:14.23,0:01:14.53,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}팔에
+Dialogue: 1,0:01:14.23,0:01:14.53,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}팔에
+Dialogue: 0,0:01:14.53,0:01:14.77,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}남은
+Dialogue: 1,0:01:14.53,0:01:14.77,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}남은
+Dialogue: 0,0:01:14.77,0:01:15.23,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}숫자
+Dialogue: 1,0:01:14.77,0:01:15.23,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}숫자
+Dialogue: 0,0:01:15.23,0:01:15.68,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}오 분
+Dialogue: 1,0:01:15.23,0:01:15.68,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H002E2EFF&}오 분
+Dialogue: 0,0:01:15.68,0:01:16.13,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}할머니는
+Dialogue: 1,0:01:15.68,0:01:16.13,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}할머니는
+Dialogue: 0,0:01:16.13,0:01:16.71,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}웃었어
+Dialogue: 1,0:01:16.13,0:01:16.71,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}웃었어
+Dialogue: 0,0:01:16.71,0:01:17.38,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}들켰네
+Dialogue: 1,0:01:16.71,0:01:17.38,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H002E2EFF&}들켰네
+Dialogue: 0,0:01:17.38,0:01:17.72,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루가
+Dialogue: 1,0:01:17.38,0:01:17.72,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루가
+Dialogue: 0,0:01:17.72,0:01:18.18,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}태어나던
+Dialogue: 1,0:01:17.72,0:01:18.18,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}태어나던
+Dialogue: 0,0:01:18.18,0:01:18.48,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}날
+Dialogue: 1,0:01:18.18,0:01:18.48,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}날
+Dialogue: 0,0:01:18.48,0:01:18.69,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루
+Dialogue: 1,0:01:18.48,0:01:18.69,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루
+Dialogue: 0,0:01:18.69,0:01:18.99,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}팔엔
+Dialogue: 1,0:01:18.69,0:01:18.99,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}팔엔
+Dialogue: 0,0:01:18.99,0:01:19.35,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}숫자가
+Dialogue: 1,0:01:18.99,0:01:19.35,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}숫자가
+Dialogue: 0,0:01:19.35,0:01:19.75,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하나도
+Dialogue: 1,0:01:19.35,0:01:19.75,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하나도
+Dialogue: 0,0:01:19.75,0:01:20.38,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}없었대
+Dialogue: 1,0:01:19.75,0:01:20.38,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}없었대
+Dialogue: 0,0:01:20.38,0:01:20.69,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}영
+Dialogue: 1,0:01:20.38,0:01:20.69,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H002E2EFF&}영
+Dialogue: 0,0:01:20.69,0:01:21.29,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}태어나자마자
+Dialogue: 1,0:01:20.69,0:01:21.29,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}태어나자마자
+Dialogue: 0,0:01:21.29,0:01:21.61,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}멈출
+Dialogue: 1,0:01:21.29,0:01:21.61,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H002E2EFF&}멈출
+Dialogue: 0,0:01:21.61,0:01:22.09,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}아이였던
+Dialogue: 1,0:01:21.61,0:01:22.09,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}아이였던
+Dialogue: 0,0:01:22.09,0:01:22.41,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}거야
+Dialogue: 1,0:01:22.09,0:01:22.41,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}거야
+Dialogue: 0,0:01:22.41,0:01:23.10,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그날 할머니가
+Dialogue: 1,0:01:22.41,0:01:23.10,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그날 할머니가
+Dialogue: 0,0:01:23.10,0:01:23.42,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루의
+Dialogue: 1,0:01:23.10,0:01:23.42,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루의
+Dialogue: 0,0:01:23.42,0:01:23.80,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}손목을
+Dialogue: 1,0:01:23.42,0:01:23.80,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}손목을
+Dialogue: 0,0:01:23.80,0:01:24.27,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}잡고
+Dialogue: 1,0:01:23.80,0:01:24.27,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}잡고
+Dialogue: 0,0:01:24.27,0:01:24.63,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루치를
+Dialogue: 1,0:01:24.27,0:01:24.63,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루치를
+Dialogue: 0,0:01:24.63,0:01:25.32,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}넘겼어
+Dialogue: 1,0:01:24.63,0:01:25.32,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}넘겼어
+Dialogue: 0,0:01:25.32,0:01:25.74,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그 다음
+Dialogue: 1,0:01:25.32,0:01:25.74,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그 다음
+Dialogue: 0,0:01:25.74,0:01:26.11,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}날도
+Dialogue: 1,0:01:25.74,0:01:26.11,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}날도
+Dialogue: 0,0:01:26.11,0:01:26.57,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그 다음
+Dialogue: 1,0:01:26.11,0:01:26.57,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그 다음
+Dialogue: 0,0:01:26.57,0:01:26.94,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}날도
+Dialogue: 1,0:01:26.57,0:01:26.94,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}날도
+Dialogue: 0,0:01:26.94,0:01:27.35,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}십이 년
+Dialogue: 1,0:01:26.94,0:01:27.35,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H0000E1FF&}십이 년
+Dialogue: 0,0:01:27.35,0:01:27.63,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}동안
+Dialogue: 1,0:01:27.35,0:01:27.63,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}동안
+Dialogue: 0,0:01:27.63,0:01:28.49,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}매일 밤
+Dialogue: 1,0:01:27.63,0:01:28.49,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}매일 밤
+Dialogue: 0,0:01:28.49,0:01:28.83,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}할머니
+Dialogue: 1,0:01:28.49,0:01:28.83,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}할머니
+Dialogue: 0,0:01:28.83,0:01:29.13,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}팔의
+Dialogue: 1,0:01:28.83,0:01:29.13,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}팔의
+Dialogue: 0,0:01:29.13,0:01:29.71,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}긴 숫자는
+Dialogue: 1,0:01:29.13,0:01:29.71,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}긴 숫자는
+Dialogue: 0,0:01:29.71,0:01:30.25,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그렇게
+Dialogue: 1,0:01:29.71,0:01:30.25,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그렇게
+Dialogue: 0,0:01:30.25,0:01:30.71,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루한테
+Dialogue: 1,0:01:30.25,0:01:30.71,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루한테
+Dialogue: 0,0:01:30.71,0:01:31.17,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}건너온
+Dialogue: 1,0:01:30.71,0:01:31.17,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}건너온
+Dialogue: 0,0:01:31.17,0:01:31.46,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}거야
+Dialogue: 1,0:01:31.17,0:01:31.46,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}거야
+Dialogue: 0,0:01:31.46,0:01:31.80,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루는
+Dialogue: 1,0:01:31.46,0:01:31.80,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루는
+Dialogue: 0,0:01:31.80,0:01:32.12,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}할머니
+Dialogue: 1,0:01:31.80,0:01:32.12,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}할머니
+Dialogue: 0,0:01:32.12,0:01:32.56,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}손목을
+Dialogue: 1,0:01:32.12,0:01:32.56,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}손목을
+Dialogue: 0,0:01:32.56,0:01:33.21,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}붙잡았어
+Dialogue: 1,0:01:32.56,0:01:33.21,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}붙잡았어
+Dialogue: 0,0:01:33.21,0:01:33.43,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}자기
+Dialogue: 1,0:01:33.21,0:01:33.43,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}자기
+Dialogue: 0,0:01:33.43,0:01:33.77,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}숫자를
+Dialogue: 1,0:01:33.43,0:01:33.77,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}숫자를
+Dialogue: 0,0:01:33.77,0:01:34.17,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}전부
+Dialogue: 1,0:01:33.77,0:01:34.17,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}전부
+Dialogue: 0,0:01:34.17,0:01:34.91,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}돌려주려고
+Dialogue: 1,0:01:34.17,0:01:34.91,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}돌려주려고
+Dialogue: 0,0:01:34.91,0:01:35.33,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}할머니가
+Dialogue: 1,0:01:34.91,0:01:35.33,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}할머니가
+Dialogue: 0,0:01:35.33,0:01:35.67,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}손을
+Dialogue: 1,0:01:35.33,0:01:35.67,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}손을
+Dialogue: 0,0:01:35.67,0:01:36.06,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}뺐어
+Dialogue: 1,0:01:35.67,0:01:36.06,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}뺐어
+Dialogue: 0,0:01:36.06,0:01:36.26,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그럼
+Dialogue: 1,0:01:36.06,0:01:36.26,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그럼
+Dialogue: 0,0:01:36.26,0:01:36.48,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}네가
+Dialogue: 1,0:01:36.26,0:01:36.48,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}네가
+Dialogue: 0,0:01:36.48,0:01:37.27,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}멈추잖니
+Dialogue: 1,0:01:36.48,0:01:37.27,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H002E2EFF&}멈추잖니
+Dialogue: 0,0:01:37.27,0:01:37.61,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}둘 중
+Dialogue: 1,0:01:37.27,0:01:37.61,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}둘 중
+Dialogue: 0,0:01:37.61,0:01:37.97,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하나는
+Dialogue: 1,0:01:37.61,0:01:37.97,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하나는
+Dialogue: 0,0:01:37.97,0:01:38.53,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}멈춰야
+Dialogue: 1,0:01:37.97,0:01:38.53,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H002E2EFF&}멈춰야
+Dialogue: 0,0:01:38.53,0:01:38.90,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}했어
+Dialogue: 1,0:01:38.53,0:01:38.90,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}했어
+Dialogue: 0,0:01:38.90,0:01:39.86,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그때 문밖이
+Dialogue: 1,0:01:38.90,0:01:39.86,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그때 문밖이
+Dialogue: 0,0:01:39.86,0:01:40.69,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}시끄러워졌어
+Dialogue: 1,0:01:39.86,0:01:40.69,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}시끄러워졌어
+Dialogue: 0,0:01:40.69,0:01:41.29,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}몰래 따라온
+Dialogue: 1,0:01:40.69,0:01:41.29,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}몰래 따라온
+Dialogue: 0,0:01:41.29,0:01:41.57,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}부자가
+Dialogue: 1,0:01:41.29,0:01:41.57,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}부자가
+Dialogue: 0,0:01:41.57,0:01:41.97,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}소리친
+Dialogue: 1,0:01:41.57,0:01:41.97,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}소리친
+Dialogue: 0,0:01:41.97,0:01:42.34,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}거야
+Dialogue: 1,0:01:41.97,0:01:42.34,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}거야
+Dialogue: 0,0:01:42.34,0:01:42.58,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}마을
+Dialogue: 1,0:01:42.34,0:01:42.58,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}마을
+Dialogue: 0,0:01:42.58,0:01:42.90,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}사람들이
+Dialogue: 1,0:01:42.58,0:01:42.90,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}사람들이
+Dialogue: 0,0:01:42.90,0:01:43.32,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하나둘
+Dialogue: 1,0:01:42.90,0:01:43.32,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하나둘
+Dialogue: 0,0:01:43.32,0:01:43.88,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}모였어
+Dialogue: 1,0:01:43.32,0:01:43.88,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}모였어
+Dialogue: 0,0:01:43.88,0:01:44.34,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}사람들은
+Dialogue: 1,0:01:43.88,0:01:44.34,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}사람들은
+Dialogue: 0,0:01:44.34,0:01:44.70,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}할머니
+Dialogue: 1,0:01:44.34,0:01:44.70,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}할머니
+Dialogue: 0,0:01:44.70,0:01:45.00,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}팔을
+Dialogue: 1,0:01:44.70,0:01:45.00,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}팔을
+Dialogue: 0,0:01:45.00,0:01:45.18,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}보고
+Dialogue: 1,0:01:45.00,0:01:45.18,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}보고
+Dialogue: 0,0:01:45.18,0:01:45.82,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루의
+Dialogue: 1,0:01:45.18,0:01:45.82,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루의
+Dialogue: 0,0:01:45.82,0:01:46.08,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}팔을
+Dialogue: 1,0:01:45.82,0:01:46.08,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}팔을
+Dialogue: 0,0:01:46.08,0:01:46.54,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}봤어
+Dialogue: 1,0:01:46.08,0:01:46.54,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}봤어
+Dialogue: 0,0:01:46.54,0:01:46.84,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}아무도
+Dialogue: 1,0:01:46.54,0:01:46.84,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}아무도
+Dialogue: 0,0:01:46.84,0:01:47.00,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}말이
+Dialogue: 1,0:01:46.84,0:01:47.00,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}말이
+Dialogue: 0,0:01:47.00,0:01:47.61,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}없었어
+Dialogue: 1,0:01:47.00,0:01:47.61,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}없었어
+Dialogue: 0,0:01:47.61,0:01:47.88,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그런데
+Dialogue: 1,0:01:47.61,0:01:47.88,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그런데
+Dialogue: 0,0:01:47.88,0:01:48.24,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}빵집
+Dialogue: 1,0:01:47.88,0:01:48.24,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}빵집
+Dialogue: 0,0:01:48.24,0:01:48.68,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}아저씨가
+Dialogue: 1,0:01:48.24,0:01:48.68,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}아저씨가
+Dialogue: 0,0:01:48.68,0:01:48.88,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}먼저
+Dialogue: 1,0:01:48.68,0:01:48.88,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}먼저
+Dialogue: 0,0:01:48.88,0:01:49.36,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}소매를
+Dialogue: 1,0:01:48.88,0:01:49.36,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H0000E1FF&}소매를
+Dialogue: 0,0:01:49.36,0:01:49.86,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}걷었어
+Dialogue: 1,0:01:49.36,0:01:49.86,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}걷었어
+Dialogue: 0,0:01:49.86,0:01:50.17,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}할머니
+Dialogue: 1,0:01:49.86,0:01:50.17,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}할머니
+Dialogue: 0,0:01:50.17,0:01:50.65,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}손목에
+Dialogue: 1,0:01:50.17,0:01:50.65,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}손목에
+Dialogue: 0,0:01:50.65,0:01:50.97,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}자기
+Dialogue: 1,0:01:50.65,0:01:50.97,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}자기
+Dialogue: 0,0:01:50.97,0:01:51.41,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}손목을
+Dialogue: 1,0:01:50.97,0:01:51.41,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}손목을
+Dialogue: 0,0:01:51.41,0:01:51.83,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}댔어
+Dialogue: 1,0:01:51.41,0:01:51.83,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}댔어
+Dialogue: 0,0:01:51.83,0:01:52.31,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}일 분
+Dialogue: 1,0:01:51.83,0:01:52.31,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H0000E1FF&}일 분
+Dialogue: 0,0:01:52.31,0:01:52.61,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}꽃집
+Dialogue: 1,0:01:52.31,0:01:52.61,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}꽃집
+Dialogue: 0,0:01:52.61,0:01:53.10,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}누나도
+Dialogue: 1,0:01:52.61,0:01:53.10,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}누나도
+Dialogue: 0,0:01:53.10,0:01:53.58,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}일 분
+Dialogue: 1,0:01:53.10,0:01:53.58,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H0000E1FF&}일 분
+Dialogue: 0,0:01:53.58,0:01:53.62,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}우산
+Dialogue: 1,0:01:53.58,0:01:53.62,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}우산
+Dialogue: 0,0:01:53.62,0:01:54.46,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}장수도
+Dialogue: 1,0:01:53.62,0:01:54.46,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}장수도
+Dialogue: 0,0:01:54.46,0:01:54.71,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}수프
+Dialogue: 1,0:01:54.46,0:01:54.71,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}수프
+Dialogue: 0,0:01:54.71,0:01:55.01,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}가게
+Dialogue: 1,0:01:54.71,0:01:55.01,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}가게
+Dialogue: 0,0:01:55.01,0:01:55.59,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}아줌마도
+Dialogue: 1,0:01:55.01,0:01:55.59,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}아줌마도
+Dialogue: 0,0:01:55.59,0:01:56.18,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}일 분씩
+Dialogue: 1,0:01:55.59,0:01:56.18,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H0000E1FF&}일 분씩
+Dialogue: 0,0:01:56.18,0:01:56.46,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}줄은
+Dialogue: 1,0:01:56.18,0:01:56.46,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}줄은
+Dialogue: 0,0:01:56.46,0:01:56.72,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}시장
+Dialogue: 1,0:01:56.46,0:01:56.72,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}시장
+Dialogue: 0,0:01:56.72,0:01:57.16,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}끝까지
+Dialogue: 1,0:01:56.72,0:01:57.16,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H0000E1FF&}끝까지
+Dialogue: 0,0:01:57.16,0:01:57.79,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}이어졌어
+Dialogue: 1,0:01:57.16,0:01:57.79,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}이어졌어
+Dialogue: 0,0:01:57.79,0:01:58.35,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}마지막으로
+Dialogue: 1,0:01:57.79,0:01:58.35,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}마지막으로
+Dialogue: 0,0:01:58.35,0:01:58.89,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}그 부자가
+Dialogue: 1,0:01:58.35,0:01:58.89,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H0000E1FF&}그 부자가
+Dialogue: 0,0:01:58.89,0:01:59.37,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}소매를
+Dialogue: 1,0:01:58.89,0:01:59.37,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}소매를
+Dialogue: 0,0:01:59.37,0:01:59.86,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}걷었어
+Dialogue: 1,0:01:59.37,0:01:59.86,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}걷었어
+Dialogue: 0,0:01:59.86,0:02:00.33,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}할머니의
+Dialogue: 1,0:01:59.86,0:02:00.33,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}할머니의
+Dialogue: 0,0:02:00.33,0:02:00.67,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}숫자는
+Dialogue: 1,0:02:00.33,0:02:00.67,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}숫자는
+Dialogue: 0,0:02:00.67,0:02:01.13,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}이제
+Dialogue: 1,0:02:00.67,0:02:01.13,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}이제
+Dialogue: 0,0:02:01.13,0:02:01.43,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}소매
+Dialogue: 1,0:02:01.13,0:02:01.43,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}소매
+Dialogue: 0,0:02:01.43,0:02:01.89,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}끝까지
+Dialogue: 1,0:02:01.43,0:02:01.89,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H0000E1FF&}끝까지
+Dialogue: 0,0:02:01.89,0:02:02.25,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}이어져
+Dialogue: 1,0:02:01.89,0:02:02.25,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}이어져
+Dialogue: 0,0:02:02.25,0:02:02.62,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}있어
+Dialogue: 1,0:02:02.25,0:02:02.62,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}있어
+Dialogue: 0,0:02:02.62,0:02:03.10,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그날 이후
+Dialogue: 1,0:02:02.62,0:02:03.10,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그날 이후
+Dialogue: 0,0:02:03.10,0:02:03.60,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}이 마을
+Dialogue: 1,0:02:03.10,0:02:03.60,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}이 마을
+Dialogue: 0,0:02:03.60,0:02:03.94,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}시장엔
+Dialogue: 1,0:02:03.60,0:02:03.94,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}시장엔
+Dialogue: 0,0:02:03.94,0:02:04.38,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}규칙이
+Dialogue: 1,0:02:03.94,0:02:04.38,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}규칙이
+Dialogue: 0,0:02:04.38,0:02:04.50,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하나
+Dialogue: 1,0:02:04.38,0:02:04.50,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하나
+Dialogue: 0,0:02:04.50,0:02:05.09,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}생겼어
+Dialogue: 1,0:02:04.50,0:02:05.09,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}생겼어
+Dialogue: 0,0:02:05.09,0:02:05.45,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}시간은
+Dialogue: 1,0:02:05.09,0:02:05.45,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}시간은
+Dialogue: 0,0:02:05.45,0:02:05.79,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}팔 수
+Dialogue: 1,0:02:05.45,0:02:05.79,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}팔 수
+Dialogue: 0,0:02:05.79,0:02:06.20,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}있어
+Dialogue: 1,0:02:05.79,0:02:06.20,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}있어
+Dialogue: 0,0:02:06.20,0:02:06.50,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그런데
+Dialogue: 1,0:02:06.20,0:02:06.50,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그런데
+Dialogue: 0,0:02:06.50,0:02:07.02,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}나눌
+Dialogue: 1,0:02:06.50,0:02:07.02,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H0000E1FF&}나눌
+Dialogue: 0,0:02:07.02,0:02:07.16,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}수도
+Dialogue: 1,0:02:07.02,0:02:07.16,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}수도
+Dialogue: 0,0:02:07.16,0:02:07.63,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}있다
+Dialogue: 1,0:02:07.16,0:02:07.63,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}있다
+Dialogue: 0,0:02:07.63,0:02:07.95,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루의
+Dialogue: 1,0:02:07.63,0:02:07.95,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루의
+Dialogue: 0,0:02:07.95,0:02:08.25,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}숫자는
+Dialogue: 1,0:02:07.95,0:02:08.25,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}숫자는
+Dialogue: 0,0:02:08.25,0:02:08.73,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}여전히
+Dialogue: 1,0:02:08.25,0:02:08.73,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}여전히
+Dialogue: 0,0:02:08.73,0:02:09.19,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}매일 밤
+Dialogue: 1,0:02:08.73,0:02:09.19,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}매일 밤
+Dialogue: 0,0:02:09.19,0:02:09.51,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}다시
+Dialogue: 1,0:02:09.19,0:02:09.51,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}다시
+Dialogue: 0,0:02:09.51,0:02:10.04,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}차올라
+Dialogue: 1,0:02:09.51,0:02:10.04,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}차올라
+Dialogue: 0,0:02:10.04,0:02:10.25,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그리고
+Dialogue: 1,0:02:10.04,0:02:10.25,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}그리고
+Dialogue: 0,0:02:10.25,0:02:10.67,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}이제는
+Dialogue: 1,0:02:10.25,0:02:10.67,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}이제는
+Dialogue: 0,0:02:10.67,0:02:11.15,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루도
+Dialogue: 1,0:02:10.67,0:02:11.15,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}하루도
+Dialogue: 0,0:02:11.15,0:02:11.57,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}매일 밤
+Dialogue: 1,0:02:11.15,0:02:11.57,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}매일 밤
+Dialogue: 0,0:02:11.57,0:02:12.09,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}누군가의
+Dialogue: 1,0:02:11.57,0:02:12.09,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}누군가의
+Dialogue: 0,0:02:12.09,0:02:12.67,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}손목에
+Dialogue: 1,0:02:12.09,0:02:12.67,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}손목에
+Dialogue: 0,0:02:12.67,0:02:13.12,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}일 분을
+Dialogue: 1,0:02:12.67,0:02:13.12,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H0000E1FF&}일 분을
+Dialogue: 0,0:02:13.12,0:02:13.42,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}놓고
+Dialogue: 1,0:02:13.12,0:02:13.42,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}놓고
+Dialogue: 0,0:02:13.42,0:02:13.69,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}와
+Dialogue: 1,0:02:13.42,0:02:13.69,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}와

@@ -1,0 +1,332 @@
+[
+ {
+  "sound": "tap/knuckle",
+  "time": 0.249,
+  "db": -19
+ },
+ {
+  "sound": "hover_tick/mid",
+  "time": 1.249,
+  "db": -22
+ },
+ {
+  "sound": "tap/knuckle",
+  "time": 2.249,
+  "db": -19
+ },
+ {
+  "sound": "hover_tick/mid",
+  "time": 3.249,
+  "db": -22
+ },
+ {
+  "sound": "tap/knuckle",
+  "time": 4.249,
+  "db": -19
+ },
+ {
+  "sound": "hover_tick/mid",
+  "time": 5.249,
+  "db": -22
+ },
+ {
+  "sound": "tap/knuckle",
+  "time": 6.249,
+  "db": -19
+ },
+ {
+  "sound": "cut_hit/sub",
+  "time": 6.4,
+  "db": -13
+ },
+ {
+  "sound": "whoosh_big/gust",
+  "time": 6.29,
+  "db": -17
+ },
+ {
+  "sound": "mallet/marimba",
+  "time": 9.56,
+  "db": -18
+ },
+ {
+  "sound": "mallet/marimba",
+  "time": 10.61,
+  "db": -18
+ },
+ {
+  "sound": "mallet/marimba",
+  "time": 11.96,
+  "db": -18
+ },
+ {
+  "sound": "pro_shimmer/m1",
+  "time": 13.745,
+  "db": -16
+ },
+ {
+  "sound": "swish/soft",
+  "time": 14.99,
+  "db": -18
+ },
+ {
+  "sound": "pro_shimmer/m0",
+  "time": 18.273,
+  "db": -19
+ },
+ {
+  "sound": "ui_pop/fall",
+  "time": 22.426,
+  "db": -16
+ },
+ {
+  "sound": "mallet/celesta",
+  "time": 23.69,
+  "db": -15
+ },
+ {
+  "sound": "reverse_swell/dark",
+  "time": 26.57,
+  "db": -18
+ },
+ {
+  "sound": "mallet/up4",
+  "time": 29.96,
+  "db": -15
+ },
+ {
+  "sound": "notify/m3",
+  "time": 31.03,
+  "db": -19
+ },
+ {
+  "sound": "ui_pop/soft",
+  "time": 36.448,
+  "db": -18
+ },
+ {
+  "sound": "cut_hit/punch",
+  "time": 40.34,
+  "db": -15
+ },
+ {
+  "sound": "pro_shimmer/m2",
+  "time": 43.504,
+  "db": -17
+ },
+ {
+  "sound": "whoosh_big/deep",
+  "time": 52.362,
+  "db": -18
+ },
+ {
+  "sound": "notify/m3",
+  "time": 57.21,
+  "db": -13
+ },
+ {
+  "sound": "notify/m3",
+  "time": 57.66,
+  "db": -15
+ },
+ {
+  "sound": "notify/m3",
+  "time": 58.11,
+  "db": -16
+ },
+ {
+  "sound": "swipe/cloth",
+  "time": 58.534,
+  "db": -20
+ },
+ {
+  "sound": "tap/soft",
+  "time": 60.659,
+  "db": -17
+ },
+ {
+  "sound": "pro_shimmer/m4",
+  "time": 61.985,
+  "db": -15
+ },
+ {
+  "sound": "riser/swell",
+  "time": 60.743,
+  "db": -20
+ },
+ {
+  "sound": "cut_hit/air",
+  "time": 65.4,
+  "db": -16
+ },
+ {
+  "sound": "mallet/celesta",
+  "time": 68.319,
+  "db": -17
+ },
+ {
+  "sound": "swish/soft",
+  "time": 71.391,
+  "db": -16
+ },
+ {
+  "sound": "reverse_swell/dark",
+  "time": 72.471,
+  "db": -16
+ },
+ {
+  "sound": "cut_hit/sub",
+  "time": 75.34,
+  "db": -12
+ },
+ {
+  "sound": "shimmer/m4",
+  "time": 77.394,
+  "db": -19
+ },
+ {
+  "sound": "cut_hit/sub",
+  "time": 80.45,
+  "db": -14
+ },
+ {
+  "sound": "pro_shimmer/m1",
+  "time": 83.645,
+  "db": -16
+ },
+ {
+  "sound": "notify/m3",
+  "time": 85.41,
+  "db": -20
+ },
+ {
+  "sound": "notify/m3",
+  "time": 86.22,
+  "db": -21
+ },
+ {
+  "sound": "downlifter/air_fall",
+  "time": 88.885,
+  "db": -19
+ },
+ {
+  "sound": "tap/finger",
+  "time": 91.869,
+  "db": -16
+ },
+ {
+  "sound": "swish/soft",
+  "time": 95.21,
+  "db": -17
+ },
+ {
+  "sound": "downlifter/air_fall",
+  "time": 97.465,
+  "db": -17
+ },
+ {
+  "sound": "knock/wood",
+  "time": 99.048,
+  "db": -13
+ },
+ {
+  "sound": "knock/wood",
+  "time": 99.248,
+  "db": -14
+ },
+ {
+  "sound": "knock/wood",
+  "time": 99.448,
+  "db": -15
+ },
+ {
+  "sound": "cut_hit/punch",
+  "time": 100.89,
+  "db": -14
+ },
+ {
+  "sound": "whoosh_big/deep",
+  "time": 102.301,
+  "db": -20
+ },
+ {
+  "sound": "swish/soft",
+  "time": 108.111,
+  "db": -17
+ },
+ {
+  "sound": "pro_shimmer/m1",
+  "time": 110.595,
+  "db": -15
+ },
+ {
+  "sound": "mallet/glock",
+  "time": 111.94,
+  "db": -14
+ },
+ {
+  "sound": "pro_shimmer/m2",
+  "time": 112.354,
+  "db": -16
+ },
+ {
+  "sound": "mallet/glock",
+  "time": 113.21,
+  "db": -14
+ },
+ {
+  "sound": "pro_shimmer/m3",
+  "time": 113.89,
+  "db": -16
+ },
+ {
+  "sound": "mallet/up4",
+  "time": 115.7,
+  "db": -14
+ },
+ {
+  "sound": "whoosh_big/gust",
+  "time": 116.191,
+  "db": -18
+ },
+ {
+  "sound": "pro_shimmer/m2",
+  "time": 118.884,
+  "db": -14
+ },
+ {
+  "sound": "riser/swell",
+  "time": 118.272,
+  "db": -18
+ },
+ {
+  "sound": "mallet/up4",
+  "time": 121.08,
+  "db": -12
+ },
+ {
+  "sound": "notify/m2",
+  "time": 122.79,
+  "db": -20
+ },
+ {
+  "sound": "mallet/celesta",
+  "time": 126.69,
+  "db": -15
+ },
+ {
+  "sound": "mallet/up4",
+  "time": 129.02,
+  "db": -16
+ },
+ {
+  "sound": "pro_shimmer/m1",
+  "time": 131.785,
+  "db": -16
+ },
+ {
+  "sound": "notify/m0",
+  "time": 133.36,
+  "db": -18
+ }
+]
