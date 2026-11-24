@@ -18,6 +18,8 @@ import mesh as MS  # noqa: E402
 import pbr  # noqa: E402
 
 STUD = 0.33
+SHOULDER_Z = 1.75      # 어깨 회전축 (몸통 바닥에서, 스터드) — 로블록스 R6 와 같음
+ARM_TOP = 2.0 - SHOULDER_Z   # 팔 윗면을 몸통 윗면(어깨선)과 같은 높이로: 축 위 +0.25 스터드 (고정 규칙)
 
 
 def plastic(name, rgb, rough=0.38):
@@ -95,10 +97,11 @@ class Char:
             p = bpy.data.objects.new(f"{name}_sh{side}", None)
             col.objects.link(p)
             p.parent = self.hip
-            p.location = (side * 1.5 * s, 0, 1.75 * s)
+            p.location = (side * 1.5 * s, 0, SHOULDER_Z * s)
             mb = MS.MB()
-            mb.box("suit", (0, 0, -0.95 * s), (1 * s, 1 * s, 1.5 * s))
-            mb.box("skin", (0, 0, -1.875 * s), (0.98 * s, 0.98 * s, 0.35 * s))                 # 손
+            # 팔 윗면 = 몸통 윗면(어깨선) 높이에 고정: 어깨 축(1.75) 기준 +0.25 ~ -1.75 (길이 2 스터드, 끝 = 엉덩이선)
+            mb.box("suit", (0, 0, (ARM_TOP - 0.825) * s), (1 * s, 1 * s, 1.65 * s))       # 소매: 윗면 ARM_TOP ~ 손목
+            mb.box("skin", (0, 0, (ARM_TOP - 2.0 + 0.175) * s), (0.98 * s, 0.98 * s, 0.35 * s))   # 손
             a = mb.build(f"{name}_arm{side}", {"suit": m("suit"), "skin": m("skin")}, col, bevel=0.012)
             a.parent = p
             self.arms[side] = p
