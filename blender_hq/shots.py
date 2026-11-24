@@ -230,10 +230,10 @@ hp = head("Rich", x, z, yaw)
 shot((10, 10), cam=[(0, p, l, 34), (1.2, add(p, (0, 0.1, 0.6)), add(l, (0, 0, 0.3)), 30), (2.47, front_cam(hp, yaw, 5.5, -1.0, -25), hp, 40)],
      ease="smooth", fstop=2.6, zoom=[("Rich", -1, 1.55, 0.95)],
      actors={"Rich": {"x": x, "z": z, "yaw": yaw, "bare": True, "acts": [("arm", "L", 80, 0, -1, 0.1, 1.6), ("expr", [(0, "뿌듯")])], "num": {"text": RICH_TEXT, "size": 0.62}},
-             **crowd(["TownB", "TownD"], -5, -6, 9, 1, 160, "놀람")})
+             **crowd(["TownB", "TownD"], -8, -6, -4, 1, 160, "놀람")})   # TownD 가 줌아웃 길 앞을 가리지 않게 옆으로
 # 11  가난한 사람들은 한 시간씩 팔아서 버티지.  (시간 삽니다 노점, TownD 가 판다)
 x, z = 10.0, -30.0
-shot((11, 11), fstop=2.8, zoom=[("TownD", 0.3, 99)],
+shot((11, 11), fstop=2.8, zoom=[("TownD", 0.45, 99, 1.15, 0.3, "cut")],
      cam=[(0, (x - 3.2, 4.6, z + 5.0), (x + 0.2, 3.6, z), 40), (2.23, (x - 2.8, 4.2, z + 4.0), (x + 0.2, 3.6, z), 36)],
      actors={"TownD": {"x": x - 2.0, "z": z, "yaw": 90, "bare": True, "acts": [("arm", "L", 84, 0, 0.2, 0.35, None, 26), ("expr", [(0, "슬픔")])],
                        "num": num_keys([(0, 3 * 3600 + 120), (0.9, 3 * 3600 + 120), (1.6, 2 * 3600 + 120)], "smooth", glow=[(0.8, 1.6)])},
@@ -481,7 +481,7 @@ shot((60, 60), "night", fstop=2.2, cam=push(front_cam(g3, 0, 3.2, 0.1, -12), g3,
      actors=room2("울먹", "슬픔", gacts=[("tilt", -8, 0.2, 0.6)]))
 # 61  둘 중 하나는, 멈춰야 했어.  (넓게, 둥근 창과 달빛)
 shot((61, 61), "night", fstop=6.0,
-     cam=[(0, (468.0, 6.0, -9.0), (471.0, 4.5, 2.0), 40), (1.61, (467.0, 7.0, -12.0), (471.0, 4.5, 2.0), 44)],
+     cam=[(0, (468.0, 6.0, -9.0), (471.0, 4.5, 2.0), 40), (1.61, (467.6, 6.5, -10.4), (471.0, 4.5, 2.0), 46)],
      actors=room2("울먹", "슬픔", hacts=[("freeze", 0)], gacts=[("freeze", 0)]))
 # 62  그때, 문밖이 시끄러워졌어.
 shot((62, 62), "night", fstop=3.2,
@@ -521,7 +521,7 @@ for i, n in enumerate(village):
     sx_, sz_ = tx + 5 + (i % 3) * 2, tz + (12 if i % 2 else -12)
     t_arr = 0.2 + (i % 6) * 0.2
     gather[n] = {"path": [(0, sx_, sz_, -90), (t_arr, sx_, sz_, -90), (t_arr + 1.0, tx, tz, -90)], "face": "놀람", "y": STREET_Y}
-shot((64, 64), "night", fstop=8.0,
+shot((64, 64), "night", fstop=8.0, nodyn=True, nomin=True,   # 가로등·처마 코앞을 지나가지 않게 원래 높은 구도 그대로
      cam=[(0, (8.0, 14.0, -40.0), (-5.0, 3.0, -62.0), 50), (1.52, (7.0, 12.0, -44.0), (-5.0, 3.0, -62.0), 48)],
      actors={**gather, "Grandma": {**gS, "face": "당황"}, "Haru": {**hS, "face": "놀람"}, "Rich": {"x": -2.0, "z": SHOP[1] - 8.5, "yaw": -60, "face": "장난기"}})
 crowd_still = street_crowd(12)

@@ -1296,6 +1296,11 @@ def enforce_distance():
             if fails == 0:
                 break
         ang = best[0]
+        # 돌아간 각도가 어떤 프레임에서라도 안 되면 그 프레임만 원래 방향으로 튀므로(순간이동 깜빡임) 컷 전체를 원래 방향으로
+        nf = sum(solve(P, L, At, ang, rays=False, fov=fov) is None for t, P, L, fov, At in fr) if ang else 0
+        if nf:
+            print("MIXFIX", sh["lines"][0], ang, nf, len(fr), flush=True)
+            ang = 0
         sol = []
         for t, P, L, fov, At in fr:
             r = solve(P, L, At, ang, rays=False, fov=fov)
@@ -1518,6 +1523,8 @@ def zoom_cam(scene, sh, t, dg):
     w, who, wid, elev = 0.0, None, 1.15, 0.3
     for z in zs:
         a = 1.0 if z[1] <= 0 else _sm((t - z[1]) / R)
+        if len(z) > 5 and z[5] == "cut":          # 날아가지 않고 바로 확대 화면으로
+            a = 1.0 if t >= z[1] else 0.0
         b = 1.0 if z[2] >= sh["dur"] - 1e-3 else 1 - _sm((t - (z[2] - R)) / R)
         ww = min(a, b)
         if ww > w:
@@ -1588,6 +1595,28 @@ def zoom_cam(scene, sh, t, dg):
     pc = cam.matrix_world.translation.copy()
     qc = cam.matrix_world.to_quaternion()
     qz = Rz.to_quaternion()
+    if w < 1.0:
+        # 원래 카메라 -> 확대 자리로 날아가는 길이 벽·가판대에 막히면, 뚫고 지나가지 않게 반에서 바로 바꾼다(컷)
+        sd = pz - pc
+        L = sd.length
+        if L > 0.05:
+            sdn, o, gone, blocked = sd / L, pc.copy(), 0.0, False
+            for _ in range(12):
+                hit, loc, _, _, ob, _ = scene.ray_cast(dg, o, sdn, distance=L - gone)
+                if not hit:
+                    break
+                if ob is not None and (ob.name in skip or ob.name.startswith("HQ_")):
+                    stp = (loc - o).length + 0.02
+                    gone += stp
+                    o = o + sdn * stp
+                    continue
+                blocked = True
+                break
+            if blocked:
+                HQ["zblock"] = HQ.get("zblock", 0) + 1
+                if w < 0.5:
+                    return
+                w = 1.0
     p = pc.lerp(pz, w)
     q = qc.slerp(qz, w)
     cam.matrix_world = Matrix.Translation(p) @ q.to_matrix().to_4x4()
