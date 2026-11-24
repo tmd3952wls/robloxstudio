@@ -1,0 +1,1212 @@
+{
+ "cobblestone_floor_01": {
+  "type": "tex",
+  "category": "street",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/cobblestone_floor_01",
+  "res": "2k",
+  "files": {
+   "diff": "cobblestone_floor_01_diff_2k.jpg",
+   "nor_gl": "cobblestone_floor_01_nor_gl_2k.jpg",
+   "rough": "cobblestone_floor_01_rough_2k.jpg",
+   "disp": "cobblestone_floor_01_disp_2k.jpg",
+   "arm": "cobblestone_floor_01_arm_2k.jpg",
+   "ao": "cobblestone_floor_01_ao_2k.jpg"
+  },
+  "bytes": 9268279,
+  "tags": [
+   "cobblestone",
+   "mud",
+   "path",
+   "pavement"
+  ],
+  "name": "Cobblestone Floor 01"
+ },
+ "cobblestone_floor_04": {
+  "type": "tex",
+  "category": "street",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/cobblestone_floor_04",
+  "res": "2k",
+  "files": {
+   "diff": "cobblestone_floor_04_diff_2k.jpg",
+   "nor_gl": "cobblestone_floor_04_nor_gl_2k.jpg",
+   "rough": "cobblestone_floor_04_rough_2k.jpg",
+   "disp": "cobblestone_floor_04_disp_2k.jpg",
+   "arm": "cobblestone_floor_04_arm_2k.jpg",
+   "ao": "cobblestone_floor_04_ao_2k.jpg"
+  },
+  "bytes": 9818417,
+  "tags": [
+   "cobblestone",
+   "moss",
+   "damp",
+   "wet"
+  ],
+  "name": "Cobblestone Floor 04"
+ },
+ "grassy_cobblestone": {
+  "type": "tex",
+  "category": "street",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/grassy_cobblestone",
+  "res": "2k",
+  "files": {
+   "diff": "grassy_cobblestone_diff_2k.jpg",
+   "nor_gl": "grassy_cobblestone_nor_gl_2k.jpg",
+   "rough": "grassy_cobblestone_rough_2k.jpg",
+   "disp": "grassy_cobblestone_disp_2k.jpg",
+   "arm": "grassy_cobblestone_arm_2k.jpg",
+   "ao": "grassy_cobblestone_ao_2k.jpg"
+  },
+  "bytes": 16135126,
+  "tags": [
+   "ground",
+   "dirt",
+   "rock",
+   "grass",
+   "dirty",
+   "path",
+   "trampled",
+   "pathway"
+  ],
+  "name": "Grassy Cobblestone"
+ },
+ "castle_wall_varriation": {
+  "type": "tex",
+  "category": "wall",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/castle_wall_varriation",
+  "res": "2k",
+  "files": {
+   "diff": "castle_wall_varriation_diff_2k.jpg",
+   "nor_gl": "castle_wall_varriation_nor_gl_2k.jpg",
+   "rough": "castle_wall_varriation_rough_2k.jpg",
+   "disp": "castle_wall_varriation_disp_2k.jpg",
+   "arm": "castle_wall_varriation_arm_2k.jpg",
+   "ao": "castle_wall_varriation_ao_2k.jpg"
+  },
+  "bytes": 10624632,
+  "tags": [
+   "wall",
+   "rough",
+   "blocks",
+   "old",
+   "castle"
+  ],
+  "name": "Castle Wall Variation"
+ },
+ "rustic_stone_wall": {
+  "type": "tex",
+  "category": "wall",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/rustic_stone_wall",
+  "res": "2k",
+  "files": {
+   "diff": "rustic_stone_wall_diff_2k.jpg",
+   "nor_gl": "rustic_stone_wall_nor_gl_2k.jpg",
+   "rough": "rustic_stone_wall_rough_2k.jpg",
+   "disp": "rustic_stone_wall_disp_2k.jpg",
+   "arm": "rustic_stone_wall_arm_2k.jpg",
+   "ao": "rustic_stone_wall_ao_2k.jpg"
+  },
+  "bytes": 17094027,
+  "tags": [
+   "weathered",
+   "old",
+   "uneven",
+   "wall",
+   "rock",
+   "rocks"
+  ],
+  "name": "Rustic Stone Wall"
+ },
+ "clay_plaster": {
+  "type": "tex",
+  "category": "wall",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/clay_plaster",
+  "res": "2k",
+  "files": {
+   "diff": "clay_plaster_diff_2k.jpg",
+   "nor_gl": "clay_plaster_nor_gl_2k.jpg",
+   "rough": "clay_plaster_rough_2k.jpg",
+   "disp": "clay_plaster_disp_2k.jpg",
+   "arm": "clay_plaster_arm_2k.jpg",
+   "ao": "clay_plaster_ao_2k.jpg"
+  },
+  "bytes": 10105700,
+  "tags": [
+   "rough",
+   "wall",
+   "plaster",
+   "plastered",
+   "cracked",
+   "exterior",
+   "cracks",
+   "scratched",
+   "uneven",
+   "clay",
+   "coarse"
+  ],
+  "name": "Clay Plaster"
+ },
+ "damaged_plaster": {
+  "type": "tex",
+  "category": "wall",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/damaged_plaster",
+  "res": "2k",
+  "files": {
+   "diff": "damaged_plaster_diff_2k.jpg",
+   "nor_gl": "damaged_plaster_nor_gl_2k.jpg",
+   "rough": "damaged_plaster_rough_2k.jpg",
+   "disp": "damaged_plaster_disp_2k.jpg",
+   "arm": "damaged_plaster_arm_2k.jpg",
+   "ao": "damaged_plaster_ao_2k.jpg"
+  },
+  "bytes": 13226023,
+  "tags": [
+   "brick",
+   "bricks",
+   "plaster",
+   "plasterconcrete",
+   "chipped",
+   "deteriorating",
+   "weathered",
+   "cracked",
+   "crumbling",
+   "plastering",
+   "cracking",
+   "exposed brick",
+   "damaged",
+   "old brick",
+   "worn down"
+  ],
+  "name": "Damaged Plaster"
+ },
+ "blue_plaster_weathered": {
+  "type": "tex",
+  "category": "wall",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/blue_plaster_weathered",
+  "res": "2k",
+  "files": {
+   "diff": "blue_plaster_weathered_diff_2k.jpg",
+   "nor_gl": "blue_plaster_weathered_nor_gl_2k.jpg",
+   "rough": "blue_plaster_weathered_rough_2k.jpg",
+   "disp": "blue_plaster_weathered_disp_2k.jpg",
+   "arm": "blue_plaster_weathered_arm_2k.jpg",
+   "ao": "blue_plaster_weathered_ao_2k.jpg"
+  },
+  "bytes": 11259459,
+  "tags": [
+   "old",
+   "weathered",
+   "worn",
+   "discolored",
+   "chipped",
+   "damaged",
+   "wall",
+   "plaster",
+   "plastered",
+   "deteriorated",
+   "exterior",
+   "blue",
+   "peeling",
+   "timeworn"
+  ],
+  "name": "Blue Plaster Weathered"
+ },
+ "medieval_wood": {
+  "type": "tex",
+  "category": "wood",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/medieval_wood",
+  "res": "2k",
+  "files": {
+   "diff": "medieval_wood_diff_2k.jpg",
+   "nor_gl": "medieval_wood_nor_gl_2k.jpg",
+   "rough": "medieval_wood_rough_2k.jpg",
+   "disp": "medieval_wood_disp_2k.jpg",
+   "arm": "medieval_wood_arm_2k.jpg",
+   "ao": "medieval_wood_ao_2k.jpg"
+  },
+  "bytes": 10103740,
+  "tags": [
+   "planks",
+   "weathered",
+   "old",
+   "uneven"
+  ],
+  "name": "Medieval Wood"
+ },
+ "brown_planks_05": {
+  "type": "tex",
+  "category": "wood",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/brown_planks_05",
+  "res": "1k",
+  "files": {
+   "diff": "brown_planks_05_diff_1k.jpg",
+   "nor_gl": "brown_planks_05_nor_gl_1k.jpg",
+   "rough": "brown_planks_05_rough_1k.jpg",
+   "disp": "brown_planks_05_disp_1k.jpg",
+   "arm": "brown_planks_05_arm_1k.jpg",
+   "ao": "brown_planks_05_ao_1k.jpg"
+  },
+  "bytes": 1537311,
+  "tags": [
+   "planks",
+   "painted",
+   "shed",
+   "house",
+   "suburb"
+  ],
+  "name": "Brown Planks 05"
+ },
+ "dark_wooden_planks": {
+  "type": "tex",
+  "category": "wood",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/dark_wooden_planks",
+  "res": "1k",
+  "files": {
+   "diff": "dark_wooden_planks_diff_1k.jpg",
+   "nor_gl": "dark_wooden_planks_nor_gl_1k.jpg",
+   "rough": "dark_wooden_planks_rough_1k.jpg",
+   "disp": "dark_wooden_planks_disp_1k.jpg",
+   "arm": "dark_wooden_planks_arm_1k.jpg",
+   "ao": "dark_wooden_planks_ao_1k.jpg"
+  },
+  "bytes": 3277074,
+  "tags": [
+   "rough",
+   "old",
+   "weathered",
+   "cracked",
+   "damaged",
+   "brown",
+   "wood",
+   "wooden",
+   "floor",
+   "planks",
+   "scratched",
+   "worn",
+   "chipped"
+  ],
+  "name": "Dark Wooden Planks"
+ },
+ "clay_roof_tiles_02": {
+  "type": "tex",
+  "category": "roof",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/clay_roof_tiles_02",
+  "res": "2k",
+  "files": {
+   "diff": "clay_roof_tiles_02_diff_2k.jpg",
+   "nor_gl": "clay_roof_tiles_02_nor_gl_2k.jpg",
+   "rough": "clay_roof_tiles_02_rough_2k.jpg",
+   "disp": "clay_roof_tiles_02_disp_2k.jpg",
+   "arm": "clay_roof_tiles_02_arm_2k.jpg",
+   "ao": "clay_roof_tiles_02_ao_2k.jpg"
+  },
+  "bytes": 13457675,
+  "tags": [
+   "weathered",
+   "old",
+   "interlocking",
+   "roof",
+   "roofing",
+   "tile roofing",
+   "clay",
+   "clay tiles",
+   "traditional",
+   "traditional roofing ",
+   "overlapping tiles"
+  ],
+  "name": "Clay Roof Tiles 02"
+ },
+ "roof_slates_02": {
+  "type": "tex",
+  "category": "roof",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/roof_slates_02",
+  "res": "2k",
+  "files": {
+   "diff": "roof_slates_02_diff_2k.jpg",
+   "nor_gl": "roof_slates_02_nor_gl_2k.jpg",
+   "rough": "roof_slates_02_rough_2k.jpg",
+   "disp": "roof_slates_02_disp_2k.jpg",
+   "arm": "roof_slates_02_arm_2k.jpg",
+   "ao": "roof_slates_02_ao_2k.jpg"
+  },
+  "bytes": 8883650,
+  "tags": [
+   "slates",
+   "uneven",
+   "old",
+   "tiles",
+   "weathered",
+   "discolored",
+   "slate roofing",
+   "slate",
+   "roofing material",
+   "roof",
+   "roofing",
+   "tile roofing",
+   "housing material",
+   "flat tiles"
+  ],
+  "name": "Roof Slates 02"
+ },
+ "grey_roof_tiles": {
+  "type": "tex",
+  "category": "roof",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/grey_roof_tiles",
+  "res": "2k",
+  "files": {
+   "diff": "grey_roof_tiles_diff_2k.jpg",
+   "nor_gl": "grey_roof_tiles_nor_gl_2k.jpg",
+   "rough": "grey_roof_tiles_rough_2k.jpg",
+   "disp": "grey_roof_tiles_disp_2k.jpg",
+   "arm": "grey_roof_tiles_arm_2k.jpg",
+   "ao": "grey_roof_tiles_ao_2k.jpg"
+  },
+  "bytes": 6549903,
+  "tags": [
+   "grey",
+   "moss",
+   "damp",
+   "mosscovered",
+   "ceramic tiles",
+   "overlapping",
+   "weathered",
+   "overlapping tiles",
+   "roofing material",
+   "roof tiles",
+   "traditional roof tiles"
+  ],
+  "name": "Grey Roof Tiles"
+ },
+ "aerial_rocks_02": {
+  "type": "tex",
+  "category": "terrain",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/aerial_rocks_02",
+  "res": "2k",
+  "files": {
+   "diff": "aerial_rocks_02_diff_2k.jpg",
+   "nor_gl": "aerial_rocks_02_nor_gl_2k.jpg",
+   "rough": "aerial_rocks_02_rough_2k.jpg",
+   "disp": "aerial_rocks_02_disp_2k.jpg",
+   "arm": "aerial_rocks_02_arm_2k.jpg",
+   "ao": "aerial_rocks_02_ao_2k.jpg"
+  },
+  "bytes": 11172892,
+  "tags": [
+   "rocks",
+   "rough",
+   "moss",
+   "cliff",
+   "rock face",
+   "cave"
+  ],
+  "name": "Aerial Rocks 02"
+ },
+ "rock_face": {
+  "type": "tex",
+  "category": "terrain",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/rock_face",
+  "res": "2k",
+  "files": {
+   "diff": "rock_face_diff_2k.jpg",
+   "nor_gl": "rock_face_nor_gl_2k.jpg",
+   "rough": "rock_face_rough_2k.jpg",
+   "disp": "rock_face_disp_2k.jpg",
+   "arm": "rock_face_arm_2k.jpg",
+   "ao": "rock_face_ao_2k.jpg"
+  },
+  "bytes": 12207082,
+  "tags": [
+   "terrain",
+   "landscape",
+   "rock face",
+   "solid rock",
+   "cliff",
+   "solid"
+  ],
+  "name": "Rock Face"
+ },
+ "leafy_grass": {
+  "type": "tex",
+  "category": "terrain",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/leafy_grass",
+  "res": "2k",
+  "files": {
+   "diff": "leafy_grass_diff_2k.jpg",
+   "nor_gl": "leafy_grass_nor_gl_2k.jpg",
+   "rough": "leafy_grass_rough_2k.jpg",
+   "disp": "leafy_grass_disp_2k.jpg",
+   "arm": "leafy_grass_arm_2k.jpg",
+   "ao": "leafy_grass_ao_2k.jpg"
+  },
+  "bytes": 23925462,
+  "tags": [
+   "grass",
+   "green",
+   "nature",
+   "ground",
+   "foliage",
+   "leaves",
+   "plants",
+   "outdoors",
+   "twigs",
+   "sticks",
+   "trampled"
+  ],
+  "name": "Leafy Grass"
+ },
+ "sparse_grass": {
+  "type": "tex",
+  "category": "terrain",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/sparse_grass",
+  "res": "2k",
+  "files": {
+   "diff": "sparse_grass_diff_2k.jpg",
+   "nor_gl": "sparse_grass_nor_gl_2k.jpg",
+   "rough": "sparse_grass_rough_2k.jpg",
+   "disp": "sparse_grass_disp_2k.jpg",
+   "arm": "sparse_grass_arm_2k.jpg",
+   "ao": "sparse_grass_ao_2k.jpg"
+  },
+  "bytes": 21408761,
+  "tags": [
+   "grass",
+   "nature",
+   "sparse",
+   "roots",
+   "root",
+   "vegetation",
+   "greenery",
+   "landscape",
+   "soil",
+   "environment",
+   "dirt",
+   "plants",
+   "ground",
+   "growth",
+   "flora"
+  ],
+  "name": "Sparse Grass"
+ },
+ "snow_02": {
+  "type": "tex",
+  "category": "terrain",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/snow_02",
+  "res": "1k",
+  "files": {
+   "diff": "snow_02_diff_1k.jpg",
+   "nor_gl": "snow_02_nor_gl_1k.jpg",
+   "rough": "snow_02_rough_1k.jpg",
+   "disp": "snow_02_disp_1k.jpg",
+   "arm": "snow_02_arm_1k.jpg",
+   "ao": "snow_02_ao_1k.jpg"
+  },
+  "bytes": 2075264,
+  "tags": [
+   "snow",
+   "uneven",
+   "smooth",
+   "powdery",
+   "frosty",
+   "snowfield",
+   "soft",
+   "wintery"
+  ],
+  "name": "Snow 02"
+ },
+ "brown_mud_rocks_01": {
+  "type": "tex",
+  "category": "terrain",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/brown_mud_rocks_01",
+  "res": "2k",
+  "files": {
+   "diff": "brown_mud_rocks_01_diff_2k.jpg",
+   "nor_gl": "brown_mud_rocks_01_nor_gl_2k.jpg",
+   "rough": "brown_mud_rocks_01_rough_2k.jpg",
+   "disp": "brown_mud_rocks_01_disp_2k.jpg",
+   "arm": "brown_mud_rocks_01_arm_2k.jpg",
+   "ao": "brown_mud_rocks_01_ao_2k.jpg"
+  },
+  "bytes": 13828772,
+  "tags": [
+   "gravel",
+   "mud",
+   "moss",
+   "stones",
+   "forest",
+   "rocks",
+   "loose stones",
+   "plants",
+   "weeds",
+   "scattered weeds",
+   "plant debris",
+   "riverbank",
+   "organic matter",
+   "rocky soil",
+   "wet ground"
+  ],
+  "name": "Brown Mud Rocks 01"
+ },
+ "burned_ground_01": {
+  "type": "tex",
+  "category": "terrain",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/burned_ground_01",
+  "res": "2k",
+  "files": {
+   "diff": "burned_ground_01_diff_2k.jpg",
+   "nor_gl": "burned_ground_01_nor_gl_2k.jpg",
+   "rough": "burned_ground_01_rough_2k.jpg",
+   "disp": "burned_ground_01_disp_2k.jpg",
+   "arm": "burned_ground_01_arm_2k.jpg",
+   "ao": "burned_ground_01_ao_2k.jpg"
+  },
+  "bytes": 10697143,
+  "tags": [
+   "mud",
+   "burned",
+   "fire",
+   "dirt",
+   "ash",
+   "plant debris",
+   "plant litter",
+   "leaves",
+   "dry leaves",
+   "dry grass",
+   "gravel",
+   "gravelly",
+   "fallen leaves",
+   "organic debris",
+   "loose stones",
+   "charred soil",
+   "scorched earth"
+  ],
+  "name": "Burned Ground 01"
+ },
+ "dry_riverbed_rock": {
+  "type": "tex",
+  "category": "terrain",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/dry_riverbed_rock",
+  "res": "2k",
+  "files": {
+   "diff": "dry_riverbed_rock_diff_2k.jpg",
+   "nor_gl": "dry_riverbed_rock_nor_gl_2k.jpg",
+   "rough": "dry_riverbed_rock_rough_2k.jpg",
+   "disp": "dry_riverbed_rock_disp_2k.jpg",
+   "arm": "dry_riverbed_rock_arm_2k.jpg",
+   "ao": "dry_riverbed_rock_ao_2k.jpg"
+  },
+  "bytes": 17253565,
+  "tags": [
+   "rough",
+   "rock face",
+   "uneven",
+   "weathered",
+   "cracked",
+   "stone"
+  ],
+  "name": "Dry Riverbed Rock"
+ },
+ "forest_ground_04": {
+  "type": "tex",
+  "category": "terrain",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/forest_ground_04",
+  "res": "1k",
+  "files": {
+   "diff": "forest_ground_04_diff_1k.jpg",
+   "nor_gl": "forest_ground_04_nor_gl_1k.jpg",
+   "rough": "forest_ground_04_rough_1k.jpg",
+   "disp": "forest_ground_04_disp_1k.jpg",
+   "arm": "forest_ground_04_arm_1k.jpg",
+   "ao": "forest_ground_04_ao_1k.jpg"
+  },
+  "bytes": 5006321,
+  "tags": [
+   "rough",
+   "uneven",
+   "stones",
+   "ground",
+   "forest",
+   "dry",
+   "brown",
+   "gravel",
+   "rock",
+   "debris",
+   "nature",
+   "dirt"
+  ],
+  "name": "Forest Ground 04"
+ },
+ "coast_sand_01": {
+  "type": "tex",
+  "category": "terrain",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/coast_sand_01",
+  "res": "1k",
+  "files": {
+   "diff": "coast_sand_01_diff_1k.jpg",
+   "nor_gl": "coast_sand_01_nor_gl_1k.jpg",
+   "rough": "coast_sand_01_rough_1k.jpg",
+   "disp": "coast_sand_01_disp_1k.jpg",
+   "arm": "coast_sand_01_arm_1k.jpg",
+   "ao": "coast_sand_01_ao_1k.jpg"
+  },
+  "bytes": 4180601,
+  "tags": [
+   "beach",
+   "costal",
+   "ocean",
+   "seaside",
+   "sand",
+   "brown",
+   "rough",
+   "gravel",
+   "damp",
+   "dirt",
+   "stones"
+  ],
+  "name": "Coast Sand 01"
+ },
+ "wooden_lantern_01": {
+  "type": "model",
+  "category": "prop",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/wooden_lantern_01",
+  "res": "1k",
+  "files": {
+   "gltf": "wooden_lantern_01_1k.gltf"
+  },
+  "bytes": 3768780,
+  "tags": [
+   "lantern",
+   "wooden",
+   "wood",
+   "old",
+   "worn",
+   "farmhouse",
+   "maritime",
+   "colonial",
+   "cove",
+   "prop",
+   "vintage",
+   "candle"
+  ],
+  "name": "Wooden Lantern 01"
+ },
+ "wooden_barrels_01": {
+  "type": "model",
+  "category": "prop",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/wooden_barrels_01",
+  "res": "1k",
+  "files": {
+   "gltf": "wooden_barrels_01_1k.gltf"
+  },
+  "bytes": 7490847,
+  "tags": [
+   "barrel",
+   "celler",
+   "old",
+   "worn",
+   "wood",
+   "antique",
+   "prop",
+   "maritime",
+   "colonial",
+   "cove",
+   "farmhouse",
+   "farm",
+   "furniture",
+   "wooden"
+  ],
+  "name": "Wooden Barrels 01"
+ },
+ "wooden_crate_01": {
+  "type": "model",
+  "category": "prop",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/wooden_crate_01",
+  "res": "1k",
+  "files": {
+   "gltf": "wooden_crate_01_1k.gltf"
+  },
+  "bytes": 2277087,
+  "tags": [
+   "vintage",
+   "wood",
+   "old",
+   "wooden",
+   "fancy",
+   "colonial",
+   "chest",
+   "box",
+   "prop",
+   "antique",
+   "farmhouse",
+   "crate",
+   "maritime",
+   "commercial",
+   "container"
+  ],
+  "name": "Wooden Crate 01"
+ },
+ "barrel_03": {
+  "type": "model",
+  "category": "prop",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/barrel_03",
+  "res": "1k",
+  "files": {
+   "gltf": "barrel_03_1k.gltf"
+  },
+  "bytes": 574136,
+  "tags": [
+   "industrial",
+   "barrel",
+   "oil",
+   "fuel",
+   "truck",
+   "painted",
+   "blue"
+  ],
+  "name": "Barrel 03"
+ },
+ "wooden_bucket_01": {
+  "type": "model",
+  "category": "prop",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/wooden_bucket_01",
+  "res": "1k",
+  "files": {
+   "gltf": "wooden_bucket_01_1k.gltf"
+  },
+  "bytes": 2331642,
+  "tags": [
+   "wooden",
+   "bucket",
+   "old",
+   "worn",
+   "wood",
+   "prop",
+   "container"
+  ],
+  "name": "Wooden Bucket 01"
+ },
+ "wine_barrel_01": {
+  "type": "model",
+  "category": "prop",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/wine_barrel_01",
+  "res": "1k",
+  "files": {
+   "gltf": "wine_barrel_01_1k.gltf"
+  },
+  "bytes": 924683,
+  "tags": [
+   "barrel",
+   "wine",
+   "celler",
+   "old",
+   "worn",
+   "grape",
+   "farmhouse",
+   "farm"
+  ],
+  "name": "Wine Barrel 01"
+ },
+ "stone_fire_pit": {
+  "type": "model",
+  "category": "prop",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/stone_fire_pit",
+  "res": "1k",
+  "files": {
+   "gltf": "stone_fire_pit_1k.gltf"
+  },
+  "bytes": 2535945,
+  "tags": [
+   "outdoor",
+   "garden",
+   "fire",
+   "bbq",
+   "farm",
+   "farmhouse",
+   "landscaping",
+   "patio",
+   "backyard",
+   "entertainment",
+   "relaxation",
+   "stone"
+  ],
+  "name": "Stone Fire Pit"
+ },
+ "wooden_ladder": {
+  "type": "model",
+  "category": "prop",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/wooden_ladder",
+  "res": "1k",
+  "files": {
+   "gltf": "wooden_ladder_1k.gltf"
+  },
+  "bytes": 2593249,
+  "tags": [
+   "scaffolding",
+   "steps",
+   "construction",
+   "workshop",
+   "ladder",
+   "step-ladder",
+   "maintenance",
+   "utility",
+   "wooden"
+  ],
+  "name": "Wooden Ladder"
+ },
+ "fir_tree_01": {
+  "type": "model",
+  "category": "nature",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/fir_tree_01",
+  "res": "1k",
+  "files": {
+   "gltf": "fir_tree_01_1k.gltf"
+  },
+  "bytes": 487358833,
+  "tags": [
+   "fir",
+   "tree",
+   "geometry nodes",
+   "woodland",
+   "needles",
+   "branches",
+   "environment",
+   "coniferous",
+   "plants",
+   "forest",
+   "tall",
+   "trunk",
+   "bark",
+   "foliage",
+   "twig"
+  ],
+  "name": "Fir Tree 01"
+ },
+ "pine_tree_01": {
+  "type": "model",
+  "category": "nature",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/pine_tree_01",
+  "res": "1k",
+  "files": {
+   "gltf": "pine_tree_01_1k.gltf"
+  },
+  "bytes": 958118530,
+  "tags": [
+   "pine",
+   "tree",
+   "needles",
+   "branches",
+   "woodland",
+   "coniferous",
+   "plants",
+   "geometry nodes",
+   "foliage",
+   "natural",
+   "trunk",
+   "bark",
+   "environment",
+   "vegetation",
+   "evergreen",
+   "forest"
+  ],
+  "name": "Pine Tree 01"
+ },
+ "island_tree_01": {
+  "type": "model",
+  "category": "nature",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/island_tree_01",
+  "res": "1k",
+  "files": {
+   "gltf": "island_tree_01_1k.gltf"
+  },
+  "bytes": 66337268,
+  "tags": [
+   "tree",
+   "natural",
+   "nature",
+   "green",
+   "plant",
+   "outdoor",
+   "leaf",
+   "botany",
+   "leaves",
+   "forest",
+   "bush",
+   "jungle",
+   "foliage",
+   "island",
+   "coastal",
+   "geometry nodes",
+   "trunk",
+   "bark"
+  ],
+  "name": "Island Tree 01"
+ },
+ "shrub_01": {
+  "type": "model",
+  "category": "nature",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/shrub_01",
+  "res": "1k",
+  "files": {
+   "gltf": "shrub_01_1k.gltf"
+  },
+  "bytes": 6877527,
+  "tags": [
+   "plant",
+   "foliage",
+   "nature",
+   "forest",
+   "leaf",
+   "botany",
+   "green",
+   "leaves",
+   "bush",
+   "shrub",
+   "small",
+   "meadow",
+   "flower",
+   "floral",
+   "ground cover",
+   "garden",
+   "environment",
+   "ageratina adenophora"
+  ],
+  "name": "Shrub 01"
+ },
+ "shrub_02": {
+  "type": "model",
+  "category": "nature",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/shrub_02",
+  "res": "1k",
+  "files": {
+   "gltf": "shrub_02_1k.gltf"
+  },
+  "bytes": 1966425,
+  "tags": [
+   "sapling",
+   "vegetation",
+   "environment",
+   "ground cover",
+   "foliage",
+   "forest",
+   "leaves",
+   "bush",
+   "jungle",
+   "nature",
+   "leaf",
+   "plant",
+   "green"
+  ],
+  "name": "Shrub 02"
+ },
+ "shrub_04": {
+  "type": "model",
+  "category": "nature",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/shrub_04",
+  "res": "1k",
+  "files": {
+   "gltf": "shrub_04_1k.gltf"
+  },
+  "bytes": 1907514,
+  "tags": [
+   "plant",
+   "shrub",
+   "bush",
+   "nature",
+   "green",
+   "leaf",
+   "foliage",
+   "ground cover",
+   "vegetation",
+   "undergrowth"
+  ],
+  "name": "Shrub 04"
+ },
+ "boulder_01": {
+  "type": "model",
+  "category": "nature",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/boulder_01",
+  "res": "1k",
+  "files": {
+   "gltf": "boulder_01_1k.gltf"
+  },
+  "bytes": 5771986,
+  "tags": [
+   "rocks",
+   "boulder",
+   "lichen",
+   "landscape",
+   "rock",
+   "geology",
+   "formation",
+   "weathered",
+   "rock face",
+   "cliff"
+  ],
+  "name": "Boulder 01"
+ },
+ "rock_moss_set_01": {
+  "type": "model",
+  "category": "nature",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/rock_moss_set_01",
+  "res": "1k",
+  "files": {
+   "gltf": "rock_moss_set_01_1k.gltf"
+  },
+  "bytes": 1937065,
+  "tags": [
+   "rocks",
+   "outdoor",
+   "stones",
+   "pebbles",
+   "rock",
+   "dirt"
+  ],
+  "name": "Rock Moss Set 01"
+ },
+ "grass_medium_01": {
+  "type": "model",
+  "category": "nature",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/grass_medium_01",
+  "res": "1k",
+  "files": {
+   "gltf": "grass_medium_01_1k.gltf"
+  },
+  "bytes": 3065099,
+  "tags": [
+   "plant",
+   "grass",
+   "nature",
+   "green",
+   "shrub",
+   "outdoor",
+   "field",
+   "meadow",
+   "natural",
+   "foliage",
+   "small",
+   "botany"
+  ],
+  "name": "Grass Medium 01"
+ },
+ "fern_02": {
+  "type": "model",
+  "category": "nature",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/fern_02",
+  "res": "1k",
+  "files": {
+   "gltf": "fern_02_1k.gltf"
+  },
+  "bytes": 1146361,
+  "tags": [
+   "plant",
+   "fern",
+   "foliage",
+   "jungle",
+   "shrub",
+   "bush",
+   "leaf",
+   "leaves",
+   "green",
+   "nature",
+   "forest",
+   "outdoor"
+  ],
+  "name": "Fern 02"
+ },
+ "namaqualand_cliff_01": {
+  "type": "model",
+  "category": "nature",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/namaqualand_cliff_01",
+  "res": "1k",
+  "files": {
+   "gltf": "namaqualand_cliff_01_1k.gltf"
+  },
+  "bytes": 4544360,
+  "tags": [
+   "south africa",
+   "karoo",
+   "desert",
+   "boulders",
+   "rock",
+   "rock formation",
+   "cliff side",
+   "cliff",
+   "eroded cliffs",
+   "nature scene",
+   "rock face",
+   "rock wall"
+  ],
+  "name": "Namaqualand Cliff 01"
+ },
+ "kloofendal_48d_partly_cloudy_puresky": {
+  "type": "hdri",
+  "category": "sky",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/kloofendal_48d_partly_cloudy_puresky",
+  "res": "4k",
+  "files": {
+   "hdr": "kloofendal_48d_partly_cloudy_puresky_4k.hdr"
+  },
+  "bytes": 20674857,
+  "tags": [
+   "pure skies"
+  ],
+  "name": "Kloofendal 48d Partly Cloudy (Pure Sky)"
+ },
+ "belfast_sunset_puresky": {
+  "type": "hdri",
+  "category": "sky",
+  "license": "CC0 (Poly Haven)",
+  "source": "https://polyhaven.com/a/belfast_sunset_puresky",
+  "res": "4k",
+  "files": {
+   "hdr": "belfast_sunset_puresky_4k.hdr"
+  },
+  "bytes": 17420114,
+  "tags": [
+   "pure skies"
+  ],
+  "name": "Belfast Sunset (Pure Sky)"
+ }
+}
