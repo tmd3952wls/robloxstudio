@@ -218,12 +218,12 @@ Dialogue: 0,0:00:40.99,0:00:41.51,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fs
 Dialogue: 1,0:00:40.99,0:00:41.51,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}큰 부자가
 Dialogue: 0,0:00:41.51,0:00:42.22,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}찾아왔어
 Dialogue: 1,0:00:41.51,0:00:42.22,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}찾아왔어
-Dialogue: 0,0:00:42.22,0:00:42.77,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}네 시간을
-Dialogue: 1,0:00:42.22,0:00:42.77,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}네 시간을
-Dialogue: 0,0:00:42.77,0:00:43.11,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}전부
-Dialogue: 1,0:00:42.77,0:00:43.11,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H002E2EFF&}전부
-Dialogue: 0,0:00:43.11,0:00:43.62,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}사겠다
-Dialogue: 1,0:00:43.11,0:00:43.62,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}사겠다
+Dialogue: 0,0:00:42.22,0:00:42.68,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}니 시간을
+Dialogue: 1,0:00:42.22,0:00:42.68,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}니 시간을
+Dialogue: 0,0:00:42.68,0:00:43.02,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}전부
+Dialogue: 1,0:00:42.68,0:00:43.02,Word,,0,0,0,,{\pos(540,1180)\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)\c&H002E2EFF&}전부
+Dialogue: 0,0:00:43.02,0:00:43.62,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}사겠다
+Dialogue: 1,0:00:43.02,0:00:43.62,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}사겠다
 Dialogue: 0,0:00:43.62,0:00:44.13,Shadow,,0,0,0,,{\pos(546,1186)\blur4\fscx80\fscy80\t(0,80,\fscx100\fscy100)}대신
 Dialogue: 1,0:00:43.62,0:00:44.13,Word,,0,0,0,,{\pos(540,1180)\fscx80\fscy80\t(0,80,\fscx100\fscy100)}대신
 Dialogue: 0,0:00:44.13,0:00:44.52,Shadow,,0,0,0,,{\pos(548,1188)\blur4\fs138\fscx70\fscy70\t(0,70,\fscx112\fscy112)\t(70,140,\fscx100\fscy100)}백 년을

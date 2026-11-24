@@ -665,6 +665,8 @@ def update_effects(T):
     fl = bpy.data.objects.get("HQ_FireLight")
     if fl:
         fl.data.energy = 320 * (0.8 + 0.12 * math.sin(T * 17) + 0.08 * math.sin(T * 31 + 1.3))
+        if HQ.get("nofire_now"):
+            fl.data.energy = 0.0
     if "embers" in HQ:
         b0 = HQ["fire_base"]
         co = []
@@ -1228,7 +1230,7 @@ def enforce_distance():
     rep = []
     for sh in RT._S["shots"]:
         keys = sh.get("cam")
-        if not keys:
+        if not keys or sh.get("nomin"):
             continue
         dur = sh["dur"]
         ease = sh.get("ease", "smooth")
@@ -1381,6 +1383,18 @@ def update_crowd(shot_n, t):
                 pose = POSES.index("idle")
         S.append([x, z, yaw, pose, m])
     _separate(S, HQ.get("actor_xz", []))
+    zs = HQ.get("zoom_seg")
+    if zs:      # 팔 확대 중: 카메라 -> 숫자 시선을 가리는 군중은 뺀다
+        (qx, qz), (cx, cz) = zs
+        vx, vz = cx - qx, cz - qz
+        ll = vx * vx + vz * vz
+        keep = []
+        for s in S:
+            u = ((s[0] - qx) * vx + (s[1] - qz) * vz) / max(ll, 1e-6)
+            u = min(max(u, 0.0), 1.0)
+            if math.hypot(qx + vx * u - s[0], qz + vz * u - s[1]) > 2.0:
+                keep.append(s)
+        S = keep
     for x, z, yaw, pose, m in S:
         p = bpos(x, _y(x), z)
         lod = 0 if (p - cam).length < 40 else 1
@@ -1417,6 +1431,19 @@ def hq_frame(scene, depsgraph=None):
         except Exception:
             pass
     HQ["actor_xz"] = axz
+    HQ["zoom_seg"] = None
+    try:
+        zoom_cam(scene, sh, t, depsgraph)
+    except Exception as ex:
+        print("ZOOM ERR", ex, flush=True)
+    qmark(scene, sh, t)
+    nofire = bool(sh.get("nofire"))
+    HQ["nofire_now"] = nofire
+    hlo = bpy.data.objects.get("HQ_HallLight")
+    if hlo:
+        hlo.data.energy = 900.0 if sh.get("door") else 0.0
+    for ob in HQ.get("fire_objs", []):
+        ob.hide_render = nofire
     update_crowd(sh["lines"][0], t)
     update_lights(sh.get("light", "day") == "day")
     if sh.get("light", "day") != "day":
@@ -1472,14 +1499,249 @@ def numbers():
     print("GLYPH", {k: round(v, 3) for k, v in cw.items()}, round(h1, 3), round(pitch, 3), flush=True)
 
 
+# ------------------------------------------------------------------ 팔 숫자 확대 (망원) 카메라
+ZOOM_D = 6.8        # 카메라는 숫자에서 이만큼(약 2m) 떨어져 망원으로 당겨 찍는다 (막히면 더 가까이)
+
+
+def _sm(x):
+    x = min(max(x, 0.0), 1.0)
+    return x * x * (3 - 2 * x)
+
+
+def zoom_cam(scene, sh, t, dg):
+    """shot["zoom"] = [(배우, 시작, 끝, [가로폭 칸], [올려보기])]: 그 배우 팔 숫자를 정면에서 망원으로 크게.
+    시작<=0 이면 컷 처음부터, 끝>=길이 면 컷 끝까지 확대. 그 사이 0.45초에 걸쳐 부드럽게 들어가고 나온다."""
+    zs = sh.get("zoom")
+    if not zs:
+        return
+    R = 0.45
+    w, who, wid, elev = 0.0, None, 1.15, 0.3
+    for z in zs:
+        a = 1.0 if z[1] <= 0 else _sm((t - z[1]) / R)
+        b = 1.0 if z[2] >= sh["dur"] - 1e-3 else 1 - _sm((t - (z[2] - R)) / R)
+        ww = min(a, b)
+        if ww > w:
+            w, who = ww, z[0]
+            wid = z[3] if len(z) > 3 else 1.15
+            elev = z[4] if len(z) > 4 else 0.3
+    info = RT._S["chars"].get(who)
+    if w <= 1e-4 or not info:
+        return
+    O = bpy.data.objects
+    num = O[info["num"]]
+    if num.hide_render:
+        return
+    if dg is None:
+        dg = bpy.context.evaluated_depsgraph_get()
+    ev = num.evaluated_get(dg)
+    Mn = num.matrix_world
+    cs = [Mn @ Vector(c) for c in ev.bound_box]
+    c = sum(cs, Vector()) / 8
+    M3 = Mn.to_3x3()
+    n = (M3 @ Vector((0, 0, 1))).normalized()
+    u = (M3 @ Vector((0, 1, 0))).normalized()
+    UP = Vector((0, 0, 1))
+    skip = set(HQ["zoom_skip"]) | {p["ob"] for p in info["parts"]} | {info["num"]}
+    for lst in info["pool"].values():
+        skip |= set(lst)
+    best = None
+    for ang in (0, 22, -22, 45, -45):
+        d = (n + UP * elev).normalized()
+        th = math.radians(ang)
+        d = Vector((d.x * math.cos(th) - d.y * math.sin(th), d.x * math.sin(th) + d.y * math.cos(th), d.z)).normalized()
+        o, free = c + d * 0.03, ZOOM_D + 0.5
+        for _ in range(10):
+            hit, loc, _, _, ob, _ = scene.ray_cast(dg, o, d, distance=ZOOM_D + 0.5 - (o - c).length)
+            if not hit:
+                break
+            if ob is not None and (ob.name in skip or ob.name.startswith("HQ_")):
+                o = loc + d * 0.02
+                continue
+            free = (loc - c).length
+            break
+        if best is None or free > best[1] + 0.3:
+            best = (d, free)
+        if free >= ZOOM_D:
+            break
+    d, free = best
+    D = max(1.4, min(ZOOM_D, free * 0.85))
+    zc = d
+    # 화면 위쪽: 수평선은 최대한 유지(세상 위쪽), 글자가 읽히도록 글자 위쪽 쪽으로 최대 40도만 기울임
+    y0 = UP - zc * UP.dot(zc)
+    y1 = u - zc * u.dot(zc)
+    if y0.length < 1e-3:
+        y0 = y1
+    y0.normalize()
+    zy = y0
+    if y1.length > 1e-3:
+        y1.normalize()
+        ang = math.atan2(y0.cross(y1).dot(zc), y0.dot(y1))
+        if abs(ang) <= math.radians(115):
+            ang = max(-math.radians(40), min(math.radians(40), ang))
+        zy = (Matrix.Rotation(ang, 3, zc) @ y0).normalized()
+    zx = zy.cross(zc).normalized()
+    Rz = Matrix((zx, zy, zc)).transposed()
+    pz = c + d * D
+    V = wid * 16.0 / 9.0
+    az = 2 * math.atan(V / 2 / D)
+    cam = scene.camera
+    pc = cam.matrix_world.translation.copy()
+    qc = cam.matrix_world.to_quaternion()
+    qz = Rz.to_quaternion()
+    p = pc.lerp(pz, w)
+    q = qc.slerp(qz, w)
+    cam.matrix_world = Matrix.Translation(p) @ q.to_matrix().to_4x4()
+    cam.data.angle = cam.data.angle + (az - cam.data.angle) * w
+    dof = cam.data.dof
+    dof.focus_distance = dof.focus_distance + ((c - p).length - dof.focus_distance) * w
+    dof.aperture_fstop = dof.aperture_fstop + (4.0 - dof.aperture_fstop) * w
+    HQ["zoom_seg"] = ((p.x, -p.y), (c.x, -c.y))
+
+
+# ------------------------------------------------------------------ 머리 위 물음표
+def qmark(scene, sh, t):
+    ob = bpy.data.objects.get("HQ_QMark")
+    if not ob:
+        return
+    q = sh.get("qmark")
+    info = RT._S["chars"].get(q[0]) if q else None
+    if not q or not info or t < q[1]:
+        ob.hide_render = True
+        return
+    hp = bpy.data.objects[info["parts"][info["head"]["idx"]]["ob"]].matrix_world.translation
+    e = _sm((t - q[1]) / 0.12)
+    pop = 1 + 0.35 * math.sin(math.pi * min(max((t - q[1]) / 0.3, 0), 1))
+    s = 1.15 * e * pop
+    cam = scene.camera
+    R = cam.matrix_world.to_quaternion().to_matrix().to_4x4()
+    pos = hp + Vector((0, 0, 2.3 + 0.06 * math.sin((t - q[1]) * 6)))
+    ob.matrix_world = Matrix.Translation(pos) @ R @ Matrix.Rotation(math.radians(8 * math.sin((t - q[1]) * 4)), 4, "Z") @ Matrix.Diagonal((s, s, s, 1))
+    ob.hide_render = s < 1e-3
+
+
+def qmark_object():
+    fp = os.path.join(os.path.dirname(bpy.data.filepath), "..", "audio", "fonts", "Jua-Regular.ttf")
+    font = bpy.data.fonts.load(os.path.abspath(fp), check_existing=True)
+    cu = bpy.data.curves.new("HQ_QMark", "FONT")
+    cu.body = "?"
+    cu.font = font
+    cu.size = 2.4
+    cu.extrude = 0.14
+    cu.offset = 0.035          # 굵게
+    cu.align_x = "CENTER"
+    cu.align_y = "CENTER"
+    ob = bpy.data.objects.new("HQ_QMark", cu)
+    cu.materials.append(_emit_mat("HQ_QMarkMat", (1.0, 0.8, 0.1, 1), 4.0))
+    ob.visible_shadow = False
+    ob.hide_render = True
+    bpy.context.scene.collection.objects.link(ob)
+
+
+# ------------------------------------------------------------------ 다락방 문: 벽에 문 구멍 + 문 밖 복도
+def _box(name, lo, hi, color, mat=None):
+    """로블록스 좌표 lo~hi 상자."""
+    import bmesh
+    me = bpy.data.meshes.new(name)
+    bm = bmesh.new()
+    c = [(lo[i] + hi[i]) / 2 for i in range(3)]
+    s = [hi[i] - lo[i] for i in range(3)]
+    bmesh.ops.create_cube(bm, size=1.0, matrix=Matrix.Translation(bpos(*c)) @ Matrix.Diagonal((s[0], s[2], s[1], 1)))
+    bm.to_mesh(me)
+    bm.free()
+    ob = bpy.data.objects.new(name, me)
+    if mat:
+        me.materials.append(mat)
+    ob.color = color + (1,) if len(color) == 3 else color
+    bpy.context.scene.collection.objects.link(ob)
+    return ob
+
+
+def door_hole():
+    door = bpy.data.objects.get("HaruRoom.Door")
+    if not door:
+        return
+    cut = _box("HQ_DoorCut", (456.6, 0.05, -6.75), (459.8, 6.95, -3.25), (1, 1, 1))
+    cut.hide_render = True
+    cut.hide_viewport = True
+    lo, hi = bpos(456.6, 0.05, -6.75), bpos(459.8, 6.95, -3.25)
+    blo = Vector((min(lo.x, hi.x), min(lo.y, hi.y), min(lo.z, hi.z)))
+    bhi = Vector((max(lo.x, hi.x), max(lo.y, hi.y), max(lo.z, hi.z)))
+    n = 0
+    for ob in list(bpy.data.objects):
+        if ob.type != "MESH" or not ob.name.startswith("HaruRoom.") or ob.name == "HaruRoom.Door":
+            continue
+        bb = [ob.matrix_world @ Vector(c) for c in ob.bound_box]
+        a = Vector((min(v.x for v in bb), min(v.y for v in bb), min(v.z for v in bb)))
+        b = Vector((max(v.x for v in bb), max(v.y for v in bb), max(v.z for v in bb)))
+        if all(a[i] < bhi[i] and b[i] > blo[i] for i in range(3)):
+            if (b - a).length < 3.0:
+                continue        # 작은 소품(문고리 등)은 건드리지 않음
+            m = ob.modifiers.new("HQ_DoorHole", "BOOLEAN")
+            m.object = cut
+            m.operation = "DIFFERENCE"
+            m.solver = "EXACT"
+            n += 1
+    wood = bpy.data.materials.get("R_WoodPlanks") or bpy.data.materials.get("R_Wood")
+    col = (0.22, 0.15, 0.1)
+    _box("XQ_HallFloor", (447.0, -1.0, -10.0), (457.6, 0.0, 0.0), col, wood)
+    _box("XQ_HallWallS", (447.0, 0.0, -10.6), (457.6, 8.5, -10.0), col, wood)
+    _box("XQ_HallWallN", (447.0, 0.0, 0.0), (457.6, 8.5, 0.6), col, wood)
+    _box("XQ_HallWallW", (446.4, 0.0, -10.6), (447.0, 8.5, 0.6), col, wood)
+    _box("XQ_HallCeil", (447.0, 8.5, -10.6), (457.6, 9.1, 0.6), col, wood)
+    hl = bpy.data.lights.new("HQ_HallLight", "POINT")       # 복도 등불: 문이 열리면 따뜻한 빛이 새어 들어옴
+    hl.color, hl.energy, hl.shadow_soft_size = (1.0, 0.68, 0.38), 0.0, 0.3
+    hl.use_custom_distance, hl.cutoff_distance = True, 16
+    hlo = bpy.data.objects.new("HQ_HallLight", hl)
+    hlo.location = bpos(451.5, 6.5, -5.0)
+    bpy.context.scene.collection.objects.link(hlo)
+    print("DOORHOLE cut", n, flush=True)
+
+
+# ------------------------------------------------------------------ 수리점 안 아기 침대
+CRIB = (395.0, -2.0)      # 아기 침대 중심 (로블록스 x, z)
+CRIB_TOP = 2.3            # 매트리스 윗면 높이
+
+
+def crib():
+    wood = bpy.data.materials.get("R_Wood") or bpy.data.materials.get("R_WoodPlanks")
+    cx, cz = CRIB
+    hx, hz = 1.5, 1.9
+    wc = (0.78, 0.6, 0.4)
+    for i, (sx, sz) in enumerate(((-1, -1), (1, -1), (-1, 1), (1, 1))):
+        x, z = cx + sx * (hx - 0.12), cz + sz * (hz - 0.12)
+        _box(f"XQ_CribLeg{i}", (x - 0.12, 0.0, z - 0.12), (x + 0.12, CRIB_TOP + 0.75, z + 0.12), wc, wood)
+    _box("XQ_CribBase", (cx - hx, CRIB_TOP - 0.45, cz - hz), (cx + hx, CRIB_TOP - 0.25, cz + hz), wc, wood)
+    _box("XQ_CribMat", (cx - hx + 0.1, CRIB_TOP - 0.25, cz - hz + 0.1), (cx + hx - 0.1, CRIB_TOP, cz + hz - 0.1), (0.92, 0.9, 0.86))
+    _box("XQ_CribPillow", (cx - 0.55, CRIB_TOP, cz + hz - 0.9), (cx + 0.55, CRIB_TOP + 0.18, cz + hz - 0.2), (0.97, 0.95, 0.92))
+    # 난간: 위 가로대 + 살 (앞쪽 -x 면은 낮게: 팔 숫자를 위에서 보도록)
+    for side, top in ((-1, CRIB_TOP + 0.35), (1, CRIB_TOP + 0.7)):
+        x = cx + side * (hx - 0.06)
+        _box(f"XQ_CribRail{side}", (x - 0.06, top - 0.1, cz - hz), (x + 0.06, top, cz + hz), wc, wood)
+        k = 0
+        z = cz - hz + 0.35
+        while z < cz + hz - 0.2:
+            _box(f"XQ_CribBar{side}_{k}", (x - 0.04, CRIB_TOP, z - 0.04), (x + 0.04, top - 0.1, z + 0.04), wc, wood)
+            z += 0.42
+            k += 1
+    for side in (-1, 1):
+        z = cz + side * (hz - 0.06)
+        _box(f"XQ_CribEnd{side}", (cx - hx, CRIB_TOP - 0.25, z - 0.08), (cx + hx, CRIB_TOP + 0.85, z + 0.08), wc, wood)
+
+
 def apply():
     RT._init()
+    qmark_object()
+    door_hole()
+    crib()
     numbers()
     materials()
     world()
     lights()
     atmosphere()
     effects_static()
+    HQ["fire_objs"] = [o for o in bpy.data.objects if o.name.startswith(("HQ_Fire", "HQ_Flame", "HQ_Embers", "HQ_Coal", "HQ_Brazier"))
+                       and o.type != "LIGHT"]
+    HQ["zoom_skip"] = {o.name for o in bpy.data.objects if o.name.startswith("HQ_")}
     lib = crowd_library()
     HQ["crowd_by_shot"] = {}
     for sh in RT._S["shots"]:

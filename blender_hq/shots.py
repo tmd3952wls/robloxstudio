@@ -172,7 +172,7 @@ _open_keys = [((0.0, 32.0, 62.0), (0.0, 6.0, hz0 - 20), 52),     # 정문 안쪽
               ((2.9, 4.4, 19.5), add(_fa0, (0, 0.6, 0)), 34),      # 하루 왼쪽으로 돌며 팔 쪽으로
               (_pA, _fa0, 30),
               (_pB, _fa0, 27)]
-shot((1, 2), fstop=4.0, ease="lin", cam=spline_cam(_open_keys, 4.45, warp=1.6),
+shot((1, 2), fstop=4.0, ease="lin", nofire=True, bloom=0.3, zoom=[("Haru", 2.6, 99)], cam=spline_cam(_open_keys, 4.45, warp=1.6),
      actors={"Haru": {"x": hx0, "z": hz0, "yaw": hyaw0, "bare": [(0, False), (1.55, True)],
                       "num": {"v": 13 * 3600 + 27 * 60 + 41.5, "rate": -1.0, "glow": [(1.55, 2.5)]},
                       "acts": [("look", -6, -12, 0.2, 0.7), ("look", 6, 12, 1.0, 1.3), ("arm", "L", 80, 0, 1.15, 0.45),
@@ -183,7 +183,7 @@ hp = head("TownE", x, z, yaw)
 fa = forearm("TownE", x, z, yaw, raise_=40)
 p3, l3 = arm_cam("TownE", x, z, yaw, raise_=40, dist=2.4)
 shot((3, 3), cam=[(0, p3, l3, 32), (1.2, add(p3, (0, 0, 0)), l3, 30), (2.17, front_cam(hp, yaw, 6.0, 0.4, -20), hp, 40)],
-     ease="out", temp=5800, fstop=2.4,
+     ease="out", temp=5800, fstop=2.4, zoom=[("TownE", -1, 99)],
      actors={"TownE": {"x": x, "z": z, "yaw": yaw, "bare": True, "acts": [("arm", "L", 40, 0, -1, 0.1), ("freeze", 2.05), ("expr", [(0, "무표정"), (2.05, "무표정|closed")])],
                        "num": {"keys": [(0, 2.9), (2.05, 0.0)], "ease": "lin"}, "tint": (0.25, 0.25, 0.27)},
              "TownB2": {"x": x + 3.5, "z": z - 3.0, "yaw": -60, "face": "충격", "acts": [("jerk", 1.9, 1.2)]}})
@@ -228,16 +228,17 @@ x, z, yaw = 2.0, -14.0, 0.0
 p, l = arm_cam("Rich", x, z, yaw, raise_=80, dist=2.5, back=0.4)
 hp = head("Rich", x, z, yaw)
 shot((10, 10), cam=[(0, p, l, 34), (1.2, add(p, (0, 0.1, 0.6)), add(l, (0, 0, 0.3)), 30), (2.47, front_cam(hp, yaw, 5.5, -1.0, -25), hp, 40)],
-     ease="smooth", fstop=2.6,
+     ease="smooth", fstop=2.6, zoom=[("Rich", -1, 1.55, 0.95)],
      actors={"Rich": {"x": x, "z": z, "yaw": yaw, "bare": True, "acts": [("arm", "L", 80, 0, -1, 0.1, 1.6), ("expr", [(0, "뿌듯")])], "num": {"text": RICH_TEXT, "size": 0.62}},
              **crowd(["TownB", "TownD"], -5, -6, 9, 1, 160, "놀람")})
 # 11  가난한 사람들은 한 시간씩 팔아서 버티지.  (시간 삽니다 노점, TownD 가 판다)
 x, z = 10.0, -30.0
-shot((11, 11), fstop=2.8,
+shot((11, 11), fstop=2.8, zoom=[("TownD", 0.3, 99)],
      cam=[(0, (x - 3.2, 4.6, z + 5.0), (x + 0.2, 3.6, z), 40), (2.23, (x - 2.8, 4.2, z + 4.0), (x + 0.2, 3.6, z), 36)],
      actors={"TownD": {"x": x - 2.0, "z": z, "yaw": 90, "bare": True, "acts": [("arm", "L", 84, 0, 0.2, 0.35, None, 26), ("expr", [(0, "슬픔")])],
                        "num": num_keys([(0, 3 * 3600 + 120), (0.9, 3 * 3600 + 120), (1.6, 2 * 3600 + 120)], "smooth", glow=[(0.8, 1.6)])},
-             "TownB": {"x": x + 2.3, "z": z, "yaw": -90, "bare": True, "y": STREET_Y, "acts": [("arm", "L", 84, 0, 0.2, 0.35, None, 26)], "face": "무표정"}},
+             "TownB": {"x": x + 2.3, "z": z, "yaw": -90, "bare": True, "y": STREET_Y, "acts": [("arm", "L", 84, 0, 0.2, 0.35, None, 26)], "face": "무표정",
+                       "num": num_keys([(0, 30 * 3600 + 900), (0.9, 30 * 3600 + 900), (1.6, 31 * 3600 + 900)], "smooth")}},
      touchglow=(0.8, 1.7, "TownD", 30))
 # 12  그래서 다들 소매를 내리고 다녀.  (거리, 모두 소매 내림)
 walkers = {}
@@ -263,13 +264,13 @@ shot((14, 14), cam=[(0, front_cam(hp, hyaw, 9.0, -1.0), hp, 40), (0.71, front_ca
              **crowd(["TownA2", "TownD"], -7, -14, 13, -2, 30)})
 # 15-16  하루의 팔엔, 이십사 시간이 적혀 있어. 딱 하루.
 p, l = arm_cam("Haru", hx, hz, hyaw, raise_=82, dist=2.0)
-shot((15, 16), cam=[(0, add(p, (0.6, 0.3, 0.8)), l, 36), (2.75, add(p, (-0.1, 0.0, 0.0)), l, 28)], ease="smooth", fstop=2.0,
+shot((15, 16), zoom=[("Haru", -1, 99)], cam=[(0, add(p, (0.6, 0.3, 0.8)), l, 36), (2.75, add(p, (-0.1, 0.0, 0.0)), l, 28)], ease="smooth", fstop=2.0,
      actors={"Haru": {"x": hx, "z": hz, "yaw": hyaw, "bare": True, "num": {"text": "24:00:00"}, "acts": [("arm", "L", 82, 0, -1, 0.1), ("expr", [(0, "기본 미소"), (2.2, "뿌듯")])]}})
 # 17-18  이상한 건, 자정만 지나면 숫자가 다시 이십사 시간으로 돌아온다는 거야.  (밤 다락방, 0:00:02 -> 24:00:00)
 haru_lie = {"x": BED["x"], "z": HARU_LIE_Z, "yaw": 180, "y": BED["y"], "lie": True, "bare": True}
 fa = forearm("Haru", 0, 0, 180, 0, 0)          # 서 있을 때 기준 -> 누운 자세로 변환
 fa_lie = (BED["x"] + fa[0], BED["y"] + 0.0, HARU_LIE_Z + fa[1])
-shot((17, 18), "night", fstop=2.2,
+shot((17, 18), "night", fstop=2.2, zoom=[("Haru", 1.2, 99)],
      cam=[(0, (470.5, 7.5, -9.0), (475.0, 3.4, 1.5), 46), (1.4, (472.0, 5.8, fa_lie[2] - 3.0), fa_lie, 34), (3.77, (472.9, 4.5, fa_lie[2] - 1.0), fa_lie, 26)],
      actors={"Haru": {**haru_lie, "face": "잠|closed", "num": num_keys([(0, 4.0), (2.15, 0.0), (2.2, 24 * 3600), (3.8, 24 * 3600 - 1)], "lin", glow=[(2.15, 2.9)])}},
      touchglow=(2.1, 3.0, "Haru", 25))
@@ -322,10 +323,10 @@ shot((25, 25), fstop=2.4, cam=push(front_cam(rhp, ryaw, 4.6, -0.6, 22), rhp, 36,
      actors=pair("장난기", "놀람", racts=[("arm", "R", 70, 10, 0.1, 0.3)]))
 # 26  대신, 백 년을 주지.  (부자가 소매를 걷고 숫자 팔을 내민다)
 p, l = arm_cam("Rich", rx, rz, ryaw, raise_=82, dist=2.6, back=0.3)
-shot((26, 26), fstop=2.4, cam=[(0, add(p, (0, 0.2, -0.5)), l, 36), (1.25, p, l, 32)],
+shot((26, 26), fstop=2.4, zoom=[("Rich", -1, 99, 0.95)], cam=[(0, add(p, (0, 0.2, -0.5)), l, 36), (1.25, p, l, 32)],
      actors=pair("뿌듯", "놀람", racts=[("arm", "L", 82, 0, -1, 0.1)], rbare=True))
 # 27  하루는 이상했어.
-shot((27, 27), fstop=2.2, cam=push(front_cam(hhp, hyaw, 3.6, 0.4, -15), hhp, 32, 0.98, amt=0.1),
+shot((27, 27), fstop=2.2, qmark=("Haru", 0.12), cam=push(front_cam(hhp, hyaw, 3.6, 0.4, -15), hhp, 32, 0.98, amt=0.1),
      actors=pair("장난기", "의심", hacts=[("tilt", 12, 0.1, 0.5)]))
 # 28  왜 겨우 하루를, 백 년이나 주고 사려는 걸까.  (투샷)
 shot((28, 28), fstop=4.0, cam=[(0, (9.5, 4.8, -98.5), (0, 3.9, -98.5), 52), (2.42, (8.5, 4.7, -98.5), (0, 3.9, -98.5), 50)],
@@ -357,9 +358,10 @@ shot((32, 32), "night", fstop=2.4,
 # 33  시계탑이 열두 번 울렸어.
 shot((33, 33), "night", cam=[(0, (0, 40, -215), TOWER, 34), (1.38, (0, 46, -228), TOWER, 26)], fstop=11, shake=3.0)
 # 34  문이 아주 조용히 열리고,
-shot((34, 34), "night", fstop=4.0,
-     cam=[(0, (468.5, 5.0, 2.5), (460.5, 3.8, -4.8), 40), (1.33, (467.5, 4.8, 1.8), (460.5, 3.8, -4.8), 38)],
-     actors={"Grandma": {"path": [(0, 459.4, -4.8, 90), (1.33, 461.0, -4.4, 70)], "y": ROOM_Y, "face": "무표정"}})
+#   문(벽 x=458.3, z -6.8~-3.2, 경첩 z=-6.8)이 천천히 안쪽으로 열리고, 할머니가 복도에서 문으로 들어온다
+shot((34, 34), "night", fstop=4.0, door=(0.0, 0.85, 92), exp=0.6,
+     cam=[(0, (468.5, 5.0, 2.5), (459.5, 3.8, -4.8), 40), (1.33, (467.5, 4.8, 1.8), (460.0, 3.8, -4.8), 38)],
+     actors={"Grandma": {"path": [(0, 454.6, -4.9, 90), (0.45, 454.6, -4.9, 90), (1.35, 459.8, -4.7, 80)], "y": ROOM_Y, "face": "무표정"}})
 # 35  차가운 손 하나가, 하루의 손목에 닿았어.
 gx, gz = 472.2, fa_lie[2] + 2.2
 shot((35, 35), "night", fstop=2.0,
@@ -367,7 +369,7 @@ shot((35, 35), "night", fstop=2.0,
      actors={"Haru": {**haru_lie, "bare": True, "face": "잠|closed", "num": {"text": "0:00:00"}},
              "Grandma": {"x": gx, "z": gz, "yaw": 90, "y": ROOM_Y, "face": "무표정", "acts": [("arm", "L", 82, 0, 0.3, 0.9, None, -25)]}})
 # 36-37  팔이 따뜻해지면서, 숫자가 다시 올라가기 시작했어.
-shot((36, 37), "night", fstop=2.0,
+shot((36, 37), "night", fstop=2.0, zoom=[("Haru", -1, 99)],
      cam=[(0, (471.2, 5.4, fa_lie[2] - 0.3), fa_lie, 27), (2.79, (471.6, 5.1, fa_lie[2] - 0.2), fa_lie, 23)],
      actors={"Haru": {**haru_lie, "bare": True, "face": "잠|closed",
                       "num": num_keys([(0, 0), (0.3, 0), (2.7, 24 * 3600)], "smooth", glow=[(0.2, 2.9)])}},
@@ -400,7 +402,7 @@ shot((42, 42), "night", fstop=2.0,
      actors={"Haru": {**haru_lie, "face": "충격"}})
 # 43-44  할머니 팔에 남은 숫자. 오 분.  (회상하듯 팔 클로즈업)
 p, l = arm_cam("Grandma", gx, gz, 90, ROOM_Y, raise_=60, dist=1.8, back=0.2)
-shot((43, 44), "night", fstop=2.0, temp=6000,
+shot((43, 44), "night", fstop=2.0, temp=6000, zoom=[("Grandma", -1, 99)],
      cam=[(0, add(p, (0, 0.2, 0)), l, 32), (1.75, p, l, 25)],
      actors={"Grandma": {"x": gx, "z": gz, "yaw": 90, "y": ROOM_Y, "bare": True, "num": num_live(5 * 60), "acts": [("arm", "L", 60, 0, -1, 0.1)], "face": "무표정"}})
 # 45-46  할머니는 웃었어. 들켰네.
@@ -411,21 +413,23 @@ shot((45, 46), "night", fstop=2.2,
 
 # ================================================================== 5. 회상
 # 47-48  하루가 태어나던 날, 하루 팔엔 숫자가 하나도 없었대.  (수리점 안, 아기 하루)
-bx, bz = 400.0, 3.0
-baby = {"x": bx + 2.0, "z": bz - 1.0, "yaw": 180, "y": 3.05, "lie": True, "scale": 0.42, "face": "잠|closed"}
+#   아기 하루는 수리점 안 아기 침대(hq_upgrade.CRIB: 중심 395,-2, 매트리스 높이 2.3)에 누워 있다
+bx, bz = 395.0, -2.0                      # 아기 침대 중심
+BABY_S = 0.42
+baby = {"x": bx, "z": bz + 1.25 - RIG["Haru"]["Head"][1] * BABY_S, "yaw": 180, "y": 2.3 + 0.95 * BABY_S, "lie": True, "scale": BABY_S, "face": "잠|closed"}
 shot((47, 48), "night", temp=9000, exp=0.15, fstop=2.8,
-     cam=[(0, (bx - 6.0, 6.5, bz - 9.0), (bx + 1.0, 3.6, bz), 44), (2.87, (bx - 3.5, 5.6, bz - 6.0), (bx + 1.6, 3.4, bz), 38)],
-     actors={"Grandma": {"x": bx - 0.2, "z": bz - 0.8, "yaw": 90, "y": ROOM_Y, "face": "슬픔"}, "Haru": dict(baby)})
+     cam=[(0, (bx - 8.0, 7.5, bz - 9.0), (bx - 0.5, 2.8, bz), 44), (2.87, (bx - 6.0, 6.6, bz - 6.5), (bx - 0.3, 2.8, bz), 40)],
+     actors={"Grandma": {"x": bx - 2.6, "z": bz + 0.3, "yaw": 90, "y": ROOM_Y, "face": "슬픔"}, "Haru": dict(baby)})
 # 49-50  영. 태어나자마자 멈출 아이였던 거야.
-bfa = forearm("Haru", 0, 0, 180, 0, 0, scale=0.42)
-bfa_w = (bx + 2.0 + bfa[0], 3.05, bz - 1.0 + bfa[1])
-shot((49, 50), "night", temp=9000, exp=0.15, fstop=1.8,
-     cam=[(0, (bfa_w[0] - 1.1, bfa_w[1] + 0.5, bfa_w[2] - 0.6), bfa_w, 30), (2.1, (bfa_w[0] - 0.9, bfa_w[1] + 0.4, bfa_w[2] - 0.5), bfa_w, 26)],
+bfa = forearm("Haru", 0, 0, 180, 0, 0, scale=BABY_S)
+bfa_w = (baby["x"] + bfa[0], baby["y"], baby["z"] + bfa[1])
+shot((49, 50), "night", temp=9000, exp=0.15, fstop=1.8, zoom=[("Haru", -1, 99, 0.6, 1.2)],
+     cam=[(0, (bfa_w[0] - 1.6, bfa_w[1] + 1.6, bfa_w[2] - 0.8), bfa_w, 30), (2.1, (bfa_w[0] - 1.4, bfa_w[1] + 1.4, bfa_w[2] - 0.7), bfa_w, 26)],
      actors={"Haru": {**baby, "bare": True, "num": {"text": "0:00:00", "size": 1.0}}})
 # 51-52  그날 할머니가 하루의 손목을 잡고, 하루치를 넘겼어.
 shot((51, 52), "night", temp=9000, exp=0.15, fstop=2.4,
-     cam=[(0, (bx - 1.2, 5.4, bz - 6.0), (bx + 0.8, 3.4, bz - 0.8), 42), (2.87, (bx - 1.0, 5.0, bz - 5.0), (bx + 0.8, 3.4, bz - 0.8), 38)],
-     actors={"Grandma": {"x": bx - 0.6, "z": bz - 1.6, "yaw": 90, "y": ROOM_Y, "face": "결심", "bare": True, "num": {"text": LONG_TEXT, "size": 0.62},
+     cam=[(0, (bx - 4.5, 6.4, bz - 6.5), (bx - 0.6, 2.8, bz - 0.2), 42), (2.87, (bx - 4.0, 6.0, bz - 5.5), (bx - 0.6, 2.8, bz - 0.2), 38)],
+     actors={"Grandma": {"x": bx - 2.4, "z": bz - 0.4, "yaw": 90, "y": ROOM_Y, "face": "결심", "bare": True, "num": {"text": LONG_TEXT, "size": 0.62},
                          "acts": [("arm", "L", 55, 0, 0.1, 0.6, None, 10)]},
              "Haru": {**baby, "bare": True, "num": num_keys([(0, 0), (1.2, 0), (2.6, 24 * 3600)], "smooth", glow=[(1.1, 2.9)])}},
      touchglow=(1.0, 2.9, "Grandma", 50))
@@ -447,7 +451,7 @@ shot((55, 55), "night", temp=8000, fstop=5.6,
 gx2, gz2 = 401.0, -2.0
 p, l = arm_cam("Grandma", gx2, gz2, 90, ROOM_Y, raise_=70, dist=1.9, back=0.2)
 steps = [(0.0, LONG_TEXT), (0.7, "43,800:00:00\n35,040:00:00"), (1.4, "26,280:00:00"), (2.1, "8,760:00:00"), (2.6, "0:05:00")]
-shot((56, 56), "night", temp=8000, fstop=2.0,
+shot((56, 56), "night", temp=8000, fstop=2.0, zoom=[("Grandma", -1, 99, 0.95)],
      cam=[(0, add(p, (0, 0.3, 0.3)), l, 34), (2.95, p, l, 28)],
      actors={"Grandma": {"x": gx2, "z": gz2, "yaw": 90, "y": ROOM_Y, "bare": True, "acts": [("arm", "L", 70, 0, -1, 0.1)],
                          "num": {"text": (lambda st: (lambda t: [s for tt, s in st if t >= tt][-1]))(steps), "size": 0.62}}})
@@ -486,9 +490,11 @@ shot((62, 62), "night", fstop=3.2,
 # 63  몰래 따라온 부자가 소리친 거야.  (문 앞 부자)
 dr = (459.6, -4.6)
 rhp2 = head("Rich", dr[0], dr[1], 90, ROOM_Y)
-shot((63, 63), "night", fstop=2.6,
+#   문이 벌컥 열리고 부자가 복도에서 들어오며 소리친다
+shot((63, 63), "night", fstop=2.6, door=(0.0, 0.3, 100), exp=0.35,
      cam=[(0, front_cam(rhp2, 90, 6.0, -1.6, -10), rhp2, 38), (1.64, front_cam(rhp2, 90, 4.0, -1.2, -8), rhp2, 34)], ease="out",
-     actors={"Rich": {"x": dr[0], "z": dr[1], "yaw": 90, "y": ROOM_Y, "face": "분노", "acts": [("arm", "R", 85, 0, 0.0, 0.2), ("jerk", 0.1, 1.0)]}})
+     actors={"Rich": {"path": [(0, 454.8, -4.9, 90), (0.12, 454.8, -4.9, 90), (0.8, dr[0], dr[1], 90)], "y": ROOM_Y, "face": "분노",
+                      "acts": [("arm", "R", 85, 0, 0.75, 0.2), ("jerk", 0.8, 1.0)]}})
 
 # ================================================================== 7. 나눔 (밤, 수리점 앞 거리)
 gS = {"x": SHOP[0] + 0.6, "z": SHOP[1] - 1.2, "yaw": 90, "y": WALK_Y}
@@ -525,7 +531,7 @@ shot((65, 65), "night", fstop=3.2,
      actors={**street_crowd(12, "충격", [("look", -15, 0, 0.1, 0.4)]), "Grandma": {**gS, "face": "슬픔", "bare": True, "num": num_live(4 * 60 + 30)}})
 # 66  하루의 팔을 봤어.
 p, l = arm_cam("Haru", hS["x"], hS["z"], 90, WALK_Y, raise_=70, dist=2.0)
-shot((66, 66), "night", fstop=2.0, cam=[(0, add(p, (0, 0.2, 0.3)), l, 32), (1.31, p, l, 28)],
+shot((66, 66), "night", fstop=2.0, zoom=[("Haru", -1, 99)], cam=[(0, add(p, (0, 0.2, 0.3)), l, 32), (1.31, p, l, 28)],
      actors={"Haru": {**hS, "bare": True, "num": {"text": "24:00:00"}, "acts": [("arm", "L", 70, 0, -1, 0.1)], "face": "울먹"}})
 # 67  아무도 말이 없었어.
 shot((67, 67), "night", fstop=8.0,
@@ -560,14 +566,14 @@ shot((69, 69), "night", fstop=2.2, touchglow=(0.7, 1.95, "Grandma", 45),
      actors=touch_pair("Baker", "결심", 9 * 3600, 0.7, 1.95, 4 * 60 + 28, 5 * 60 + 28, {"Haru": {**hS, "face": "놀람"}}))
 # 70  일 분.  (할머니 팔 숫자)
 p, l = arm_cam("Grandma", gS["x"], gS["z"], 90, WALK_Y, raise_=84, inward=26, dist=2.4)
-shot((70, 70), "night", fstop=2.0, cam=[(0, p, l, 28), (0.46, add(p, (0.0, 0.0, 0.0)), l, 27)],
+shot((70, 70), "night", fstop=2.0, zoom=[("Grandma", -1, 99)], cam=[(0, p, l, 28), (0.46, add(p, (0.0, 0.0, 0.0)), l, 27)],
      actors={"Grandma": {**gS, "bare": True, "acts": [("arm", "L", 84, 0, -1, 0.1, None, 26)], "num": num_live(5 * 60 + 27), "face": "울먹"}})
 # 71  꽃집 누나도.
 shot((71, 71), "night", fstop=2.4, touchglow=(0.25, 0.77, "Grandma", 45),
      cam=[(0, (mid_t[0] - 0.4, 4.6, mid_t[2] - 3.6), mid_t, 40), (0.77, (mid_t[0] - 0.3, 4.4, mid_t[2] - 3.2), mid_t, 38)],
      actors=touch_pair("Flower", "기본 미소", 6 * 3600, 0.25, 0.77, 5 * 60 + 26, 6 * 60 + 26))
 # 72  일 분.
-shot((72, 72), "night", fstop=2.0, cam=[(0, p, l, 27), (0.46, p, l, 26)],
+shot((72, 72), "night", fstop=2.0, zoom=[("Grandma", -1, 99)], cam=[(0, p, l, 27), (0.46, p, l, 26)],
      actors={"Grandma": {**gS, "bare": True, "acts": [("arm", "L", 84, 0, -1, 0.1, None, 26)], "num": num_live(6 * 60 + 25), "face": "울먹"}})
 # 73  우산 장수도, 수프 가게 아줌마도,
 shot((73, 73), "night", fstop=2.8, touchglow=(0.2, 1.99, "Grandma", 45),
@@ -576,7 +582,7 @@ shot((73, 73), "night", fstop=2.8, touchglow=(0.2, 1.99, "Grandma", 45),
              "Soup": {"x": touch_bk["x"] + 1.8, "z": touch_bk["z"] + 2.4, "yaw": -100, "y": STREET_Y, "bare": [(0, False), (0.9, True)], "num": num_live(15 * 3600), "face": "결심",
                       "acts": [("arm", "L", 40, 0, 0.9, 0.3)]}})
 # 74  일 분씩.  (할머니 숫자가 빨리 오름)
-shot((74, 74), "night", fstop=2.0, cam=[(0, p, l, 27), (0.57, p, l, 25)],
+shot((74, 74), "night", fstop=2.0, zoom=[("Grandma", -1, 99)], cam=[(0, p, l, 27), (0.57, p, l, 25)],
      actors={"Grandma": {**gS, "bare": True, "acts": [("arm", "L", 84, 0, -1, 0.1, None, 26)], "face": "울먹",
                          "num": num_keys([(0, 7 * 60 + 23), (0.57, 11 * 60 + 23)], "lin", glow=[(0, 0.6)])}})
 # 75  줄은 시장 끝까지 이어졌어.  (높은 곳에서 길게 늘어선 줄)
@@ -600,12 +606,12 @@ shot((76, 76), "night", fstop=2.6, touchglow=(1.3, 2.05, "Grandma", 50),
              "Grandma": {**gS, "bare": True, "face": "놀람", "num": num_live(11 * 60 + 20), "acts": [("arm", "L", 84, 0, 1.0, 0.35, None, 26)]},
              "Haru": {**hS, "face": "놀람"}})
 # 77  할머니의 숫자는,
-shot((77, 77), "night", fstop=2.0, cam=[(0, add(p, (0, 0.4, 0)), l, 30), (0.74, p, l, 28)],
+shot((77, 77), "night", fstop=2.0, zoom=[("Grandma", -1, 99)], cam=[(0, add(p, (0, 0.4, 0)), l, 30), (0.74, p, l, 28)],
      actors={"Grandma": {**gS, "bare": True, "acts": [("arm", "L", 84, 0, -1, 0.1, None, 26)], "face": "감동",
                          "num": {"text": "0:11:19"}}})
 # 78  이제 소매 끝까지 이어져 있어.  (숫자가 팔을 가득 채움)
 steps2 = [(0.0, "0:11:19"), (0.35, "87,600:11:19"), (0.7, "87,600:11:19\n35,040:00:00"), (1.05, FULL_TEXT)]
-shot((78, 78), "night", fstop=2.0, cam=[(0, p, l, 27), (1.94, add(p, (0.0, 0.25, 0.0)), add(l, (0, 0.1, 0)), 31)],
+shot((78, 78), "night", fstop=2.0, zoom=[("Grandma", -1, 99, 0.95)], cam=[(0, p, l, 27), (1.94, add(p, (0.0, 0.25, 0.0)), add(l, (0, 0.1, 0)), 31)],
      touchglow=(0.0, 1.9, "Grandma", 50),
      actors={"Grandma": {**gS, "bare": True, "acts": [("arm", "L", 84, 0, -1, 0.1, None, 26)], "face": "감동",
                          "num": {"text": (lambda st: (lambda t: [s for tt, s in st if t >= tt][-1]))(steps2), "size": 0.62, "glow": [(0.0, 1.6)]}}})
@@ -630,7 +636,7 @@ shot((81, 81), "day", fstop=2.6, touchglow=(0.4, 1.41, "TownB", 30),
              "TownC": {"x": ax_ - 4.3, "z": az_, "yaw": 90, "bare": True, "acts": [("arm", "L", 84, 0, 0.0, 0.3, None, 26)], "face": "기본 미소",
                        "num": num_keys([(0, 40 * 3600), (0.4, 40 * 3600), (1.0, 40 * 3600 - 60)], "smooth")}})
 # 82  하루의 숫자는 여전히, 매일 밤 다시 차올라.  (밤, 자는 하루, 미소)
-shot((82, 82), "night", fstop=2.2,
+shot((82, 82), "night", fstop=2.2, zoom=[("Haru", 0.9, 99)],
      cam=[(0, (472.0, 6.2, fa_lie[2] - 4.0), (475.0, 3.6, 1.5), 40), (2.41, (472.9, 4.6, fa_lie[2] - 1.2), fa_lie, 28)],
      actors={"Haru": {**haru_lie, "face": "기본 미소|closed", "num": num_keys([(0, 3.0), (1.3, 0.0), (1.35, 24 * 3600), (2.5, 24 * 3600 - 1)], "lin", glow=[(1.3, 2.2)])}},
      touchglow=(1.25, 2.2, "Haru", 25))
@@ -640,7 +646,7 @@ shot((83, 83), "night", fstop=4.0,
      actors={"Haru": {"path": [(0, 0.0, -1.0, 180), (1.09, 0.0, -4.5, 180)], "face": "결심"}})
 # 84  매일 밤 누군가의 손목에, 일 분을 놓고 와.  (가로등 아래 잠든 노인 손목에 살짝, 그리고 시계탑으로)
 ex_, ez_ = 9.0, -20.0
-shot((84, 84), "night", fstop=3.5, touchglow=(0.5, 1.6, "Haru", 35),
+shot((84, 84), "night", fstop=3.5, nodyn=True, nomin=True, nofire=True, touchglow=(0.5, 1.6, "Haru", 35),
      cam=[(0, (ex_ - 0.3, 4.6, ez_ + 6.0), (ex_ - 0.2, 3.6, ez_), 42), (1.3, (ex_ - 0.6, 5.2, ez_ + 7.5), (ex_ - 0.2, 3.8, ez_), 44),
           (2.7, (ex_ - 6.0, 12.0, ez_ + 14.0), (0.0, 50.0, -240.0), 46)], ease="smooth",
      actors={"Haru": {"x": ex_ - 2.2, "z": ez_ + 0.3, "yaw": 90, "face": "기본 미소", "acts": [("arm", "L", 75, 0, 0.0, 0.4, 1.7, 20), ("lean", 10, 0.0, 0.4)]},

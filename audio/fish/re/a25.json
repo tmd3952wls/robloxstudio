@@ -1,0 +1,5 @@
+[["press","Escape"], ["wait",800], ["click_xy",480,145], ["wait",500], ["press","Control+A"], ["press","Delete"], ["wait",500],
+ ["insert_file","C:/Users/tmd39/Documents/수명을파는시장/audio/fish/re/line25.txt"], ["wait",1500], ["shot","ready"],
+ ["press","Control+Enter"], ["wait",55000], ["shot","gen"],
+ ["download_xy",592,916,"C:/Users/tmd39/Documents/수명을파는시장/audio/fish/re/l25_t1.mp3"], ["wait",2000],
+ ["download_xy",983,916,"C:/Users/tmd39/Documents/수명을파는시장/audio/fish/re/l25_t2.mp3"]]
