@@ -1,4 +1,0 @@
-file 'C:\Users\tmd39\Documents\별이떨어지는마을\blender\비교\_seg\3_반응과_달리기_0_old.mp4'
-file 'C:\Users\tmd39\Documents\별이떨어지는마을\blender\비교\_seg\3_반응과_달리기_0_new.mp4'
-file 'C:\Users\tmd39\Documents\별이떨어지는마을\blender\비교\_seg\3_반응과_달리기_1_old.mp4'
-file 'C:\Users\tmd39\Documents\별이떨어지는마을\blender\비교\_seg\3_반응과_달리기_1_new.mp4'

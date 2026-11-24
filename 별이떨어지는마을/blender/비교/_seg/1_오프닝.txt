@@ -1,2 +1,0 @@
-file 'C:\Users\tmd39\Documents\별이떨어지는마을\blender\비교\_seg\1_오프닝_0_old.mp4'
-file 'C:\Users\tmd39\Documents\별이떨어지는마을\blender\비교\_seg\1_오프닝_0_new.mp4'
