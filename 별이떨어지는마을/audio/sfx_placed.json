@@ -1,0 +1,542 @@
+[
+ {
+  "cut": 1,
+  "sound": "whoosh_big/gust",
+  "time": 0.0,
+  "db": -10
+ },
+ {
+  "cut": 1,
+  "sound": "swish/soft",
+  "time": 2.614,
+  "db": -14
+ },
+ {
+  "cut": 1,
+  "sound": "swish/bright",
+  "time": 3.042,
+  "db": -18
+ },
+ {
+  "cut": 1,
+  "sound": "pro_shimmer/m1",
+  "time": 3.466,
+  "db": -16
+ },
+ {
+  "cut": 1,
+  "sound": "mallet/celesta",
+  "time": 3.805,
+  "db": -15
+ },
+ {
+  "cut": 5,
+  "sound": "swish/cane",
+  "time": 4.272,
+  "db": -16
+ },
+ {
+  "cut": 6,
+  "sound": "whoosh_fast/tight",
+  "time": 5.781,
+  "db": -15
+ },
+ {
+  "cut": 6,
+  "sound": "knock/wood",
+  "time": 6.035,
+  "db": -18
+ },
+ {
+  "cut": 7,
+  "sound": "pro_shimmer/m1",
+  "time": 6.495,
+  "db": -17
+ },
+ {
+  "cut": 8,
+  "sound": "mallet/glock",
+  "time": 8.532,
+  "db": -13
+ },
+ {
+  "cut": 9,
+  "sound": "knock/snap",
+  "time": 10.068,
+  "db": -14
+ },
+ {
+  "cut": 10,
+  "sound": "pro_shimmer/m0",
+  "time": 10.647,
+  "db": -19
+ },
+ {
+  "cut": 11,
+  "sound": "pro_whoosh_big/windy",
+  "time": 11.97,
+  "db": -20
+ },
+ {
+  "cut": 12,
+  "sound": "pro_shimmer/m1",
+  "time": 14.183,
+  "db": -16
+ },
+ {
+  "cut": 13,
+  "sound": "ui_pop/fall",
+  "time": 15.731,
+  "db": -14
+ },
+ {
+  "cut": 14,
+  "sound": "notify/mid_wood",
+  "time": 16.569,
+  "db": -15
+ },
+ {
+  "cut": 15,
+  "sound": "cut_hit/punch",
+  "time": 17.999,
+  "db": -12
+ },
+ {
+  "cut": 15,
+  "sound": "whoosh_fast/heavy",
+  "time": 17.754,
+  "db": -16
+ },
+ {
+  "cut": 16,
+  "sound": "mallet/up4",
+  "time": 19.55,
+  "db": -14
+ },
+ {
+  "cut": 17,
+  "sound": "ui_pop/soft",
+  "time": 21.293,
+  "db": -18
+ },
+ {
+  "cut": 18,
+  "sound": "swipe/glide",
+  "time": 21.847,
+  "db": -20
+ },
+ {
+  "cut": 19,
+  "sound": "drip/plink",
+  "time": 23.78,
+  "db": -17
+ },
+ {
+  "cut": 20,
+  "sound": "cut_hit/sub",
+  "time": 25.363,
+  "db": -13
+ },
+ {
+  "cut": 21,
+  "sound": "whoosh_big/deep",
+  "time": 25.13,
+  "db": -18
+ },
+ {
+  "cut": 22,
+  "sound": "ui_pop/wide",
+  "time": 27.237,
+  "db": -16
+ },
+ {
+  "cut": 24,
+  "sound": "swipe/cloth",
+  "time": 29.444,
+  "db": -15
+ },
+ {
+  "cut": 25,
+  "sound": "tap/glass",
+  "time": 30.39,
+  "db": -15
+ },
+ {
+  "cut": 26,
+  "sound": "pro_shimmer/m2",
+  "time": 30.67,
+  "db": -16
+ },
+ {
+  "cut": 27,
+  "sound": "ui_pop/boop",
+  "time": 32.541,
+  "db": -16
+ },
+ {
+  "cut": 27,
+  "sound": "ui_pop/boop",
+  "time": 32.902,
+  "db": -17
+ },
+ {
+  "cut": 28,
+  "sound": "swish/flick",
+  "time": 34.817,
+  "db": -17
+ },
+ {
+  "cut": 31,
+  "sound": "mallet/marimba",
+  "time": 38.647,
+  "db": -17
+ },
+ {
+  "cut": 32,
+  "sound": "shimmer/m4",
+  "time": 39.353,
+  "db": -18
+ },
+ {
+  "cut": 33,
+  "sound": "pro_shimmer/m4",
+  "time": 40.597,
+  "db": -17
+ },
+ {
+  "cut": 34,
+  "sound": "swish/stick",
+  "time": 42.413,
+  "db": -16
+ },
+ {
+  "cut": 35,
+  "sound": "swish/stick",
+  "time": 43.471,
+  "db": -15
+ },
+ {
+  "cut": 35,
+  "sound": "swish/blade",
+  "time": 43.703,
+  "db": -17
+ },
+ {
+  "cut": 35,
+  "sound": "swish/stick",
+  "time": 43.795,
+  "db": -16
+ },
+ {
+  "cut": 36,
+  "sound": "knock/snap",
+  "time": 44.813,
+  "db": -15
+ },
+ {
+  "cut": 37,
+  "sound": "tap/glass",
+  "time": 45.664,
+  "db": -16
+ },
+ {
+  "cut": 38,
+  "sound": "reverse_swell/dark",
+  "time": 45.828,
+  "db": -15
+ },
+ {
+  "cut": 38,
+  "sound": "cut_hit/sub",
+  "time": 46.556,
+  "db": -12
+ },
+ {
+  "cut": 39,
+  "sound": "cut_hit/air",
+  "time": 47.038,
+  "db": -16
+ },
+ {
+  "cut": 40,
+  "sound": "cut_hit/punch",
+  "time": 48.069,
+  "db": -15
+ },
+ {
+  "cut": 41,
+  "sound": "whoosh_fast/reverse",
+  "time": 48.752,
+  "db": -16
+ },
+ {
+  "cut": 42,
+  "sound": "downlifter/air_fall",
+  "time": 49.859,
+  "db": -16
+ },
+ {
+  "cut": 43,
+  "sound": "pro_shimmer/m1",
+  "time": 51.487,
+  "db": -17
+ },
+ {
+  "cut": 44,
+  "sound": "swish/soft",
+  "time": 53.101,
+  "db": -18
+ },
+ {
+  "cut": 45,
+  "sound": "shutter/film",
+  "time": 54.58,
+  "db": -16
+ },
+ {
+  "cut": 45,
+  "sound": "cut_hit/punch",
+  "time": 54.604,
+  "db": -14
+ },
+ {
+  "cut": 46,
+  "sound": "riser/swell",
+  "time": 54.523,
+  "db": -18
+ },
+ {
+  "cut": 47,
+  "sound": "swipe/glide",
+  "time": 56.493,
+  "db": -18
+ },
+ {
+  "cut": 48,
+  "sound": "reverse_swell/ring",
+  "time": 57.9,
+  "db": -17
+ },
+ {
+  "cut": 49,
+  "sound": "downlifter/sub_sink",
+  "time": 59.84,
+  "db": -16
+ },
+ {
+  "cut": 50,
+  "sound": "cut_hit/kick",
+  "time": 61.868,
+  "db": -12
+ },
+ {
+  "cut": 51,
+  "sound": "swish/flick",
+  "time": 62.54,
+  "db": -17
+ },
+ {
+  "cut": 52,
+  "sound": "tap/table",
+  "time": 63.575,
+  "db": -14
+ },
+ {
+  "cut": 52,
+  "sound": "tap/table",
+  "time": 63.781,
+  "db": -14
+ },
+ {
+  "cut": 52,
+  "sound": "tap/table",
+  "time": 63.986,
+  "db": -14
+ },
+ {
+  "cut": 52,
+  "sound": "tap/table",
+  "time": 64.191,
+  "db": -14
+ },
+ {
+  "cut": 52,
+  "sound": "tap/table",
+  "time": 64.397,
+  "db": -14
+ },
+ {
+  "cut": 53,
+  "sound": "pro_shimmer/m0",
+  "time": 64.488,
+  "db": -18
+ },
+ {
+  "cut": 54,
+  "sound": "toggle/on",
+  "time": 65.856,
+  "db": -12
+ },
+ {
+  "cut": 55,
+  "sound": "toggle/on",
+  "time": 66.271,
+  "db": -12
+ },
+ {
+  "cut": 56,
+  "sound": "toggle/on",
+  "time": 66.668,
+  "db": -12
+ },
+ {
+  "cut": 57,
+  "sound": "whoosh_big/gust",
+  "time": 66.876,
+  "db": -14
+ },
+ {
+  "cut": 57,
+  "sound": "pro_shimmer/m4",
+  "time": 66.841,
+  "db": -17
+ },
+ {
+  "cut": 58,
+  "sound": "swish/zing",
+  "time": 68.764,
+  "db": -16
+ },
+ {
+  "cut": 59,
+  "sound": "pro_whoosh_big/long",
+  "time": 69.208,
+  "db": -14
+ },
+ {
+  "cut": 60,
+  "sound": "riser/air",
+  "time": 70.338,
+  "db": -18
+ },
+ {
+  "cut": 61,
+  "sound": "reverse_swell/breath",
+  "time": 72.071,
+  "db": -17
+ },
+ {
+  "cut": 62,
+  "sound": "toggle/latch",
+  "time": 74.362,
+  "db": -13
+ },
+ {
+  "cut": 62,
+  "sound": "mallet/up4",
+  "time": 74.419,
+  "db": -15
+ },
+ {
+  "cut": 63,
+  "sound": "pro_pop/boop",
+  "time": 75.37,
+  "db": -15
+ },
+ {
+  "cut": 63,
+  "sound": "mallet/up4",
+  "time": 75.423,
+  "db": -16
+ },
+ {
+  "cut": 64,
+  "sound": "riser/rush",
+  "time": 76.21,
+  "db": -15
+ },
+ {
+  "cut": 65,
+  "sound": "whoosh_big/swell",
+  "time": 77.252,
+  "db": -14
+ },
+ {
+  "cut": 66,
+  "sound": "whoosh_big/jet",
+  "time": 78.294,
+  "db": -13
+ },
+ {
+  "cut": 67,
+  "sound": "riser/swell",
+  "time": 79.853,
+  "db": -14
+ },
+ {
+  "cut": 68,
+  "sound": "impact/swell",
+  "time": 80.452,
+  "db": -12
+ },
+ {
+  "cut": 68,
+  "sound": "logo_sting/soft_bloom",
+  "time": 80.609,
+  "db": -14
+ },
+ {
+  "cut": 69,
+  "sound": "shimmer/m5",
+  "time": 81.572,
+  "db": -21
+ },
+ {
+  "cut": 70,
+  "sound": "drip/tiny",
+  "time": 83.094,
+  "db": -18
+ },
+ {
+  "cut": 71,
+  "sound": "mallet/marimba",
+  "time": 84.08,
+  "db": -18
+ },
+ {
+  "cut": 72,
+  "sound": "pro_shimmer/m1",
+  "time": 85.097,
+  "db": -17
+ },
+ {
+  "cut": 73,
+  "sound": "mallet/celesta",
+  "time": 86.799,
+  "db": -14
+ },
+ {
+  "cut": 74,
+  "sound": "mallet/up4",
+  "time": 87.772,
+  "db": -16
+ },
+ {
+  "cut": 75,
+  "sound": "ui_pop/soft",
+  "time": 88.772,
+  "db": -19
+ },
+ {
+  "cut": 76,
+  "sound": "logo_sting/soft_bloom",
+  "time": 89.775,
+  "db": -14
+ },
+ {
+  "cut": 76,
+  "sound": "whoosh_big/swell",
+  "time": 89.932,
+  "db": -16
+ }
+]

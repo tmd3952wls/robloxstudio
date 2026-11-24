@@ -2,26 +2,28 @@
 **/.fish_profile/
 .env
 *.key
+desktop.ini
 
-# 렌더 결과·미리보기 이미지·대용량 미디어 (용량 큼)
-blender/frames/
-blender_hq/frames/
-blender_hq/frames2/
-blender_hq/open_anim/
-blender/check*/
-blender_hq/hq*/
-blender_hq/dyn*/
-blender_hq/preview/
-blender_hq/out/
+# 렌더 결과·대용량 미디어
+**/frames*/
+**/open_anim/
+**/preview/
+**/out/
 *.png
 *.jpg
+*.jpeg
+*.exr
 *.mp4
+*.mov
+*.webm
 *.wav
 *.mp3
+*.flac
 *.blend1
+*.bak*
 __pycache__/
 *.pyc
 
 # fish.audio 페이지 덤프 (계정 정보 포함 가능)
-audio/fish/re/s*.html
-audio/fish/re/s*.txt
+**/audio/fish/re/s*.html
+**/audio/fish/re/s*.txt

@@ -1,0 +1,6 @@
+file 'C:\Users\tmd39\Documents\별이떨어지는마을\blender\비교_r3\_seg\1_오프닝_한번의_비행_0_old.mp4'
+file 'C:\Users\tmd39\Documents\별이떨어지는마을\blender\비교_r3\_seg\1_오프닝_한번의_비행_0_new.mp4'
+file 'C:\Users\tmd39\Documents\별이떨어지는마을\blender\비교_r3\_seg\2_병을_귀에_대는_장면_0_old.mp4'
+file 'C:\Users\tmd39\Documents\별이떨어지는마을\blender\비교_r3\_seg\2_병을_귀에_대는_장면_0_new.mp4'
+file 'C:\Users\tmd39\Documents\별이떨어지는마을\blender\비교_r3\_seg\3_별의_강과_하늘이_켜짐_0_old.mp4'
+file 'C:\Users\tmd39\Documents\별이떨어지는마을\blender\비교_r3\_seg\3_별의_강과_하늘이_켜짐_0_new.mp4'
