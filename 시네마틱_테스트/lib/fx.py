@@ -70,6 +70,11 @@ def flame_mat(name="Flame", strength=5.0, colors=None):
     return m
 
 
+def roof_fire_mat():
+    """지붕 화재 불꽃: 하얀 칼날처럼 보이지 않게 주황~빨강, 세기 낮춤"""
+    return flame_mat("RoofFire", strength=3.2, colors=((1.0, 0.42, 0.04), (0.85, 0.08, 0.01)))
+
+
 def flame_hair_mat():
     """불 사람 머리 불꽃: 하얗게 타 보이지 않게 진한 빨강~주황, 낮은 세기"""
     return flame_mat("FlameHair", strength=2.2, colors=((1.0, 0.22, 0.02), (0.75, 0.03, 0.01)))

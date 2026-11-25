@@ -65,11 +65,24 @@ OUTFITS = {
                  shorts=(120, 185, 235), shoes=(90, 150, 210), style="물마을", hair="drop", glass=True),
     "불주민B": dict(skin=(226, 200, 175), suit=(138, 18, 14), trim=(80, 10, 8), tie=None, shirt=(205, 64, 24),
                  shorts=(58, 22, 18), shoes=(32, 20, 18), style="불마을", hair="flame"),
+    # 조연 (2026-11-25 본편): 아이는 scale 0.72 로 만듦
+    "불아이": dict(skin=(238, 216, 192), suit=(196, 40, 24), trim=(120, 20, 12), tie=None, shirt=(235, 120, 40),
+                shorts=(80, 28, 20), shoes=(40, 24, 20), style="불마을", hair="flame"),
+    "물아이": dict(skin=(176, 224, 252), suit=(130, 198, 244), trim=(96, 166, 224), tie=None, shirt=(200, 236, 255),
+                shorts=(112, 180, 232), shoes=(84, 146, 206), style="물마을", hair="drop", glass=True),
+    "대장장이": dict(skin=(214, 180, 150), suit=(92, 26, 18), trim=(40, 22, 18), tie=None, shirt=(150, 30, 20),
+                 shorts=(46, 30, 24), shoes=(30, 22, 20), style="불마을", hair="flame", apron=(58, 40, 30)),
+    "뱃사공": dict(skin=(190, 214, 230), suit=(118, 160, 196), trim=(84, 124, 164), tie=None, shirt=(196, 220, 236),
+                shorts=(96, 136, 176), shoes=(70, 100, 140), style="물마을", hair="drop", glass=True, hat=(200, 170, 110)),
+    "엄마": dict(skin=(184, 226, 250), suit=(150, 204, 240), trim=(110, 176, 228), tie=None, shirt=(214, 238, 255),
+               shorts=(130, 190, 236), shoes=(96, 156, 214), style="물마을", hair="drop", glass=True),
+    "아빠": dict(skin=(232, 206, 180), suit=(170, 32, 22), trim=(96, 16, 12), tie=None, shirt=(70, 24, 20),
+               shorts=(68, 26, 20), shoes=(34, 22, 20), style="불마을", hair="flame"),
 }
 
 
 class Char:
-    def __init__(self, name, outfit="하루", loc=(0, 0, 0), yaw=0.0, collection=None):
+    def __init__(self, name, outfit="하루", loc=(0, 0, 0), yaw=0.0, collection=None, scale=1.0):
         self.name, self.o = name, OUTFITS[outfit]
         s = STUD
         col = collection or bpy.context.scene.collection
@@ -79,6 +92,8 @@ class Char:
         self.root = bpy.data.objects.new(f"{name}_root", None)
         col.objects.link(self.root)
         self.root.location, self.root.rotation_euler = loc, (0, 0, yaw)
+        self.root.scale = (scale, scale, scale)
+        self.scale = scale
         # 엉덩이 높이 = 다리 길이 2 스터드
         self.hip = bpy.data.objects.new(f"{name}_hip", None)
         col.objects.link(self.hip)
@@ -94,7 +109,9 @@ class Char:
         for sx in (-1, 1):
             mb.box("trim", (sx * 0.42 * s, -0.5 * s - 0.006, 1.6 * s), (0.22 * s, 0.012, 0.8 * s), MS.roty(sx * 0.35))   # 옷깃
             mb.box("trim", (sx * 0.62 * s, -0.5 * s - 0.005, 0.55 * s), (0.42 * s, 0.01, 0.18 * s))                   # 주머니
-        mats = {k: m(k) for k in ("suit", "shirt", "tie", "trim") if m(k)}
+        if self.o.get("apron"):                                   # 대장장이 앞치마
+            mb.box("apron", (0, -0.5 * s - 0.02, 0.85 * s), (1.6 * s, 0.03, 1.5 * s))
+        mats = {k: m(k) for k in ("suit", "shirt", "tie", "trim", "apron") if m(k)}
         mb.parts = {k: v for k, v in mb.parts.items() if k in mats}
         self.torso = mb.build(f"{name}_torso", mats, col, bevel=0.012)
         self.torso.parent = self.hip
@@ -118,7 +135,12 @@ class Char:
             fl = fx.flame((0, 0, 0), 0.5, 0.18, f"{name}_flamehair", n=3, light=False, mat=fx.flame_hair_mat())
             fl.parent = self.head
             fl.location = (0, 0, hs * 0.95)
-        if self.o.get("hair") == "drop":                       # 머리 위 물방울
+        if self.o.get("hat"):                                    # 뱃사공 삿갓
+            hm = MS.MB()
+            hm.cyl("hat", (0, 0, hs * 1.08), hs * 0.95, hs * 0.32, 24, r2=hs * 0.08)
+            ho = hm.build(f"{name}_hat", {"hat": plastic(f"{outfit}_hat", self.o["hat"], rough=0.8)}, col)
+            ho.parent = self.head
+        if self.o.get("hair") == "drop" and not self.o.get("hat"):   # 머리 위 물방울
             import bmesh
             bm = bmesh.new()
             bmesh.ops.create_uvsphere(bm, u_segments=20, v_segments=12, radius=hs * 0.22)

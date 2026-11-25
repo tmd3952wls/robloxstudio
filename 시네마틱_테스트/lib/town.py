@@ -297,61 +297,92 @@ class Town:
         return n
 
 
-def bridge(V, y, z_deck, name="Bridge", red_line=True):
-    """돌 아치 다리 (교각 + 반원 아치 + 벽체 + 난간 + 가운데 붉은 선)"""
+BRIDGE_HUMP = 2.2
+
+
+def bridge_half(V):
+    return (V.river_w + 30) / 2 + 3
+
+
+def deck_z(V, y, x):
+    """다리 상판 윗면 높이 (가운데가 볼록한 돌다리). 다리 밖이면 None"""
+    xc = float(V.river_x(y))
+    half = bridge_half(V)
+    u = (x - xc) / half
+    if abs(u) > 1:
+        return None
+    return V.town_z + 0.15 + BRIDGE_HUMP * (1 - u * u) + 0.3
+
+
+def bridge(V, y, z_deck=None, name="Bridge", red_line=True):
+    """가운데가 볼록한 돌 아치 다리 (교각 + 낮은 아치 + 벽체 + 난간 + 가운데 붉은 선). 양끝은 마을 땅 높이에 닿음"""
     st = pbr.tex_mat("Bridge_stone", "castle_wall_varriation", 2.0, tint=pbr.srgb(170, 162, 150), var=0.15, bump=0.7,
                      grime_z=V.water_z, grime_h=2.5)
     mb = MS.MB()
     xc = float(V.river_x(y))
     span = V.river_w + 30
-    x0, x1 = xc - span / 2, xc + span / 2
+    half = bridge_half(V)
+    x0 = xc - span / 2
     Wd = 7.0
     n_arch = 3
     pier = 3.2
     aw = (span - (n_arch + 1) * pier) / n_arch
     bot = V.water_z - 3.0
-    # 교각
-    for i in range(n_arch + 1):
+    top = lambda x: deck_z(V, y, x) - 0.3            # 상판 밑면
+    for i in range(n_arch + 1):                       # 교각
         px = x0 + pier / 2 + i * (aw + pier)
-        mb.box("s", (px, y, (bot + z_deck) / 2), (pier, Wd + 0.6, z_deck - bot))
-        if 0 < i < n_arch:                                       # 물살 가르는 뾰족 기초
-            for s in (-1, 1):
-                mb.box("s", (px, y + s * (Wd / 2 + 0.9), (bot + V.water_z + 1.5) / 2), (pier * 0.72, pier * 0.72, V.water_z + 1.5 - bot),
+        mb.box("s", (px, y, (bot + top(px)) / 2), (pier, Wd + 0.6, top(px) - bot))
+        if 0 < i < n_arch:
+            for s_ in (-1, 1):
+                mb.box("s", (px, y + s_ * (Wd / 2 + 0.9), (bot + V.water_z + 1.5) / 2), (pier * 0.72, pier * 0.72, V.water_z + 1.5 - bot),
                        MS.rotz(math.pi / 4))
-    # 아치 + 벽체 (세로 띠로 채움)
     spring = V.water_z + 1.2
-    for i in range(n_arch):
+    for i in range(n_arch):                           # 아치 + 벽체 (세로 띠)
         ax0 = x0 + pier + i * (aw + pier)
         r = aw / 2
         cx = ax0 + r
-        nstrip = 22
+        rise = min(r, top(cx) - spring - 0.9)
+        nstrip = 26
         for k in range(nstrip):
             xa = ax0 + aw * k / nstrip
             xb = ax0 + aw * (k + 1) / nstrip
             xm = (xa + xb) / 2
-            za = spring + math.sqrt(max(r * r - (xm - cx) ** 2, 0)) * 0.8
-            mb.box("s", (xm, y, (za + z_deck) / 2), (xb - xa + 0.01, Wd, z_deck - za))
-        # 아치돌 테두리 (튀어나온 반원 띠)
-        for k in range(18):
+            za = spring + math.sqrt(max(1 - ((xm - cx) / r) ** 2, 0)) * rise
+            zt = top(xm)
+            mb.box("s", (xm, y, (za + zt) / 2), (xb - xa + 0.01, Wd, zt - za))
+        for k in range(18):                           # 아치돌 테두리
             a0 = math.pi * k / 18
             a1 = math.pi * (k + 1) / 18
             am = (a0 + a1) / 2
             px = cx - r * math.cos(am)
-            pz = spring + r * math.sin(am) * 0.8
-            L = r * (a1 - a0) * 1.05
-            for s in (-1, 1):
-                mb.box("s", (px, y + s * (Wd / 2 + 0.06), pz + 0.25), (L, 0.25, 0.65), MS.roty(-(am - math.pi / 2) * 0.9))
-    # 상판·난간
-    mb.box("s", (xc, y, z_deck + 0.15), (span + 6, Wd + 0.8, 0.3))
-    for s in (-1, 1):
-        mb.box("s", (xc, y + s * (Wd / 2 + 0.15), z_deck + 0.85), (span + 6, 0.45, 1.1))
-        for k in range(14):
-            px = x0 - 2 + (span + 4) * k / 13
-            mb.box("s", (px, y + s * (Wd / 2 + 0.15), z_deck + 1.5), (0.6, 0.6, 0.25))
+            pz = spring + rise * math.sin(am)
+            L = math.hypot(r * (math.cos(a0) - math.cos(a1)), rise * (math.sin(a1) - math.sin(a0))) * 1.08
+            ang = math.atan2(rise * math.cos(am), r * math.sin(am))
+            for s_ in (-1, 1):
+                mb.box("s", (px, y + s_ * (Wd / 2 + 0.06), pz + 0.25), (L, 0.25, 0.6), MS.roty(-ang))
+    # 양끝 벽체(땅 위, 교각 바깥 ~ 다리 끝) + 상판 + 난간: 경사를 따라 짧은 조각
+    n = 64
+    for k in range(n):
+        xa = xc - half + 2 * half * k / n
+        xb = xc - half + 2 * half * (k + 1) / n
+        xm = (xa + xb) / 2
+        za, zb = deck_z(V, y, xa), deck_z(V, y, xb)
+        zm = (za + zb) / 2
+        L = math.hypot(xb - xa, zb - za) + 0.02
+        ang = math.atan2(zb - za, xb - xa)
+        R = MS.roty(-ang)
+        mb.box("s", (xm, y, zm - 0.15), (L, Wd + 0.8, 0.3), R)
+        if abs(xm - xc) > span / 2 - 0.2:             # 강 밖: 상판 아래를 땅까지 채움
+            mb.box("s", (xm, y, (zm - 0.3 + V.town_z - 1.0) / 2), (xb - xa + 0.01, Wd, zm - 0.3 - (V.town_z - 1.0)))
+        for s_ in (-1, 1):
+            mb.box("s", (xm, y + s_ * (Wd / 2 + 0.15), zm + 0.55), (L, 0.45, 1.1), R)
+        if k % 5 == 0:
+            for s_ in (-1, 1):
+                mb.box("s", (xm, y + s_ * (Wd / 2 + 0.15), zm + 1.2), (0.6, 0.6, 0.25))
     mats = {"s": st}
     if red_line:
         mats["r"] = pbr.flat_mat("RedLine", (0.6, 0.02, 0.01), 0.5, emit=(1.0, 0.05, 0.02), emit_str=1.5)
-        mb.box("r", (xc, y, z_deck + 0.31), (0.35, Wd - 0.2, 0.02))
+        mb.box("r", (xc, y, deck_z(V, y, xc) + 0.012), (0.35, Wd - 0.2, 0.02))
     return mb.build(name, mats, bevel=0.04)
 
 

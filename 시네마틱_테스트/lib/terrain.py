@@ -322,9 +322,8 @@ def terrain_mat():
     rough = b.mix(rng(lava_m, 0.05, 0.4), rough, 0.6, dtype="FLOAT")
     pbr.finish(b, col, rough, nor, None, normal_str=0.9, bump=0)
     bs = b.N["Principled BSDF"]
-    emc = b.n("ShaderNodeBlackbody", i_Temperature=1250)
-    b.ln(emc.outputs[0], bs.inputs["Emission Color"])
-    b.ln(b.math("MULTIPLY", hot, 14.0), bs.inputs["Emission Strength"])
+    bs.inputs["Emission Color"].default_value = (1.0, 0.2, 0.025, 1)     # 진한 주황빨강 (분홍·하얗게 타지 않게)
+    b.ln(b.math("MULTIPLY", hot, 5.0), bs.inputs["Emission Strength"])
     return m
 
 
