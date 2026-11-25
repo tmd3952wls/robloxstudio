@@ -126,6 +126,36 @@ print("SUNDIR", tuple(round(v, 3) for v in (sun.matrix_world.to_3x3() @ Vector((
 if os.environ.get("CAMTOP"):
     cam.location = P0 + fwd * 15 + Vector((0, 0, 90)); look.aim(cam, P0 + fwd * 15)
 look.preset(eng, "final", samples=spp, pct=pct)
+SEQ = int(os.environ.get("SEQ", "0"))
+if SEQ:
+    # 연속 렌더 측정: 주민 걷기 + 카메라 천천히 밀기 (실제 샷과 같은 조건), 프레임별 시간 기록
+    sc = bpy.context.scene
+    if eng.upper() == "CYCLES":
+        sc.render.use_persistent_data = True          # 프레임 사이에 BVH·텍스처 유지 (연속 렌더 필수 설정)
+    c0 = cam.location.copy()
+    def upd(scene, *_):
+        t = (scene.frame_current - 1) / 30.0
+        for ch in people:
+            if ch.walk:
+                ch._walk(t + 0.45)
+        cam.location = c0 + fwd * 0.6 * t
+    bpy.app.handlers.frame_change_pre.append(upd)
+    odir = os.path.join(D, "..", "out", f"seq_{which}_{eng.lower()}_{spp}")
+    os.makedirs(odir, exist_ok=True)
+    times = []
+    t_all = time.time()
+    for fr in range(1, SEQ + 1):
+        sc.frame_set(fr)
+        sc.render.filepath = os.path.join(odir, f"f{fr:04d}.png")
+        t = time.time()
+        bpy.ops.render.render(write_still=True)
+        times.append(round(time.time() - t, 2))
+    st = mon.stop()
+    st.update(scene=which, engine=eng, samples=spp, mode="sequence", frames=SEQ, first_s=times[0],
+              avg_rest_s=round(sum(times[1:]) / max(len(times) - 1, 1), 2), total_s=round(time.time() - t_all, 1), per_frame=times)
+    print("STATS", json.dumps(st))
+    perf.log(st)
+    sys.exit(0)
 bpy.context.scene.frame_set(1)
 out = os.path.join(D, "..", "out", f"{which}_{eng.lower()}{tag}.png")
 bpy.context.scene.render.filepath = out

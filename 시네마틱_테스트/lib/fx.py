@@ -19,7 +19,8 @@ def _time_value(b, speed=1.0):
     return v.outputs[0]
 
 
-def flame_mat(name="Flame", strength=5.0):
+def flame_mat(name="Flame", strength=5.0, colors=None):
+    """colors=(아래색, 위색) 주면 흑체 대신 그 색으로 (불 사람 머리: 진한 빨강)"""
     if name in bpy.data.materials:
         return bpy.data.materials[name]
     m = pbr.new_mat(name)
@@ -46,12 +47,20 @@ def flame_mat(name="Flame", strength=5.0):
     dens = b.math("SUBTRACT", nz.outputs["Fac"], b.math("MULTIPLY", h, 0.75))
     a = b.n("ShaderNodeMapRange", i_From_Min=0.05, i_From_Max=0.35)
     b.ln(dens, a.inputs["Value"])
-    bb = b.n("ShaderNodeBlackbody")
-    tmp = b.n("ShaderNodeMapRange", i_From_Min=0.0, i_From_Max=1.0, i_To_Min=1900, i_To_Max=1100)
-    b.ln(h, tmp.inputs["Value"])
-    b.ln(tmp.outputs[0], bb.inputs["Temperature"])
     em = b.n("ShaderNodeEmission", i_Strength=strength)
-    b.ln(bb.outputs[0], em.inputs["Color"])
+    if colors:
+        cr = b.n("ShaderNodeValToRGB")
+        cr.color_ramp.elements[0].color = tuple(colors[0]) + (1,)
+        cr.color_ramp.elements[1].color = tuple(colors[1]) + (1,)
+        cr.color_ramp.elements[1].position = 0.7
+        b.ln(h, cr.inputs["Fac"])
+        b.ln(cr.outputs["Color"], em.inputs["Color"])
+    else:
+        bb = b.n("ShaderNodeBlackbody")
+        tmp = b.n("ShaderNodeMapRange", i_From_Min=0.0, i_From_Max=1.0, i_To_Min=1900, i_To_Max=1100)
+        b.ln(h, tmp.inputs["Value"])
+        b.ln(tmp.outputs[0], bb.inputs["Temperature"])
+        b.ln(bb.outputs[0], em.inputs["Color"])
     tr = b.n("ShaderNodeBsdfTransparent")
     mx = b.n("ShaderNodeMixShader")
     b.ln(a.outputs[0], mx.inputs[0])
@@ -61,7 +70,12 @@ def flame_mat(name="Flame", strength=5.0):
     return m
 
 
-def flame(loc, height=1.2, radius=0.4, name="Flame", n=3, seed=0, light=True, energy=300):
+def flame_hair_mat():
+    """불 사람 머리 불꽃: 하얗게 타 보이지 않게 진한 빨강~주황, 낮은 세기"""
+    return flame_mat("FlameHair", strength=2.2, colors=((1.0, 0.22, 0.02), (0.75, 0.03, 0.01)))
+
+
+def flame(loc, height=1.2, radius=0.4, name="Flame", n=3, seed=0, light=True, energy=300, mat=None):
     """교차된 불꽃 판 여러 장 + 흔들리는 점광원"""
     rnd = random.Random(seed)
     mb = MS.MB()
@@ -72,7 +86,7 @@ def flame(loc, height=1.2, radius=0.4, name="Flame", n=3, seed=0, light=True, en
         pts = [R @ Vector((-w / 2, 0, 0)), R @ Vector((w / 2, 0, 0)), R @ Vector((w * 0.3, 0, height * 0.6)),
                R @ Vector((0, 0, height)), R @ Vector((-w * 0.3, 0, height * 0.6))]
         mb.poly("f", [tuple(p) for p in pts], [(p.x / w + 0.5, p.z / height) for p in [Vector((-w / 2, 0, 0)), Vector((w / 2, 0, 0)), Vector((w * 0.3, 0, height * 0.6)), Vector((0, 0, height)), Vector((-w * 0.3, 0, height * 0.6))]])
-    ob = mb.build(name, {"f": flame_mat()})
+    ob = mb.build(name, {"f": mat or flame_mat()})
     ob.location = loc
     ob.visible_shadow = False
     if light:
@@ -227,4 +241,107 @@ def embers(center, n=400, spread=(30, 30, 12), name="Embers", seed=1):
     L.new(smat.outputs[0], go.inputs[0])
     md = ob.modifiers.new("GN", "NODES")
     md.node_group = ng
+    return ob
+
+
+def rain(center, size=(40, 40, 22), n=6000, name="Rain", speed=14.0, seed=2):
+    """빗줄기: 가는 막대 인스턴스가 시간에 따라 떨어짐 (GN, 프레임마다 자동)"""
+    rng = np.random.default_rng(seed)
+    P = (rng.uniform(-0.5, 0.5, (n, 3)) * np.array(size)) + np.array(center)
+    me = bpy.data.meshes.new(name)
+    me.from_pydata([tuple(p) for p in P], [], [])
+    ob = bpy.data.objects.new(name, me)
+    bpy.context.scene.collection.objects.link(ob)
+    drop_me = bpy.data.meshes.new(name + "_drop")
+    mb = MS.MB()
+    mb.box("d", (0, 0, 0), (0.012, 0.012, 0.55))
+    dob = mb.build(name + "_dropobj", {"d": pbr.flat_mat("RainDrop", (0.75, 0.85, 0.95), 0.05, emit=(0.6, 0.7, 0.85), emit_str=0.6)})
+    dob.hide_render = dob.hide_viewport = True
+    ng = bpy.data.node_groups.new(name + "_GN", "GeometryNodeTree")
+    ng.interface.new_socket("Geometry", in_out="INPUT", socket_type="NodeSocketGeometry")
+    ng.interface.new_socket("Geometry", in_out="OUTPUT", socket_type="NodeSocketGeometry")
+    N, L = ng.nodes, ng.links
+    gi, go = N.new("NodeGroupInput"), N.new("NodeGroupOutput")
+    m2p = N.new("GeometryNodeMeshToPoints")
+    sp = N.new("GeometryNodeSetPosition")
+    pos = N.new("GeometryNodeInputPosition")
+    tm = N.new("GeometryNodeInputSceneTime")
+    idx = N.new("GeometryNodeInputIndex")
+    rnd = N.new("FunctionNodeRandomValue"); rnd.data_type = "FLOAT"
+    L.new(idx.outputs[0], rnd.inputs["ID"])
+    mul = N.new("ShaderNodeMath"); mul.operation = "MULTIPLY"; mul.inputs[1].default_value = speed
+    L.new(tm.outputs["Seconds"], mul.inputs[0])
+    add = N.new("ShaderNodeMath"); add.operation = "MULTIPLY_ADD"
+    L.new(rnd.outputs[0], add.inputs[0]); add.inputs[1].default_value = size[2]
+    L.new(mul.outputs[0], add.inputs[2])
+    md_ = N.new("ShaderNodeMath"); md_.operation = "FLOORED_MODULO"; md_.inputs[1].default_value = size[2]
+    L.new(add.outputs[0], md_.inputs[0])
+    neg = N.new("ShaderNodeMath"); neg.operation = "MULTIPLY"; neg.inputs[1].default_value = -1.0
+    L.new(md_.outputs[0], neg.inputs[0])
+    cmb = N.new("ShaderNodeCombineXYZ")
+    L.new(neg.outputs[0], cmb.inputs["Z"])
+    va = N.new("ShaderNodeVectorMath"); va.operation = "ADD"
+    L.new(pos.outputs[0], va.inputs[0]); L.new(cmb.outputs[0], va.inputs[1])
+    oi = N.new("GeometryNodeObjectInfo"); oi.inputs["Object"].default_value = dob
+    iop = N.new("GeometryNodeInstanceOnPoints")
+    L.new(gi.outputs[0], m2p.inputs["Mesh"])
+    L.new(m2p.outputs[0], sp.inputs["Geometry"])
+    L.new(va.outputs[0], sp.inputs["Position"])
+    L.new(sp.outputs[0], iop.inputs["Points"])
+    L.new(oi.outputs["Geometry"], iop.inputs["Instance"])
+    L.new(iop.outputs[0], go.inputs[0])
+    ob.modifiers.new("GN", "NODES").node_group = ng
+    # 위치 기준을 상자 위쪽으로 (떨어지며 아래로 감)
+    ob.location.z += size[2] / 2
+    return ob
+
+
+def water_curtain(center, width, height, yaw=0.0, name="Curtain"):
+    """흘러내리는 물 커튼 (카메라가 뚫고 지나감): 세로로 늘어진 노이즈가 아래로 흐름"""
+    m = pbr.new_mat(name)
+    b = pbr.NB(m)
+    N = b.N
+    for n in list(N):
+        N.remove(n)
+    out = b.n("ShaderNodeOutputMaterial")
+    tc = b.n("ShaderNodeTexCoord")
+    t = _time_value(b, 1.0)
+    mp = b.n("ShaderNodeMapping")
+    mp.inputs["Scale"].default_value = (6.0, 1.0, 0.35)
+    cmb = b.n("ShaderNodeCombineXYZ")
+    b.ln(b.math("MULTIPLY", t, 2.2), cmb.inputs["Z"])
+    b.ln(tc.outputs["Object"], mp.inputs["Vector"])
+    b.ln(cmb.outputs[0], mp.inputs["Location"])
+    nz = b.n("ShaderNodeTexNoise", i_Scale=3.0, i_Detail=6.0, i_Distortion=0.3)
+    b.ln(mp.outputs[0], nz.inputs["Vector"])
+    a = b.n("ShaderNodeMapRange", i_From_Min=0.5, i_From_Max=0.72, i_To_Max=0.75)   # 물줄기 사이로 뒤가 보이게
+    b.ln(nz.outputs["Fac"], a.inputs["Value"])
+    bs = b.n("ShaderNodeBsdfPrincipled")
+    bs.inputs["Base Color"].default_value = (0.75, 0.88, 0.95, 1)
+    bs.inputs["Roughness"].default_value = 0.08
+    bs.inputs["Transmission Weight"].default_value = 0.6
+    bs.inputs["IOR"].default_value = 1.33
+    bs.inputs["Emission Color"].default_value = (0.8, 0.9, 1.0, 1)
+    bs.inputs["Emission Strength"].default_value = 0.05
+    tr = b.n("ShaderNodeBsdfTransparent")
+    mx = b.n("ShaderNodeMixShader")
+    b.ln(a.outputs[0], mx.inputs[0]); b.ln(tr.outputs[0], mx.inputs[1]); b.ln(bs.outputs[0], mx.inputs[2])
+    b.ln(mx.outputs[0], out.inputs["Surface"])
+    mb = MS.MB()
+    mb.box("c", (0, 0, height / 2), (0.04, width, height))
+    ob = mb.build(name, {"c": m})
+    ob.location, ob.rotation_euler = center, (0, 0, yaw)
+    ob.visible_shadow = False
+    return ob
+
+
+def gate(center, width, height, yaw=0.0, mat=None, name="Gate"):
+    """물 커튼이 걸리는 돌 문 (기둥 둘 + 위 들보)"""
+    mat = mat or pbr.flat_mat("GateStone", (0.6, 0.62, 0.64), 0.7)
+    mb = MS.MB()
+    for s in (-1, 1):
+        mb.box("s", (0, s * (width / 2 + 0.45), height / 2), (0.9, 0.9, height))
+    mb.box("s", (0, 0, height + 0.4), (1.1, width + 1.9, 0.8))
+    ob = mb.build(name, {"s": mat}, bevel=0.04)
+    ob.location, ob.rotation_euler = center, (0, 0, yaw)
     return ob

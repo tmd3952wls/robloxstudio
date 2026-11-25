@@ -22,23 +22,49 @@ SHOULDER_Z = 1.75      # 어깨 회전축 (몸통 바닥에서, 스터드) — �
 ARM_TOP = 2.0 - SHOULDER_Z   # 팔 윗면을 몸통 윗면(어깨선)과 같은 높이로: 축 위 +0.25 스터드 (고정 규칙)
 
 
-def plastic(name, rgb, rough=0.38):
+def plastic(name, rgb, rough=0.38, glass=False):
     m = bpy.data.materials.get(name)
     if m:
         return m
+    if glass:                                 # 물 사람: 반투명 하늘색 유리 (Cycles 굴절, EEVEE 는 레이트레이싱 굴절)
+        m = pbr.flat_mat(name, pbr.srgb(*rgb), rough=0.04, emit=pbr.srgb(*rgb), emit_str=0.25)
+        bs = m.node_tree.nodes["Principled BSDF"]
+        bs.inputs["Transmission Weight"].default_value = 0.92
+        bs.inputs["IOR"].default_value = 1.33
+        try:
+            m.surface_render_method = "DITHERED"
+            m.use_raytrace_refraction = True
+        except Exception:
+            pass
+        return m
     m = pbr.flat_mat(name, pbr.srgb(*rgb), rough=rough, coat=0.15)
     return m
+
+
+def set_glow(outfit, color=(1.0, 0.45, 0.12), strength=0.0, keys=("suit", "trim", "shirt", "shorts", "skin")):
+    """불 사람 몸빛 (밤 장면): 해당 의상 재질에 발광"""
+    for k in keys:
+        m = bpy.data.materials.get(f"{outfit}_{k}")
+        if m:
+            bs = m.node_tree.nodes["Principled BSDF"]
+            bs.inputs["Emission Color"].default_value = tuple(color) + (1,)
+            bs.inputs["Emission Strength"].default_value = strength
 
 
 OUTFITS = {
     # 하루: 대머리·하얀 피부·파란 정장(72,126,200, 깃·주머니 46,90,158)·검정 넥타이·흰 반바지·노란 신발 (고정)
     "하루": dict(skin=(245, 245, 242), suit=(72, 126, 200), trim=(46, 90, 158), tie=(20, 20, 24), shirt=(250, 250, 250),
                shorts=(248, 248, 248), shoes=(250, 205, 40), style="하루", hair=None),
-    # 불 마을 주민: 붉은 갈색 옷, 머리 위 불꽃
-    "불주민A": dict(skin=(236, 214, 190), suit=(150, 52, 38), trim=(90, 30, 24), tie=None, shirt=(60, 40, 32),
-                 shorts=(70, 48, 38), shoes=(40, 30, 26), style="불마을", hair="flame"),
-    "불주민B": dict(skin=(226, 200, 175), suit=(120, 70, 40), trim=(80, 45, 28), tie=None, shirt=(200, 120, 60),
-                 shorts=(60, 42, 34), shoes=(35, 28, 24), style="불마을", hair="flame"),
+    # 불 마을 주민: 진한 불빨강 옷, 머리 위 빨간 불꽃 (몸 발광 X — 2026-11-25 "타는 듯해서 빨간 불색만 강조")
+    "불주민A": dict(skin=(236, 214, 190), suit=(178, 28, 20), trim=(105, 14, 10), tie=None, shirt=(60, 22, 18),
+                 shorts=(72, 26, 20), shoes=(36, 22, 20), style="불마을", hair="flame"),
+    # 물 마을 주민: 몸 전체가 반투명 하늘색 유리, 머리 위 물방울
+    "물주민A": dict(skin=(170, 220, 250), suit=(120, 190, 240), trim=(90, 160, 220), tie=None, shirt=(190, 230, 255),
+                 shorts=(110, 175, 230), shoes=(80, 140, 200), style="물마을", hair="drop", glass=True),
+    "물주민B": dict(skin=(180, 228, 252), suit=(140, 205, 245), trim=(100, 170, 225), tie=None, shirt=(200, 235, 255),
+                 shorts=(120, 185, 235), shoes=(90, 150, 210), style="물마을", hair="drop", glass=True),
+    "불주민B": dict(skin=(226, 200, 175), suit=(138, 18, 14), trim=(80, 10, 8), tie=None, shirt=(205, 64, 24),
+                 shorts=(58, 22, 18), shoes=(32, 20, 18), style="불마을", hair="flame"),
 }
 
 
@@ -48,7 +74,8 @@ class Char:
         s = STUD
         col = collection or bpy.context.scene.collection
         self.col = col
-        m = lambda k: plastic(f"{outfit}_{k}", self.o[k]) if self.o.get(k) else None
+        gl = self.o.get("glass", False)
+        m = lambda k: plastic(f"{outfit}_{k}", self.o[k], glass=gl and k not in ("tie",)) if self.o.get(k) else None
         self.root = bpy.data.objects.new(f"{name}_root", None)
         col.objects.link(self.root)
         self.root.location, self.root.rotation_euler = loc, (0, 0, yaw)
@@ -88,9 +115,26 @@ class Char:
         self.face = FACE.FaceRig(self.head, hs, hs * 0.49, hs * 0.24, z_center=hs / 2, prefix="Face_" + outfit)
         if self.o.get("hair") == "flame":
             import fx
-            fl = fx.flame((0, 0, 0), 0.5, 0.18, f"{name}_flamehair", n=3, light=False)
+            fl = fx.flame((0, 0, 0), 0.5, 0.18, f"{name}_flamehair", n=3, light=False, mat=fx.flame_hair_mat())
             fl.parent = self.head
             fl.location = (0, 0, hs * 0.95)
+        if self.o.get("hair") == "drop":                       # 머리 위 물방울
+            import bmesh
+            bm = bmesh.new()
+            bmesh.ops.create_uvsphere(bm, u_segments=20, v_segments=12, radius=hs * 0.22)
+            for v in bm.verts:
+                if v.co.z > 0:
+                    v.co.z *= 1.0 + 1.6 * (v.co.z / (hs * 0.22))
+                    v.co.x *= 1 - 0.75 * (v.co.z / (hs * 0.6))
+                    v.co.y *= 1 - 0.75 * (v.co.z / (hs * 0.6))
+            me = bpy.data.meshes.new(f"{name}_drop")
+            bm.to_mesh(me); bm.free()
+            me.materials.append(plastic(f"{outfit}_suit", self.o["suit"], glass=True))
+            dr = bpy.data.objects.new(f"{name}_drop", me)
+            col.objects.link(dr)
+            dr.parent = self.head
+            dr.location = (0, 0, hs * 1.12)
+            me.polygons.foreach_set("use_smooth", [True] * len(me.polygons))
         # 팔 (어깨 축에서 회전)
         self.arms = {}
         for side in (-1, 1):

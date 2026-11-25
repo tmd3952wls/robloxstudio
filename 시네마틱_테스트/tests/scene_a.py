@@ -23,6 +23,32 @@ yb = info["bridge_y"]
 xr = float(V.river_x(-420))
 cam = look.camera((xr + 60, -430, 150), (-260, 700, 120), lens=22)
 look.preset(eng, "final", samples=spp, pct=pct)
+SEQ = int(os.environ.get("SEQ", "0"))
+if SEQ:
+    sc = bpy.context.scene
+    if eng.upper() == "CYCLES":
+        sc.render.use_persistent_data = True
+    c0 = cam.location.copy()
+    from mathutils import Vector
+    def upd(scene, *_):
+        t = (scene.frame_current - 1) / 30.0
+        cam.location = c0 + Vector((0, 9.0, -2.0)) * t           # 드론 접근
+    bpy.app.handlers.frame_change_pre.append(upd)
+    odir = os.path.join(D, "..", "out", f"seq_A_{eng.lower()}_{spp}")
+    os.makedirs(odir, exist_ok=True)
+    times, t_all = [], time.time()
+    for fr in range(1, SEQ + 1):
+        sc.frame_set(fr)
+        sc.render.filepath = os.path.join(odir, f"f{fr:04d}.png")
+        t = time.time()
+        bpy.ops.render.render(write_still=True)
+        times.append(round(time.time() - t, 2))
+    st = mon.stop()
+    st.update(scene="A", engine=eng, samples=spp, mode="sequence", frames=SEQ, first_s=times[0],
+              avg_rest_s=round(sum(times[1:]) / max(len(times) - 1, 1), 2), total_s=round(time.time() - t_all, 1), per_frame=times)
+    print("STATS", json.dumps(st))
+    perf.log(st)
+    sys.exit(0)
 bpy.context.scene.frame_set(1)
 out = os.path.join(D, "..", "out", f"A_{eng.lower()}{tag}.png")
 bpy.context.scene.render.filepath = out
