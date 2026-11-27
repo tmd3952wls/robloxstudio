@@ -57,7 +57,7 @@ def sign(center, yaw, text="절대\n건너지 말 것", name="Sign"):
     mb = MS.MB()
     R = MS.rotz(yaw)
     for sx in (-1, 1):
-        mb.box("w", tuple(R @ Vector((sx * (W / 2 - 0.12), 0, 1.0))), (0.12, 0.12, 2.0), R)
+        mb.box("w", tuple(R @ Vector((sx * (W / 2 - 0.12), 0, 1.0))), (0.12, T - 0.02, 2.0), R)   # 기둥 깊이 < 판 두께: 판 앞으로 튀어나와 글씨를 가리지 않게
     mb.box("w", tuple(R @ Vector((0, 0, 1.65))), (W, T, H), R)
     ob = mb.build(name, {"w": wood}, bevel=0.015)
     ob.location = center

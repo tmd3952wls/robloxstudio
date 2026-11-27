@@ -593,7 +593,7 @@ elif shot == "bridge":
 elif shot == "sign":                            # 10: 표지판 글씨까지 빨려듦 (판 전체가 화면 안에)
     light("day")
     sgn = Vector((SIGN_X, SIGN_Y, DZ(SIGN_X) + 1.65))
-    fn = rush_to(sgn, (-1, 0.12, 0), 16.0, 2.3, 2.6, 0.05, lens=(26, 34), p=2.4)
+    fn = rush_to(sgn, (-1, 0.12, 0), 16.0, 3.2, 2.6, 0.05, lens=(26, 30), p=2.4)   # 끝에서 판이 잘리지 않게 (3.2m, 30mm)
 
 elif shot == "feet":                            # 11: 붉은 선 양쪽 불 발 / 물 발, 낮게 밀기
     light("day")
@@ -602,7 +602,7 @@ elif shot == "feet":                            # 11: 붉은 선 양쪽 불 발 
     person("F", "불주민A", fp, math.pi / 2, (("결심", 0.8),), deck=True)
     person("Wt", "물주민A", wp, -math.pi / 2, (("결심", 0.8),), deck=True)
     z0 = DZ(xc)
-    fn = path((xc - 0.2, yb - 4.5, z0 + 0.35), (xc, yb - 1.7, z0 + 0.3), (xc, yb + 0.2, z0 + 0.3), (xc, yb + 0.2, z0 + 0.35), lens=(30, 36))
+    fn = path((xc - 0.25, yb - 3.1, z0 + 0.4), (xc, yb - 1.7, z0 + 0.3), (xc, yb + 0.2, z0 + 0.3), (xc, yb + 0.2, z0 + 0.35), lens=(30, 36))   # 난간(y-3.4~-3.9) 안쪽에서 시작
 
 elif shot == "legend_steam":                    # 12: 손 닿자 하얀 김 확 -> 위로 급후퇴 (옛이야기, 색 바램은 인코딩 때)
     light("day")
@@ -1094,7 +1094,8 @@ elif shot in ("haru_run", "crowd", "shout_smith", "shout_boat", "step", "nothing
     elif shot == "step":
         xs = xc - 1.25
         haru((xs, yb - 0.3), (1, 0, 0), (("결심", 0.9),), walk=(1.2, 0), deck=True)
-        fn = path(Vector((xc - 0.2, yb - 3.6, z0 + 0.32)), Vector((xc + 0.05, yb - 1.5, z0 + 0.28)), Vector((xc, yb - 0.3, z0 + 0.15)),
+        # 난간(y-3.4~-3.9) 안쪽에서 시작 (검은 프레임 방지)
+        fn = path(Vector((xc - 0.2, yb - 3.1, z0 + 0.32)), Vector((xc + 0.05, yb - 1.5, z0 + 0.28)), Vector((xc, yb - 0.3, z0 + 0.15)),
                   Vector((xc + 0.2, yb - 0.3, z0 + 0.15)), lens=(30, 38))
     else:
         emo = {"nothing": (("평온", 0.6),), "look_hands": (("놀람", 0.9),), "decide": (("결심", 1.1),)}.get(shot, (("결심", 0.9),))
@@ -1315,7 +1316,7 @@ if mode in ("still", "probe"):
 os.makedirs(os.path.join(OUT, "frames"), exist_ok=True)
 os.makedirs(os.path.join(OUT, "stills"), exist_ok=True)
 times = []
-frames = [(f0 + f1) // 2] if mode == "still" else range(f0, f1 + 1)
+frames = [int(os.environ.get("STILL_F", (f0 + f1) // 2))] if mode == "still" else range(f0, f1 + 1)   # STILL_F: 확인할 프레임 지정
 for fr in frames:
     p = os.path.join(OUT, "stills" if mode == "still" else "frames", f"{name}.png" if mode == "still" else f"f{fr:04d}.png")
     if mode != "still" and os.path.exists(p):
