@@ -184,7 +184,7 @@ SIGN_Y = yb - 2.35
 
 
 def bridge_sign():
-    ST.sign((SIGN_X, SIGN_Y, DZ(SIGN_X)), -math.pi / 2)
+    ST.sign((SIGN_X, SIGN_Y, DZ(SIGN_X)), -math.pi / 2, text="NEVER\nCROSS")
 
 
 def rain_at(center, size=(60, 60, 30), n=12000):

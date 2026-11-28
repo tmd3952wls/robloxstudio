@@ -6,13 +6,14 @@ import json
 import os
 
 TIMING = r"C:\Users\tmd39\Desktop\haru_short\불과물의마을\audio\timing.json"
-LAST = 3811
+# 영어판(2026-11-28): timing.json 이 영어(호흡 없음) -> 끝 프레임은 timing 에서 계산. 한국어판은 shotlist_ko_bak.py
+MIN_SHOT = 24                                   # 컷 최소 0.8초
 FLASHBACK_LINES = [(12, 13), (53, 62)]          # 옛이야기·회상 구간 (대사 a 시작 ~ 대사 b 시작) -> 인코딩 때 색 바램
 
 RAW = [
-    ("sky", ("f", 1), "EEVEE"), ("river", ("f", 22), "CYCLES"), ("fireroofs", ("f", 63), "CYCLES"),
-    ("waterroofs", ("f", 85), "CYCLES"), ("firestreet", ("f", 115), "CYCLES"), ("night", ("f", 144), "CYCLES"),
-    ("waterfall", ("f", 192), "CYCLES"), ("rain", ("f", 222), "CYCLES"), ("bridge", ("f", 255), "CYCLES"),
+    ("sky", 1, "EEVEE"), ("river", 2, "CYCLES"), ("fireroofs", 3, "CYCLES"),
+    ("waterroofs", 4, "CYCLES"), ("firestreet", 5, "CYCLES"), ("night", 6, "CYCLES"),
+    ("waterfall", 7, "CYCLES"), ("rain", 8, "CYCLES"), ("bridge", 9, "CYCLES"),
     ("sign", 10, "CYCLES"), ("feet", 11, "CYCLES"), ("legend_steam", 12, "CYCLES"), ("moss", 13, "CYCLES"),
     ("banks", 14, "CYCLES"),
     ("haru_plaza", 15, "CYCLES"), ("haru_walk", 16, "CYCLES"), ("hand", 17, "CYCLES"), ("across", 18, "CYCLES"),
@@ -61,9 +62,16 @@ def shots():
         else:                                        # ("mid", n): 대사 n 의 가운데
             f = round((T[st[1]]["start"] + T[st[1]]["dur"] / 2) * 30) + 1
         starts.append((name, f, eng))
+    last = round((T[max(T)]["start"] + T[max(T)]["dur"] + 0.25) * 30)
+    for i in range(1, len(starts)):                 # 너무 짧은 컷은 뒤 컷 시작을 미룸 (뒤 컷도 최소 길이 남을 때만)
+        nm, f, eng = starts[i]
+        nxt = starts[i + 1][1] if i + 1 < len(starts) else last + 1
+        want = starts[i - 1][1] + MIN_SHOT
+        if f < want and nxt - want >= MIN_SHOT:
+            starts[i] = (nm, want, eng)
     out = []
     for i, (name, f, eng) in enumerate(starts):
-        f1 = starts[i + 1][1] - 1 if i + 1 < len(starts) else LAST
+        f1 = starts[i + 1][1] - 1 if i + 1 < len(starts) else last
         out.append((name, f, f1, eng))
     return out
 
